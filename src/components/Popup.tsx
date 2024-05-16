@@ -49,7 +49,7 @@ const Popup = () => {
           isOpen === true ? "block" : "hidden"
         } inset-0 z-50 bg-black/80 flex px-[100px] justify-center items-center`}
       >
-        <div className="bg-[#356BA3] mt-[50px] max-w-4xl p-4 shadow-lg rounded-lg text-white relative">
+        <div className="bg-[#356BA3] mt-[50px] py-4 px-2 shadow-lg rounded-lg text-white relative">
           <Button
             variant="ghost"
             onClick={() => setIsOpen(false)}
@@ -60,9 +60,9 @@ const Popup = () => {
           <Image
             src="/Artboard 1.png"
             alt="Logo"
-            width={350}
-            height={350}
-            className="h-full w-full"
+            width={5000}
+            height={5000}
+            className="h-full w-full sm:w-[560px] sm:h-[360px]"
           />
           {/* Content of your dialog */}
           {/* 69ac6f7c-e4c6-40b6-af03-d47876657613 */}
@@ -101,9 +101,8 @@ const Popup = () => {
       >
         <img
           src="/Artboard 3.png"
-          className="rounded-md w-[200px]"
+          className="rounded-md w-[250px]"
           alt="Popup"
-
         />
       </motion.button>
     </>
