@@ -47,9 +47,9 @@ const Popup = () => {
       <div
         className={`fixed ${
           isOpen === true ? "block" : "hidden"
-        } inset-0 z-50 bg-black/80 flex justify-center items-center`}
+        } inset-0 z-50 bg-black/80 flex px-[100px] justify-center items-center`}
       >
-        <div className="bg-[#356BA3] mx-[20px] mt-[50px] max-w-4xl p-4 shadow-lg rounded-lg text-white relative">
+        <div className="bg-[#356BA3] mt-[50px] max-w-4xl p-4 shadow-lg rounded-lg text-white relative">
           <Button
             variant="ghost"
             onClick={() => setIsOpen(false)}
