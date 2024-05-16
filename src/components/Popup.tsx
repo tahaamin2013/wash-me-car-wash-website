@@ -58,7 +58,7 @@ const Popup = () => {
             <X className="h-4 w-4 text-black" />
           </Button>
           <Image
-            src="/Artboard 3.png"
+            src="/Artboard 1.png"
             alt="Logo"
             width={350}
             height={350}
@@ -99,12 +99,11 @@ const Popup = () => {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.3 }}
       >
-        <Image
-          src="/Artboard 1.png"
-          className="rounded-md w-[150px] h-{150px] sm:w-[200px] sm:h-[200px]"
+        <img
+          src="/Artboard 3.png"
+          className="rounded-md w-[200px]"
           alt="Popup"
-          width={200}
-          height={200}
+
         />
       </motion.button>
     </>
