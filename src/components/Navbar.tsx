@@ -50,7 +50,7 @@ const Navbar = () => {
   }, [scrollPosition]);
   return (
     <div className="fixed z-50 w-full flex flex-col items-center">
-      <div className="bg-[#1b3e63] w-full h-fit text-white capitalize flex sm:flex-row flex-col flex-wrap justify-between px-5 text-center items-center">
+      <div className="bg-[#1b3e63] w-full text-white capitalize flex sm:flex-row flex-col flex-wrap justify-between px-5 text-center items-center">
         <div></div>
         <button
           onClick={(e) => handleButtonClick(e, "#MemberShips")}

@@ -62,7 +62,7 @@ const Popup = () => {
             alt="Logo"
             width={5000}
             height={5000}
-            className="h-full w-full sm:w-[560px] sm:h-[360px]"
+            className="h-full w-full sm:w-[560px] sm:h-[390px]"
           />
           {/* Content of your dialog */}
           {/* 69ac6f7c-e4c6-40b6-af03-d47876657613 */}
