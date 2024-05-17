@@ -85,7 +85,7 @@ const Reviews = () => {
         What our customers say
       </div>
       <div
-        className="flex flex-col gap-2 justify-center items-center w-full bg-blue text-white py-7 px-16 mt-4"
+        className="flex flex-col gap-2 justify-center items-center w-full bg-myBlue text-white py-7 px-16 mt-4"
         style={{
           backgroundImage:
             "url(https://raw.githubusercontent.com/aimahusnain/Washme-CarWash-Images/main/bubbles.png)",

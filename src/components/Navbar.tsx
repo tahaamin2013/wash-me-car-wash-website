@@ -38,7 +38,7 @@ const Navbar = () => {
 
       // Adjust the condition as needed
       if (position > 130) {
-        setNavbarColor("bg-blue shadow-xl");
+        setNavbarColor("bg-myBlue shadow-xl");
       } else {
         setNavbarColor("bg-transparent");
       }
@@ -64,7 +64,7 @@ const Navbar = () => {
         </div>
       </div>
       <div
-        className="bg-blue text-white transition-all duration-200 shadow-xl px-5 lg:px-20 py-2 items-center justify-between w-full"
+        className="bg-myBlue text-white transition-all duration-200 shadow-xl px-5 lg:px-20 py-2 items-center justify-between w-full"
         style={{
           backgroundImage:
             "url(https://raw.githubusercontent.com/aimahusnain/Washme-CarWash-Images/main/bubbles.png)",

@@ -14,7 +14,7 @@ const New: React.FC = () => {
   const plugin = useRef(Autoplay({ delay: 5000, stopOnInteraction: false }));
   return (
     <div
-      className="flex flex-col w-full justify-center items-center mt-3 bg-blue px-5 pb-3 text-white"
+      className="flex flex-col w-full justify-center items-center mt-3 bg-myBlue px-5 pb-3 text-white"
       style={{
         backgroundImage:
           "url(https://raw.githubusercontent.com/aimahusnain/Washme-CarWash-Images/main/bubbles.png)",

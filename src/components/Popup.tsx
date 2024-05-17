@@ -1,15 +1,33 @@
-"use client";
+'use client'
 
-import React, { useState, useEffect } from "react";
-import { motion, useAnimation } from "framer-motion";
-import Image from "next/image";
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
+import { Input } from "./ui/input";
 import { Button } from "./ui/button";
 
-const Popup = () => {
-  const [isOpen, setIsOpen] = useState(true); // Initialize isOpen as per your requirement
-  const [isVisible, setIsVisible] = useState(false);
-  const controls = useAnimation();
+const LeadGenForm = () => {
+  const [showForm, setShowForm] = useState(false);
+  const [showBottomBar, setShowBottomBar] = useState(false);
+  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowForm(true);
+    }, 3000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  const handleCloseForm = () => {
+    setShowForm(false);
+    setShowBottomBar(true);
+  };
+
+  const handleBottomBarClick = () => {
+    setShowForm(true);
+    setShowBottomBar(false);
+  };
 
   async function handleSubmit(e: any) {
     e.preventDefault();
@@ -27,86 +45,92 @@ const Popup = () => {
     const result = await response.json();
     if (result.success) {
       console.log(result);
+      setShowSuccessMessage(true);
+      setShowForm(false);
+      setShowBottomBar(false);
     }
   }
 
-  const goToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
-
-  useEffect(() => {
-    const timeoutId = setTimeout(() => {
-      setIsOpen(true); // Open the toast after 5 seconds
-    }, 3000);
-
-    return () => clearTimeout(timeoutId);
-  }, []);
-
   return (
     <>
-      <div
-        className={`fixed ${
-          isOpen === true ? "block" : "hidden"
-        } inset-0 z-50 bg-black/80 flex px-[100px] justify-center items-center`}
-      >
-        <div className="bg-[#356BA3] mt-[50px] py-4 px-2 shadow-lg rounded-lg text-white relative">
-          <Button
-            variant="ghost"
-            onClick={() => setIsOpen(false)}
-            className="absolute top-[-35px] right-0 bg-white opacity-70 hover:opacity-100 focus:outline-none"
-          >
-            <X className="h-4 w-4 text-black" />
-          </Button>
-          <Image
-            src="/Artboard 1.png"
-            alt="Logo"
-            width={5000}
-            height={5000}
-            className="h-full w-full sm:w-[560px] sm:h-[390px]"
-          />
-          {/* Content of your dialog */}
-          {/* 69ac6f7c-e4c6-40b6-af03-d47876657613 */}
-          <form
-            onSubmit={handleSubmit}
-            className="w-full flex gap-2 items-center justify-center"
-          >
-            <div>
-              <input
-                type="email"
-                name="email"
-                required
-                placeholder="Enter Your Email"
-                className="rounded-md mt-2 py-1.5 outline-none text-black px-2"
-              />
-            </div>
-            <button
-              type="submit"
-              className="bg-[#b1c34f] rounded-md text-black mt-2 px-4 py-1 text-lg"
+      <AnimatePresence>
+        {showForm && (
+          <div className="fixed sm:mx-0 mx-8 inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.8 }}
+              transition={{ duration: 0.3 }}
+              className="bg-myBlue text-white rounded-lg shadow-lg w-full relative max-w-md text-center"
             >
-              Submit
-            </button>
-          </form>
-        </div>
-      </div>
+              <div className="px-8 pt-8">
+                <button
+                  onClick={handleCloseForm}
+                  className="mt-4 absolute right-3 top-1 text-white font-bold text-4xl"
+                >
+                  {" "}
+                  <X />
+                </button>
+                <h2 className="text-4xl mb-4 font-bold caveatfont">
+                  Get First Month Free with Our Monthly Memberships!
+                </h2>
+                <p className="mb-6">
+                  Sign up for our exclusive monthly memberships & Enjoy 4 washes a month, Saving up to $36!
+                </p>
+              </div>
+              <form onSubmit={handleSubmit} className="flex p-8 pt-4 bg-black/30 gap-2 items-center justify-center">
+                <Input
+                  type="email"
+                  name="email"
+                  required
+                  placeholder="Enter Your Email Address"
+                  className="w-2/3 text-gray-700"
+                />
+                <Button type="submit" className="bg-orange-500 text-white">
+                  Subscribe
+                </Button>
+              </form>
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
 
-      <motion.button
-        id="goTopBtn"
-        onClick={() => setIsOpen(true)}
-        className={`fixed ${
-          isOpen === false ? "block" : "hidden"
-        } bottom-[0px] left-[0px] w-fit py-3 px-[20px] text-sm bg-transparent rounded-md z-50 text-left shadow-lg`}
-        initial={{ opacity: 0, scale: 0 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.3 }}
-      >
-        <img
-          src="/Artboard 3.png"
-          className="rounded-md w-[250px]"
-          alt="Popup"
-        />
-      </motion.button>
+      <AnimatePresence>
+        {showSuccessMessage && (
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.8 }}
+            transition={{ duration: 0.3 }}
+            className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50"
+          >
+            <div className="bg-myBlue text-white rounded-lg shadow-lg w-full max-w-md text-center p-8">
+              <h2 className="text-2xl mb-4">Success!</h2>
+              <p>Your form has been submitted successfully.</p>
+              <Button onClick={() => setShowSuccessMessage(false)} className="mt-4 bg-white text-black hover:text-white">
+                Close
+              </Button>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      <AnimatePresence>
+        {showBottomBar && (
+          <motion.div
+            initial={{ y: 100 }}
+            animate={{ y: 0 }}
+            exit={{ y: 100 }}
+            transition={{ duration: 0.3 }}
+            onClick={handleBottomBarClick}
+            className="bottom-[0px] left-[0px] fixed bg-myBlue text-white cursor-pointer w-fit py-3 px-[20px] text-sm rounded-md z-50 text-left shadow-lg"
+          >
+            Get 50% OFF
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   );
 };
 
-export default Popup;
+export default LeadGenForm;

@@ -146,13 +146,13 @@ const Contact = () => {
   return (
     <div id="Contact">
       <h1 className="flex flex-row items-center mb-4 mt-2 text-2xl">
-        <hr className="bg-blue w-full h-0.5 mt-0.5" />
+        <hr className="bg-myBlue w-full h-0.5 mt-0.5" />
         <span className="mx-2 text-blue">Contact</span>
-        <hr className="bg-blue w-full h-0.5 mt-0.5" />
+        <hr className="bg-myBlue w-full h-0.5 mt-0.5" />
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div
-          className="bg-blue text-white border shadow-xl p-2 rounded-lg py-6 px-8 overflow-hidden"
+          className="bg-myBlue text-white border shadow-xl p-2 rounded-lg py-6 px-8 overflow-hidden"
           style={{
             backgroundImage:
               "url(https://raw.githubusercontent.com/aimahusnain/Washme-CarWash-Images/main/bubbles.png)",
@@ -257,7 +257,7 @@ const Contact = () => {
           </div>
         </div>
         <div
-          className="bg-blue border shadow-xl rounded-lg py-5 px-4 text-white overflow-hidden"
+          className="bg-myBlue border shadow-xl rounded-lg py-5 px-4 text-white overflow-hidden"
           style={{
             backgroundImage:
               "url(https://raw.githubusercontent.com/aimahusnain/Washme-CarWash-Images/main/bubbles.png)",

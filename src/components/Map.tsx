@@ -4,7 +4,7 @@ const Map = () => {
   return (
     <div
       key="1"
-      className="bg-blue lg:grid gap-6 grid-cols-2 px-7 py-6 items-center text-white overflow-hidden shadow-xl"
+      className="bg-myBlue lg:grid gap-6 grid-cols-2 px-7 py-6 items-center text-white overflow-hidden shadow-xl"
       style={{
         backgroundImage:
           "url(https://raw.githubusercontent.com/aimahusnain/Washme-CarWash-Images/main/bubbles.png)",

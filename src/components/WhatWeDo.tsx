@@ -86,7 +86,7 @@ const WhatWeDo: React.FC = () => {
           {data.map((item, index) => (
             <CarouselItem key={index}>
               <div
-                className="bg-blue rounded-xl h-[600px] sm:h-[400px] text-white overflow-hidden shadow-xl"
+                className="bg-myBlue rounded-xl h-[600px] sm:h-[400px] text-white overflow-hidden shadow-xl"
                 style={{
                   backgroundImage:
                     "url(https://raw.githubusercontent.com/aimahusnain/Washme-CarWash-Images/main/bubbles.png)",

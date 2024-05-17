@@ -7,7 +7,7 @@ const Team = () => {
       {/* Desktop View */}
       <div
         id="Meet the Team"
-        className="hidden sm:block relative bg-blue h-[520px] text-white overflow-hidden rounded-xl"
+        className="hidden sm:block relative bg-myBlue h-[520px] text-white overflow-hidden rounded-xl"
       >
         <div className="absolute inset-0">
           <Image

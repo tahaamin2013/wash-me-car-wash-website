@@ -85,3 +85,10 @@
 .button:hover{
   background-position: 200px 0 !important;
 }
+
+.caveatfont {
+  font-family: "Caveat", cursive;
+  font-optical-sizing: auto;
+  font-weight: 30;
+  font-style: normal;
+}
