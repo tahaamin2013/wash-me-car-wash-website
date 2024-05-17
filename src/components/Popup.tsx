@@ -55,7 +55,7 @@ const LeadGenForm = () => {
     <>
       <AnimatePresence>
         {showForm && (
-          <div className="fixed sm:mx-0 mx-8 inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+          <div className="fixed sm:px-0 px-8 inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
