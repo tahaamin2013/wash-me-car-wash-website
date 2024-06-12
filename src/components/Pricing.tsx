@@ -109,6 +109,7 @@ const Pricing: React.FC = () => {
             <p className="font-sans text-2xl font-bold uppercase">
               4 Washes Per Month
             </p>
+            <h1 className="text-lg">Includes Teflon Wax</h1>
             <p className="font-bold text-5xl mb-2 text-black flex items-start justify-center">
               <span className="text-lg font-bold">$</span>34.95
             </p>
@@ -211,6 +212,7 @@ const Pricing: React.FC = () => {
             <p className="font-sans text-2xl font-bold uppercase">
               4 Washes Per Month
             </p>
+            <h1 className="text-lg">Includes Teflon Wax</h1>
             <p className="font-bold text-5xl mb-2 text-black flex items-start justify-center">
               <span className="text-lg font-bold">$</span>36.95
             </p>
@@ -339,6 +341,7 @@ const Pricing: React.FC = () => {
             <p className="font-sans text-2xl font-bold uppercase">
               4 Washes Per Month
             </p>
+            <h1 className="text-lg">Includes Teflon Wax</h1>
             <p className="font-bold text-5xl mb-2 text-black flex items-start justify-center">
               <span className="text-lg font-bold">$</span>39.95
             </p>
