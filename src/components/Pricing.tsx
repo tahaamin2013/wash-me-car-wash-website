@@ -104,31 +104,36 @@ const Pricing: React.FC = () => {
               Add $2 For Wax
             </span>
           </p>
-<hr />
-<div className="mt-3 border-0 border-t-2 border-black">
-            <p className="font-sans text-2xl font-bold uppercase">
-              4 Washes Per Month
-            </p>
-            <h1 className="text-lg">Includes Teflon Wax</h1>
+          <hr />
+          <div className="mt-3 border-0 border-t-2 border-black">
+            <h1 className="text-lg  font-bold">
+              <span className=" text-[#717c33]">Join</span> <br /> Our Monthly
+              Car Wash Membership <br />{" "}
+              <span className="text-[#717c33]"> & </span> <br />{" "}
+              <span className=" uppercase text-red-600">save money!</span>
+            </h1>
+            <Link
+              target="_blank"
+              href="https://touch4wash.com/hugesavings/hugesavingmembers.php?flk=2266b543ddd7762a69f0a4c0173dfbdd"
+              className="flex items-center text-xl rounded-md w-full justify-center my-2"
+            >
+              <Button
+                size="lg"
+                className="bg-green text-black font-bold py-8 hover:text-white text-lg"
+              >
+                Compact Club <br />
+                Membership
+              </Button>
+            </Link>
             <p className="font-bold text-5xl mb-2 text-black flex items-start justify-center">
               <span className="text-lg font-bold">$</span>34.95
             </p>
+            <p className="font-sans text-[10px]  uppercase">
+              4 Washes Per Month
+            </p>
+            <h1 className="text-[10px] mb-2">Includes Teflon Wax</h1>
             <p className="flex flex-col gap-1 mb-1 w-full items-center justify-center">
-              <Link
-                target="_blank"
-                href="https://touch4wash.com/hugesavings/hugesavingmembers.php?flk=2266b543ddd7762a69f0a4c0173dfbdd"
-                className="flex items-center text-xl rounded-md"
-              >
-                <Button
-                  size="lg"
-                  className="bg-green text-black font-bold py-8 text-lg"
-                >
-                  Compact Club <br />
-                  Membership
-                </Button>
-              </Link>
-
-              <p className="mt-3">
+              <p className="">
                 Click the Above Link <br />
                 Or
                 <br />
@@ -181,7 +186,7 @@ const Pricing: React.FC = () => {
           <p className="flex flex-col gap-1 mb-1">
             <span className="flex items-center justify-center w-full gap-2">
               <FaCheck fill="green" />
-             Tire and All over Pre-soak
+              Tire and All over Pre-soak
             </span>
             <span className="flex items-center justify-center w-full gap-2">
               <FaCheck fill="green" />
@@ -209,28 +214,34 @@ const Pricing: React.FC = () => {
             </span>
           </p>
           <div className="mt-3 border-0 border-t-2 border-black">
-            <p className="font-sans text-2xl font-bold uppercase">
-              4 Washes Per Month
-            </p>
-            <h1 className="text-lg">Includes Teflon Wax</h1>
+            <h1 className="text-lg  font-bold">
+              <span className=" text-[#717c33]">Join</span> <br /> Our Monthly
+              Car Wash Membership <br />{" "}
+              <span className="text-[#717c33]"> & </span> <br />{" "}
+              <span className=" uppercase text-red-600">save money! </span>
+            </h1>
+            <Link
+              target="_blank"
+              href="https://touch4wash.com/hugesavings/hugesavingmembers.php?flk=d283035156d4b2fd9776ac54c0a05cd7"
+              className="flex items-center text-xl rounded-md w-full justify-center my-2"
+            >
+              <Button
+                size="lg"
+                className="bg-green text-black  font-bold py-8 hover:text-white text-lg"
+              >
+                Mid Size Club <br /> Membership
+              </Button>
+            </Link>
+
             <p className="font-bold text-5xl mb-2 text-black flex items-start justify-center">
               <span className="text-lg font-bold">$</span>36.95
             </p>
-            <p className="flex flex-col gap-1 mb-1 w-full items-center justify-center">
-              <Link
-                target="_blank"
-                href="https://touch4wash.com/hugesavings/hugesavingmembers.php?flk=d283035156d4b2fd9776ac54c0a05cd7"
-                className="flex items-center text-xl rounded-md"
-              >
-                <Button
-                  size="lg"
-                  className="bg-green text-black font-bold py-8 text-lg"
-                >
-                  Mid Size Club <br /> Membership
-                </Button>
-              </Link>
-
-              <p className="mt-3">
+            <p className="mt-3">
+              <p className="font-sans text-[10px]  uppercase">
+                4 Washes Per Month
+              </p>
+              <h1 className="text-[10px] mb-2">Includes Teflon Wax</h1>
+              <p className="flex flex-col gap-1 mb-1 w-full items-center justify-center">
                 Click the Above Link <br />
                 Or
                 <br />
@@ -310,7 +321,7 @@ const Pricing: React.FC = () => {
           <p className="flex flex-col gap-1 mb-1">
             <span className="flex items-center justify-center w-full gap-2">
               <FaCheck fill="green" />
-             Tire and All over Pre-soak
+              Tire and All over Pre-soak
             </span>
             <span className="flex items-center justify-center w-full gap-2">
               <FaCheck fill="green" />
@@ -338,28 +349,34 @@ const Pricing: React.FC = () => {
             </span>
           </p>
           <div className="mt-3 border-0 border-t-2 border-black">
-            <p className="font-sans text-2xl font-bold uppercase">
-              4 Washes Per Month
-            </p>
-            <h1 className="text-lg">Includes Teflon Wax</h1>
-            <p className="font-bold text-5xl mb-2 text-black flex items-start justify-center">
-              <span className="text-lg font-bold">$</span>39.95
-            </p>
-
             <p className="flex flex-col gap-1 mb-1 w-full items-center justify-center">
+              <h1 className="text-lg  font-bold">
+                <span className=" text-[#717c33]">Join</span> <br /> Our Monthly
+                Car Wash Membership <br />{" "}
+                <span className="text-[#717c33]"> & </span>
+                <br />{" "}
+                <span className="text-red-600 uppercase">save money!</span>
+              </h1>
               <Link
                 target="_blank"
                 href="https://touch4wash.com/hugesavings/hugesavingmembers.php?flk=a68d0e837cb627acbfc0e9a24343e4ac"
-                className="flex items-center text-xl rounded-md"
+                className="flex items-center text-xl rounded-md w-full justify-center my-2"
               >
                 <Button
                   size="lg"
-                  className="bg-green text-black font-bold py-8 text-lg"
+                  className="bg-green text-black font-bold py-8 hover:text-white text-lg"
                 >
                   SUV Truck Club <br /> Membership
                 </Button>
               </Link>
-              <p className="mt-3">
+              <p className="font-bold text-5xl  text-black flex items-start justify-center">
+                <span className="text-lg font-bold">$</span>39.95
+              </p>
+              <p className="">
+                <p className="font-sans text-[10px]  uppercase">
+                  4 Washes Per Month
+                </p>
+                <h1 className="text-[10px] mb-2">Includes Teflon Wax</h1>
                 Click the Above Link <br />
                 Or
                 <br />
