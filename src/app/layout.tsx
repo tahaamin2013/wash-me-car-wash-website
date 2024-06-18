@@ -33,6 +33,8 @@ export default function RootLayout({
             async
             data-user="36493"
             data-account="41469"
+            onLoad={() => console.log("Script loaded successfully")}
+            onError={(e) => console.error("Error loading script", e)}
           />
           {children}
           <Topbutton /> <Footer />
