@@ -109,7 +109,8 @@ const Pricing: React.FC = () => {
             <h1 className="text-lg  font-bold">
               <span className=" text-[#717c33]">Join</span> <br /> Our Monthly
               Car Wash Membership <br />{" "}
-              <span className="text-[#717c33]"> & </span> <br />{" "}
+              <h1 className="text-lg mb-1">Includes Teflon Wax</h1>
+              <span className="text-[#717c33]"> & </span> <br />
               <span className=" uppercase text-red-600">save money!</span>
             </h1>
             <Link
@@ -131,7 +132,6 @@ const Pricing: React.FC = () => {
             <p className="font-sans text-[10px]  uppercase">
               4 Washes Per Month
             </p>
-            <h1 className="text-[10px] mb-2">Includes Teflon Wax</h1>
             <p className="flex flex-col gap-1 mb-1 w-full items-center justify-center">
               <p className="">
                 Click the Above Link <br />
@@ -217,6 +217,7 @@ const Pricing: React.FC = () => {
             <h1 className="text-lg  font-bold">
               <span className=" text-[#717c33]">Join</span> <br /> Our Monthly
               Car Wash Membership <br />{" "}
+              <h1 className="text-lg mb-1">Includes Teflon Wax</h1>
               <span className="text-[#717c33]"> & </span> <br />{" "}
               <span className=" uppercase text-red-600">save money! </span>
             </h1>
@@ -240,7 +241,6 @@ const Pricing: React.FC = () => {
               <p className="font-sans text-[10px]  uppercase">
                 4 Washes Per Month
               </p>
-              <h1 className="text-[10px] mb-2">Includes Teflon Wax</h1>
               <p className="flex flex-col gap-1 mb-1 w-full items-center justify-center">
                 Click the Above Link <br />
                 Or
@@ -353,6 +353,7 @@ const Pricing: React.FC = () => {
               <h1 className="text-lg  font-bold">
                 <span className=" text-[#717c33]">Join</span> <br /> Our Monthly
                 Car Wash Membership <br />{" "}
+                <h1 className="text-lg mb-1">Includes Teflon Wax</h1>
                 <span className="text-[#717c33]"> & </span>
                 <br />{" "}
                 <span className="text-red-600 uppercase">save money!</span>
@@ -376,7 +377,6 @@ const Pricing: React.FC = () => {
                 <p className="font-sans text-[10px]  uppercase">
                   4 Washes Per Month
                 </p>
-                <h1 className="text-[10px] mb-2">Includes Teflon Wax</h1>
                 Click the Above Link <br />
                 Or
                 <br />
