@@ -1,22 +1,12 @@
+import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
+import Topbutton from "@/components/Topbutton";
+import { Toaster } from "@/components/ui/sonner";
+import Loader from "@/lib/Loader";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
-import Link from "next/link";
-import Topbutton from "@/components/Topbutton";
-import Footer from "@/components/Footer";
-import Memberships from "@/components/memberships";
-import Loader from "@/lib/Loader";
-import { Toaster } from "@/components/ui/sonner"
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog"
-import Popup from "@/components/Popup";
+import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -35,11 +25,17 @@ export default function RootLayout({
       <body className={inter.className}>
         <Loader>
           {/* <Memberships /> */}
-           <Popup />
+          {/* <Popup /> */}
           <Navbar />
           <Toaster />
+          <Script
+            src="https://a.omappapi.com/app/js/api.min.js"
+            async
+            data-user="36493"
+            data-account="41469"
+          />
           {children}
-          <Topbutton />          <Footer />
+          <Topbutton /> <Footer />
         </Loader>
       </body>
     </html>
