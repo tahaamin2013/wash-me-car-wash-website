@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="overflow-x-hidden">
       <head>
-          <Script
+          <script
             src="https://a.omappapi.com/app/js/api.min.js"
             async
             data-user="36493"
