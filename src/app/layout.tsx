@@ -30,7 +30,7 @@ export default function RootLayout({
           {/* <Popup /> */}
           <Navbar />
           <Toaster />
-          <Script type="text/javascript" src="/js/OptinMonster.js"></Script>
+          <Script type="text/javascript" src='https://a.omappapi.com/app/js/api.min.js'></Script>
           <RouteChangeListener />
           {/* <OptinMonsterEmbed /> */}
           {children}
