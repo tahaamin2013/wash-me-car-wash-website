@@ -6,7 +6,8 @@ import Loader from "@/lib/Loader";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Script from "next/script";
+import { RouteChangeListener } from "@/provider/RouteChangeListener";
+import { OptinMonsterEmbed } from "@/provider/omEmbed";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,12 +29,9 @@ export default function RootLayout({
           {/* <Popup /> */}
           <Navbar />
           <Toaster />
-          <Script
-            src="https://a.omappapi.com/app/js/api.min.js"
-            async
-            data-user="36493"
-            data-account="41469"
-          />
+          <script type="text/javascript" src="/js/OptinMonster.js"></script>
+          <RouteChangeListener />
+          {/* <OptinMonsterEmbed /> */}
           {children}
           <Topbutton /> <Footer />
         </Loader>
