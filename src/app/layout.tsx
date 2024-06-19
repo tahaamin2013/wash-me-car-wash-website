@@ -8,6 +8,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { RouteChangeListener } from "@/provider/RouteChangeListener";
 import { OptinMonsterEmbed } from "@/provider/omEmbed";
+import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -29,7 +30,7 @@ export default function RootLayout({
           {/* <Popup /> */}
           <Navbar />
           <Toaster />
-          <script type="text/javascript" src="/js/OptinMonster.js"></script>
+          <Script type="text/javascript" src="/js/OptinMonster.js"></Script>
           <RouteChangeListener />
           {/* <OptinMonsterEmbed /> */}
           {children}
