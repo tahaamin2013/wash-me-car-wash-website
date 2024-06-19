@@ -22,20 +22,30 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="overflow-x-hidden">
-      <head>
-          <script
-            src="https://a.omappapi.com/app/js/api.min.js"
-            async
-            data-user="36493"
-            data-account="41469"
-          />
-      </head>
       <body className={inter.className}>
         <Loader>
           {/* <Memberships /> */}
           {/* <Popup /> */}
           <Navbar />
           <Toaster />
+          {/* <Script
+            src="https://a.omappapi.com/app/js/api.min.js"
+            async
+            data-user="36493"
+            data-account="41469"
+          /> */}
+          <Script>
+      (function (d, u, ac) {
+        var s = d.createElement("script");
+        s.type = "text/javascript";
+        s.src = "https://a.omappapi.com/app/js/api.min.js";
+        s.async = true;
+        s.dataset.user = u;
+        s.dataset.account = ac;
+        d.getElementsByTagName("head")[0].appendChild(s);
+      })(document, 36493, 41469);
+    </Script>
+
           {children}
           <Topbutton /> <Footer />
         </Loader>
