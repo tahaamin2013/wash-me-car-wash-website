@@ -27,7 +27,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <Loader>
           {/* <Memberships /> */}
-          {/* <Popup /> */}
+          <Popup />
           <Navbar />
           <Toaster />
           <Script type="text/javascript" src='https://a.omappapi.com/app/js/api.min.js'></Script>
