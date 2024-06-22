@@ -9,6 +9,7 @@ import "./globals.css";
 import { RouteChangeListener } from "@/provider/RouteChangeListener";
 import { OptinMonsterEmbed } from "@/provider/omEmbed";
 import Script from "next/script";
+import LeadGenForm from "@/components/Popup";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -27,10 +28,13 @@ export default function RootLayout({
       <body className={inter.className}>
         <Loader>
           {/* <Memberships /> */}
-          <Popup />
+          <LeadGenForm />
           <Navbar />
           <Toaster />
-          <Script type="text/javascript" src='https://a.omappapi.com/app/js/api.min.js'></Script>
+          <Script
+            type="text/javascript"
+            src="https://a.omappapi.com/app/js/api.min.js"
+          ></Script>
           <RouteChangeListener />
           {/* <OptinMonsterEmbed /> */}
           {children}
