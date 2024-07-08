@@ -10,7 +10,7 @@ import Popup from '@/components/Popup'
 import { RouteChangeListener } from "@/provider/RouteChangeListener";
 import { OptinMonsterEmbed } from "@/provider/omEmbed";
 import Script from "next/script";
-import LeadGenForm from "@/components/Popup";
+import MyPopup from "@/components/Popup";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,10 +28,9 @@ export default function RootLayout({
     <html lang="en" className="overflow-x-hidden">
       <body className={inter.className}>
         <Loader>
-          <LeadGenForm />
+          <MyPopup />
           <Navbar />
           <Toaster />
-         <Popup />
           <Script
             type="text/javascript"
             src="https://a.omappapi.com/app/js/api.min.js"
