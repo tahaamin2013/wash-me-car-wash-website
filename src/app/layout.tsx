@@ -30,13 +30,6 @@ export default function RootLayout({
           <LeadGenForm />
           <Navbar />
           <Toaster />
-          <div style={{fontSize: "11px", display: "block", textAlign: "center", fontFamily: "arial", width: "205px"}}>
-            <a href="http://www.postcardmania.com/?bid=1130837" target="_blank" rel="noopener noreferrer">
-              <img src="//mypostcardmania.com/mailbox/img/0365053m.png" alt="Postcard Advertising" />
-            </a>
-            <br />
-            <a href="http://www.postcardmania.com/?bid=1130837" target="_blank" rel="noopener noreferrer">Postcard Advertising</a>
-          </div>
          
           <Script
             type="text/javascript"

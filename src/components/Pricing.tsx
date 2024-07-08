@@ -34,18 +34,50 @@ const Pricing: React.FC = () => {
       id="#MemberShips"
       className="font-sans text-center mt-8 my-8 flex justify-center items-center flex-col"
     >
-      <div className="flex flex-row items-center gap-0 sm:gap-[40px]">
-        <Image
-          src="https://raw.githubusercontent.com/aimahusnain/Washme-CarWash-Images/main/Frame-1.png"
-          alt="image of house"
-          className="w-[200px] h-[200px] ml-0"
-          width={200}
-          height={200}
-        />
-        <div>
-          <h1 className="text-4xl mb-2 font-bold">Choose Your Plan</h1>
+      <div className="flex md:flex-row flex-col w-full sm:justify-between justify-center items-center">
+        <div
+          className="md:ml-24"
+          style={{
+            fontSize: "11px",
+            display: "block",
+            textAlign: "center",
+            fontFamily: "arial",
+            width: "205px",
+          }}
+        >
+          <a
+            href="http://www.postcardmania.com/?bid=1130837"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="//mypostcardmania.com/mailbox/img/0365053m.png"
+              alt="Postcard Advertising"
+            />
+          </a>
+          <br />
+          <a
+            href="http://www.postcardmania.com/?bid=1130837"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Postcard Advertising
+          </a>
         </div>
-        <div />
+        <div className="flex md:flex-row flex-col items-center gap-0 sm:gap-[40px]">
+          <Image
+            src="https://raw.githubusercontent.com/aimahusnain/Washme-CarWash-Images/main/Frame-1.png"
+            alt="image of house"
+            className="w-[200px] h-[200px] ml-0"
+            width={200}
+            height={200}
+          />
+          <div>
+            <h1 className="text-4xl mb-2 font-bold">Choose Your Plan</h1>
+          </div>
+          <div />
+        </div>
+        <div className="md:mx-20" />
       </div>
 
       <div className="flex md:flex-row flex-col w-full items-start mt-4 justify-center gap-[50px] mb-3">
