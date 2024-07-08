@@ -74,6 +74,7 @@ const Navbar = () => {
           <div className={`flex justify-between items-center`}>
             <Link href="/" className="outline-none absolute">
               <Image
+                loading="lazy"
                 src="https://raw.githubusercontent.com/aimahusnain/Washme-CarWash-Images/main/Wash-Me-Logo.png"
                 className="w-[100px] h-[70px] py-1"
                 alt="Logo"

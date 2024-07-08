@@ -23,6 +23,7 @@ export default function Footer() {
       <div className="flex flex-col">
         <div className="flex">
           <Image
+            loading="lazy"
             src="/Hand Wash Open 9 - 4.png"
             width={100}
             height={300}
@@ -67,10 +68,13 @@ export default function Footer() {
               <IoMdMail className="mt-0.5 fill-green" />
               eileen@eileentefft.com
             </p>
-              <Link className="m-0 dark:text-dark p-0 flex flex-row items-center gap-3" href='tel:360-4304126'>
+            <Link
+              className="m-0 dark:text-dark p-0 flex flex-row items-center gap-3"
+              href="tel:360-4304126"
+            >
               <FaPhoneAlt className="fill-green" />
               360-4304126
-              </Link>
+            </Link>
           </div>
           <div className="flex text-right justify-center mt-8 space-x-6">
             <TooltipProvider>

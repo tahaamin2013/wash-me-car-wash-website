@@ -54,6 +54,7 @@ const GoTopButton = () => {
         className="w-[170px] absolute h-[30px] bottom-6 right-[1px]"
         width={170}
         height={30}
+        loading="lazy"
       />
     </motion.button>
   );

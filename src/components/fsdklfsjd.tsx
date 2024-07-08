@@ -61,8 +61,11 @@ const Git: React.FC = () => {
             </div>
           </div>
 
-          <img
-            loading="eager"
+          <Image
+            
+            width={500}
+            height={500}
+            loading="lazy"
             className="max-w-full "
             src="https://raw.githubusercontent.com/aimahusnain/Washme-CarWash-Images/main/RealMockup.webp"
             alt={`Step 1 image`}

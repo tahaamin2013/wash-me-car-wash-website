@@ -120,6 +120,7 @@ const Home: React.FC = () => {
         src="https://raw.githubusercontent.com/aimahusnain/Washme-CarWash-Images/main/washhouse.webp"
         alt="image of house"
         className="w-screen"
+        loading="lazy"
         width={3200}
         height={390}
       />
@@ -144,7 +145,6 @@ const Home: React.FC = () => {
           <Contact />
         </div> */}
       </main>
-
     </>
   );
 };

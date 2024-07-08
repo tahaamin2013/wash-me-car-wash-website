@@ -125,6 +125,7 @@ const Reviews = () => {
                       <div className="p-2 border border-white rounded-lg py-3 sm:py-5 w-full h-full ml-3">
                         <div className="flex gap-3 items-center">
                           <Image
+                            loading="lazy"
                             width={45}
                             height={45}
                             src={review.reviewer_picture_url}

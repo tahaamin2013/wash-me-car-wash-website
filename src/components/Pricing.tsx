@@ -62,6 +62,7 @@ const Pricing: React.FC = () => {
         </div>
         <div className="flex md:flex-row flex-col items-center gap-0 sm:gap-[40px]">
           <Image
+                loading="lazy"
             src="https://raw.githubusercontent.com/aimahusnain/Washme-CarWash-Images/main/Frame-1.png"
             alt="image of house"
             className="w-[200px] h-[200px] ml-0"
@@ -85,11 +86,11 @@ const Pricing: React.FC = () => {
           }}
         >
           <Image
+                loading="lazy"
             alt="car image"
             src="https://raw.githubusercontent.com/aimahusnain/Washme-CarWash-Images/main/car3.png"
             width={320}
             height={250}
-            loading="eager"
             className="w-52 hover:scale-110 transition-all duration-300"
           />
           <h1 className="text-2xl font-bold capitalize">
@@ -170,11 +171,11 @@ const Pricing: React.FC = () => {
             </p>
             <div className="w-full flex justify-center">
               <Image
+                loading="lazy"
                 className="mt-3"
                 src="https://raw.githubusercontent.com/aimahusnain/Washme-CarWash-Images/main/1st%20qr.png"
                 width={150}
                 height={250}
-                loading="eager"
                 alt="Compact Club"
               />
             </div>
@@ -193,11 +194,11 @@ const Pricing: React.FC = () => {
           }}
         >
           <Image
+                loading="lazy"
             alt="car image"
             src="https://raw.githubusercontent.com/aimahusnain/Washme-CarWash-Images/main/sedan.png"
             width={320}
             height={250}
-            loading="eager"
             className="w-52 hover:scale-110 transition-all duration-300"
           />
           <h1 className="text-2xl font-bold capitalize">
@@ -278,8 +279,8 @@ const Pricing: React.FC = () => {
             </p>
             <div className="w-full flex justify-center">
               <Image
+                loading="lazy"
                 className="mt-3"
-                loading="eager"
                 src="https://raw.githubusercontent.com/aimahusnain/Washme-CarWash-Images/main/2nd%20qr.png"
                 width={150}
                 height={250}
@@ -304,31 +305,31 @@ const Pricing: React.FC = () => {
             <CarouselContent>
               <CarouselItem className="w-full flex justify-center items-center">
                 <Image
+                loading="lazy"
                   alt="car image"
                   src="https://raw.githubusercontent.com/aimahusnain/Washme-CarWash-Images/main/car2.png"
                   width={320}
                   height={250}
-                  loading="eager"
                   className="w-52 hover:scale-110 transition-all duration-300"
                 />
               </CarouselItem>
 
               <CarouselItem className="w-full flex justify-center items-center">
                 <Image
+                loading="lazy"
                   alt="car image"
                   src="https://raw.githubusercontent.com/aimahusnain/Washme-CarWash-Images/main/car1.png"
                   width={320}
                   height={250}
-                  loading="eager"
                   className="w-52 hover:scale-110 transition-all duration-300"
                 />
               </CarouselItem>
               <CarouselItem className="w-full flex justify-center items-center">
                 <Image
+                loading="lazy"
                   alt="car image"
                   src="https://raw.githubusercontent.com/aimahusnain/Washme-CarWash-Images/main/van.png"
                   width={320}
-                  loading="eager"
                   height={250}
                   className="w-52 hover:scale-110 transition-all duration-300"
                 />
@@ -413,11 +414,11 @@ const Pricing: React.FC = () => {
             </p>
             <div className="w-full flex justify-center">
               <Image
+                loading="lazy"
                 className="mt-1"
                 src="https://raw.githubusercontent.com/aimahusnain/Washme-CarWash-Images/main/last%20qr.png"
                 width={150}
                 height={250}
-                loading="eager"
                 alt="Compact Club"
               />
             </div>
