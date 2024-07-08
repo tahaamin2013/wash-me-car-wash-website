@@ -6,6 +6,7 @@ import Loader from "@/lib/Loader";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Popup from '@/components/Popup'
 import { RouteChangeListener } from "@/provider/RouteChangeListener";
 import { OptinMonsterEmbed } from "@/provider/omEmbed";
 import Script from "next/script";
@@ -30,7 +31,7 @@ export default function RootLayout({
           <LeadGenForm />
           <Navbar />
           <Toaster />
-         
+         <Popup />
           <Script
             type="text/javascript"
             src="https://a.omappapi.com/app/js/api.min.js"

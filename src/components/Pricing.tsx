@@ -21,14 +21,10 @@ interface Plan {
 }
 
 const Pricing: React.FC = () => {
-  const [selectedCar, setSelectedCar] = useState<string>("small");
   const plugin = React.useRef(
     Autoplay({ delay: 2000, stopOnInteraction: false })
   );
 
-  useEffect(() => {
-    console.log(`Selected Car: ${selectedCar}`);
-  }, [selectedCar]);
   return (
     <div
       id="#MemberShips"
