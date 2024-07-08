@@ -103,10 +103,10 @@ const WhatWeDo: React.FC = () => {
                     className="w-[700px] h-[500px] object-cover object-top lg:block hidden"
                   />
                   <div className="mt-4 flex flex-col flex-wrap ml-6">
-                    <h1 className="text-left text-white">
-                      <h1 className="font-bold text-2xl">{item.title}</h1>
-                      <p className="text-sm mt-3 mb-3">{item.description}</p>
+                    <h1 className="text-left text-white font-bold text-2xl">
+                      {item.title}
                     </h1>
+                    <p className="text-sm mt-3 mb-3">{item.description}</p>
                   </div>
                   <Image
                     width={500}
