@@ -79,11 +79,11 @@ const Home: React.FC = () => {
           playsInline
           className="w-full pt-[50px] object-cover"
         >
-          {/* <source
+          <source
             src="/WashMe Car Wash Video - Edited.mp4"
             className="object-cover"
             type="video/mp4"
-          /> */}
+          />
         </video>
 
         <div className="absolute top-[40%] sm:top-[35%] items-center justify-center w-full flex flex-col">
