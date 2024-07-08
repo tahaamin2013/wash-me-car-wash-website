@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -94,7 +94,7 @@ const LeadGenForm = () => {
                 <Button
                   aria-label="Subscribe Button"
                   type="submit"
-                  className="bg-orange-500 text-white"
+                  className="bg-orange-600 text-white"
                 >
                   Subscribe
                 </Button>

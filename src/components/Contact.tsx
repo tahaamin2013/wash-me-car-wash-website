@@ -288,9 +288,13 @@ const Contact = () => {
           </div>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11057.182314530331!2d-122.9279929!3d46.14486!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54946c94ec9bed79%3A0x41eb6feac6768b1b!2sWash%20Me%20Car%20Wash!5e0!3m2!1sen!2sbr!4v1708203053173!5m2!1sen!2sbr"
-            className="rounded-xl mt-2 w-full"
+            className="rounded-xl mt-2 w-full sm:w-full sm:h-[300px] h-[400px] overflow-hidden"
+            width="600"
+            height="300"
             loading="lazy"
+            title="Google Maps location of Wash Me Car Wash"
           ></iframe>
+
           <div className="flex flex-col gap-1 mt-6">
             <p className="flex gap-3 items-center">
               <IoMdMail className="mt-0.5 fill-green" />

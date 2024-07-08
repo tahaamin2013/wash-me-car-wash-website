@@ -27,12 +27,16 @@ const FAQ = () => {
             className="grid grid-cols-1 text-left gap-x-8 w-full"
           >
             <AccordionItem className="border-b-zinc-800" value="item-1">
-              <AccordionTrigger className="!text-left">
-                1. How do I pay and renew my membership?
-              </AccordionTrigger>
-              <AccordionContent>
-                You can conveniently pay and renew through our app.
-              </AccordionContent>
+              <h3>
+                <AccordionTrigger className="!text-left">
+                  1. How do I pay and renew my membership?
+                </AccordionTrigger>
+              </h3>
+              <h3>
+                <AccordionContent>
+                  You can conveniently pay and renew through our app.
+                </AccordionContent>
+              </h3>
             </AccordionItem>
             <AccordionItem className="border-b-zinc-800" value="item-2">
               <AccordionTrigger className="!text-left">
