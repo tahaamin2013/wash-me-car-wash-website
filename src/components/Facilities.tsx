@@ -10,7 +10,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import React, { useRef } from "react";
 import Image from "next/image";
 
-const New: React.FC = () => {
+const Facilities: React.FC = () => {
   const plugin = useRef(Autoplay({ delay: 5000, stopOnInteraction: false }));
   return (
     <div
@@ -252,15 +252,6 @@ const New: React.FC = () => {
                 className="w-[365px] object-cover object-center h-full rounded-xl border-2 border-white"
               />
 
-              {/* <Image
-                          loading="lazy"
-                alt="Step 6"
-                width={365}
-                height={400}
-                src="https://raw.githubusercontent.com/aimahusnain/Washme-CarWash-Images/main/phone.webp"
-                className="w-[365px] object-cover rounded-xl border-2 border-white"
-                loading="lazy"
-              /> */}
             </CarouselItem>
           </CarouselContent>
           <CarouselPrevious />
@@ -271,4 +262,4 @@ const New: React.FC = () => {
   );
 };
 
-export default New;
+export default Facilities;

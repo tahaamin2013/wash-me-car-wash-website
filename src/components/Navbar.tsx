@@ -85,21 +85,13 @@ const Navbar = () => {
             </Link>
             <div className="w-full flex justify-end">
               <div className="md:block hidden">
-                <Goy id="Our Services" level="h2">
-                  Our Services
-                </Goy>
-                <Goy id="MemberShips" level="h2">
-                  Save Here
-                </Goy>
-                <Goy id="Meet the Team" level="h2">
-                  Meet The Team
-                </Goy>
-                <Goy id="FAQ" level="h2">
-                  FAQ
-                </Goy>
-                <Goy id="Contact" level="h2">
-                  Contact us
-                </Goy>
+                <div className="text-white font-bold flex gap-5 text-lg">
+                  <Goy id="Our Services">Our Services</Goy>
+                  <Goy id="#MemberShips">Save Here</Goy>
+                  <Goy id="Meet the Team">Meet The Team</Goy>
+                  <Goy id="FAQ">FAQ</Goy>
+                  <Goy id="Contact">Contact us</Goy>
+                </div>
               </div>
               <div className="md:hidden block z-50">
                 <Sheet>

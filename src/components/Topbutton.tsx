@@ -1,5 +1,5 @@
 "use client";
-// components/GoTopButton.js
+
 import { useEffect, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 import Image from "next/image";

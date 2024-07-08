@@ -19,7 +19,7 @@ const FAQ = () => {
       >
         <div className="bottom-6 text-left left-4 right-4">
           <h1 className="font-bold text-2xl text-center">
-            Got Questions? We’ve Got Answers!
+            Got Questions? We&apos;ve Got Answers!
           </h1>
           <Accordion
             type="single"

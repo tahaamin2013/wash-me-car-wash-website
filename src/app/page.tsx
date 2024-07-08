@@ -6,7 +6,7 @@ import Pricing from "@/components/Pricing";
 import Team from "@/components/Team";
 import WhatWeDo from "@/components/WhatWeDo";
 import Git from "@/components/fsdklfsjd";
-import New from "@/components/new";
+import Facilities from "@/components/Facilities";
 import Reviews from "@/components/reviews";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -127,7 +127,7 @@ const Home: React.FC = () => {
       <Map />
       <main>
         <div className="-mt-3">
-          <New />
+          <Facilities />
         </div>
         <div className="mx-5">
           {" "}

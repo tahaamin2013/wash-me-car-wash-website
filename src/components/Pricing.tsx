@@ -41,7 +41,7 @@ const Pricing: React.FC = () => {
             width: "205px",
           }}
         >
-          <a
+          <Link
             href="http://www.postcardmania.com/?bid=1130837"
             target="_blank"
             rel="noopener noreferrer"
@@ -50,7 +50,7 @@ const Pricing: React.FC = () => {
               src="//mypostcardmania.com/mailbox/img/0365053m.png"
               alt="Postcard Advertising"
             />
-          </a>
+          </Link>
           <br />
           <a
             href="http://www.postcardmania.com/?bid=1130837"
