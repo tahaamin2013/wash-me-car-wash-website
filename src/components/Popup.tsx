@@ -67,6 +67,7 @@ const LeadGenForm = () => {
                 <button
                   onClick={handleCloseForm}
                   className="mt-4 absolute right-3 top-1 text-white font-bold text-4xl"
+                  aria-label="Closing Button"
                 >
                   {" "}
                   <X />
@@ -75,10 +76,14 @@ const LeadGenForm = () => {
                   Get First Month Free with Our Monthly Memberships!
                 </h2>
                 <p className="mb-6">
-                  Sign up for our exclusive monthly memberships & Enjoy 4 washes a month, Saving up to $36!
+                  Sign up for our exclusive monthly memberships & Enjoy 4 washes
+                  a month, Saving up to $36!
                 </p>
               </div>
-              <form onSubmit={handleSubmit} className="flex p-8 pt-4 bg-black/30 gap-2 items-center justify-center">
+              <form
+                onSubmit={handleSubmit}
+                className="flex p-8 pt-4 bg-black/30 gap-2 items-center justify-center"
+              >
                 <Input
                   type="email"
                   name="email"
@@ -86,7 +91,11 @@ const LeadGenForm = () => {
                   placeholder="Enter Your Email Address"
                   className="w-2/3 text-gray-700"
                 />
-                <Button type="submit" className="bg-orange-500 text-white">
+                <Button
+                  aria-label="Subscribe Button"
+                  type="submit"
+                  className="bg-orange-500 text-white"
+                >
                   Subscribe
                 </Button>
               </form>
@@ -107,7 +116,11 @@ const LeadGenForm = () => {
             <div className="bg-myBlue text-white rounded-lg shadow-lg w-full max-w-md text-center p-8">
               <h2 className="text-2xl mb-4">Success!</h2>
               <p>Your form has been submitted successfully.</p>
-              <Button onClick={() => setShowSuccessMessage(false)} className="mt-4 bg-white text-black hover:text-white">
+              <Button
+                aria-label="Close Button"
+                onClick={() => setShowSuccessMessage(false)}
+                className="mt-4 bg-white text-black hover:text-white"
+              >
                 Close
               </Button>
             </div>

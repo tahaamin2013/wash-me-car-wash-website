@@ -19,7 +19,9 @@ const Goy = ({ id, children }: any) => {
   };
 
   return (
-    <button onClick={(e) => handleButtonClick(e, `${id}`)}>{children}</button>
+    <button aria-label="Go Button" onClick={(e) => handleButtonClick(e, `${id}`)}>
+      {children}
+    </button>
   );
 };
 

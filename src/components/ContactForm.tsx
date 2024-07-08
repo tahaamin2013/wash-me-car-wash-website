@@ -46,10 +46,15 @@ export function Contact() {
 
   return (
     <>
-      <form onSubmit={handleSubmit} className="max-w-sm my-10 mx-auto flex flex-col items-center justify-center">
-      <h1 className='text-4xl font-bold mx-auto mb-2'>Contact Form</h1>
+      <form
+        onSubmit={handleSubmit}
+        className="max-w-sm my-10 mx-auto flex flex-col items-center justify-center"
+      >
+        <h1 className="text-4xl font-bold mx-auto mb-2">Contact Form</h1>
         <div className="mb-4">
-          <label htmlFor="name" className="block mb-1">Name</label>
+          <label htmlFor="name" className="block mb-1">
+            Name
+          </label>
           <input
             type="text"
             name="name"
@@ -61,7 +66,9 @@ export function Contact() {
           />
         </div>
         <div className="mb-4">
-          <label htmlFor="email" className="block mb-1">Email</label>
+          <label htmlFor="email" className="block mb-1">
+            Email
+          </label>
           <input
             type="email"
             name="email"
@@ -73,7 +80,9 @@ export function Contact() {
           />
         </div>
         <div className="mb-4">
-          <label htmlFor="phone" className="block mb-1">Phone Number</label>
+          <label htmlFor="phone" className="block mb-1">
+            Phone Number
+          </label>
           <input
             type="tel"
             name="phone"
@@ -84,7 +93,13 @@ export function Contact() {
             className="w-full px-4 py-2 rounded border border-gray-300 focus:border-blue-500 focus:outline-none"
           />
         </div>
-        <Button type="submit" className='bg-black text-white'>Submit Form</Button>
+        <Button
+          type="submit"
+          aria-label="Submit Form"
+          className="bg-black text-white"
+        >
+          Submit Form
+        </Button>
       </form>
     </>
   );

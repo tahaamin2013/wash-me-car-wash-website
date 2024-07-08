@@ -41,6 +41,7 @@ const Memberships = () => {
       <button
         onClick={(e) => handleButtonClick(e, "#MemberShips")}
         id="goTopBtn"
+        aria-label="We are now offering MEMBERSHIPS!!! button"
         // px-5 flex-wrap cursor-pointer z-50 fixed mb-4 justify-center sm:justify-between items-center
       >
         <p className="underline">We are now offering MEMBERSHIPS!!!</p>

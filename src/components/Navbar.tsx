@@ -55,6 +55,7 @@ const Navbar = () => {
         <button
           onClick={(e) => handleButtonClick(e, "#MemberShips")}
           id="goTopBtn"
+          aria-label="We are now offering MEMBERSHIPS!!! button"
         >
           <p className="underline">We are now offering MEMBERSHIPS!!!</p>
         </button>

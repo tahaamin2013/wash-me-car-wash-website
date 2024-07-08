@@ -62,7 +62,7 @@ const Pricing: React.FC = () => {
         </div>
         <div className="flex md:flex-row flex-col items-center gap-0 sm:gap-[40px]">
           <Image
-                loading="lazy"
+            loading="lazy"
             src="https://raw.githubusercontent.com/aimahusnain/Washme-CarWash-Images/main/Frame-1.png"
             alt="image of house"
             className="w-[200px] h-[200px] ml-0"
@@ -86,7 +86,7 @@ const Pricing: React.FC = () => {
           }}
         >
           <Image
-                loading="lazy"
+            loading="lazy"
             alt="car image"
             src="https://raw.githubusercontent.com/aimahusnain/Washme-CarWash-Images/main/car3.png"
             width={320}
@@ -149,6 +149,7 @@ const Pricing: React.FC = () => {
             >
               <Button
                 size="lg"
+                aria-label="Compact Club Membership button"
                 className="bg-green text-black font-bold py-8 hover:text-white text-lg"
               >
                 Compact Club <br />
@@ -194,7 +195,7 @@ const Pricing: React.FC = () => {
           }}
         >
           <Image
-                loading="lazy"
+            loading="lazy"
             alt="car image"
             src="https://raw.githubusercontent.com/aimahusnain/Washme-CarWash-Images/main/sedan.png"
             width={320}
@@ -257,6 +258,7 @@ const Pricing: React.FC = () => {
             >
               <Button
                 size="lg"
+                aria-label="Mid Size Club Membership"
                 className="bg-green text-black  font-bold py-8 hover:text-white text-lg"
               >
                 Mid Size Club <br /> Membership
@@ -305,7 +307,7 @@ const Pricing: React.FC = () => {
             <CarouselContent>
               <CarouselItem className="w-full flex justify-center items-center">
                 <Image
-                loading="lazy"
+                  loading="lazy"
                   alt="car image"
                   src="https://raw.githubusercontent.com/aimahusnain/Washme-CarWash-Images/main/car2.png"
                   width={320}
@@ -316,7 +318,7 @@ const Pricing: React.FC = () => {
 
               <CarouselItem className="w-full flex justify-center items-center">
                 <Image
-                loading="lazy"
+                  loading="lazy"
                   alt="car image"
                   src="https://raw.githubusercontent.com/aimahusnain/Washme-CarWash-Images/main/car1.png"
                   width={320}
@@ -326,7 +328,7 @@ const Pricing: React.FC = () => {
               </CarouselItem>
               <CarouselItem className="w-full flex justify-center items-center">
                 <Image
-                loading="lazy"
+                  loading="lazy"
                   alt="car image"
                   src="https://raw.githubusercontent.com/aimahusnain/Washme-CarWash-Images/main/van.png"
                   width={320}
@@ -394,6 +396,7 @@ const Pricing: React.FC = () => {
               >
                 <Button
                   size="lg"
+                  aria-label="SUV Truck Club Membership button"
                   className="bg-green text-black font-bold py-8 hover:text-white text-lg"
                 >
                   SUV Truck Club <br /> Membership
