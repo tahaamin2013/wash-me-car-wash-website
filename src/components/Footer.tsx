@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -9,8 +10,14 @@ import {
 import Goy from "./goy";
 import { IoMdMail } from "react-icons/io";
 import { FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
+import { useState } from "react";
 
 export default function Footer() {
+  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+
+  const handleVideoLoad = () => {
+    setIsVideoLoaded(true);
+  };
   return (
     <div
       id="Contact"
@@ -27,18 +34,20 @@ export default function Footer() {
             src="/Hand Wash Open 9 - 4.png"
             width={100}
             height={300}
-            className="h-[200px] sm:h-[300px] w-fit rounded-l-xl"
+            className="h-[163px] mt-4 lg:mt-0 relative w-[145px] lg:h-[270px] rounded-l-xl"
             alt="wash me car wash timing image with pink and blue color"
           />
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="w-[250px] sm:w-[440px] rounded-r-xl object-cover"
-          >
-            <source src="/car.mp4" className="object-cover" type="video/mp4" />
-          </video>
+    
+          <div className="relative w-full pb-[56.25%] h-0">
+            <iframe
+              src="https://www.youtube.com/embed/Nnp8YUHGzBs?autoplay=1&mute=1&loop=1&playlist=Nnp8YUHGzBs&controls=0&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1"
+              title="YouTube video player"
+              className="w-[290px] lg:w-[470px] rounded-r-xl h-[193px] lg:h-[270px]  top-0 right-0 pointer-events-none"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;"
+              referrerPolicy="strict-origin-when-cross-origin"
+            ></iframe>
+          </div>
         </div>
         <div className="flex sm:flex-row sm:justify-center items-center flex-col w-full mt-6 sm:gap-10">
           <h1 className="!text-white/60 sm:block hidden">
