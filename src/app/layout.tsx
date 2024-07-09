@@ -27,10 +27,10 @@ export default function RootLayout({
         <MyPopup />
         <Navbar />
         <Toaster />
-        {/* <Script
+        <Script
           type="text/javascript"
           src="https://a.omappapi.com/app/js/api.min.js"
-        /> */}
+        />
         <RouteChangeListener />
         {children}
         <Topbutton />
