@@ -12,13 +12,14 @@ const Team = () => {
         <div className="absolute inset-0">
           <Image
             alt="Wash me car wash team image"
-            src="https://raw.githubusercontent.com/aimahusnain/Washme-CarWash-Images/main/teem.webp"
+            src="https://raw.githubusercontent.com/aimahusnain/Washme-CarWash-Images/main/unnamed.jpg"
             width={1200}
-            loading="lazy"
             height={800}
-            className="w-full h-full object-center object-cover"
+            layout="responsive"
+            objectFit="cover"
+            loading="lazy"
+            className="rounded-lg"
           />
-   
         </div>
         <div className="relative z-10 inset-0 text-center flex justify-between w-full gap-3 items-center h-full">
           <div className="flex flex-col gap-4 mt-[1px] sm:mt-[120px] w-full justify-center items-center">
