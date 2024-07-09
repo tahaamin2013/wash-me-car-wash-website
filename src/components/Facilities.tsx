@@ -180,11 +180,6 @@ const Facilities: React.FC = () => {
               />
             </CarouselItem>
             <CarouselItem className="md:basis-1/2 lg:basis-1/3 w-full flex justify-center items-center">
-              {/* <img
-                src="https://raw.githubusercontent.com/aimahusnain/Washme-CarWash-Images/main/fet.webp"
-                loading="lazy"
-                className="w-[365px] object-cover rounded-xl border-2 border-white"
-              /> */}
               <Image
                 loading="lazy"
                 alt="Step 2"

@@ -8,7 +8,7 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import Goy from "./goy";
-import { contactDetails, socialLinks, navLinks } from "@/AllWebsiteData"; // Adjust the import path as needed
+import { contactDetails, socialLinks, navLinks } from "@/AllWebsiteData";
 import { FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 

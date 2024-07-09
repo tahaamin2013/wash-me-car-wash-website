@@ -12,7 +12,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import Link from "next/link";
-// Define a type for the review object
+
 interface Review {
   reviewer_name: string;
   rating: number;
@@ -22,7 +22,7 @@ interface Review {
 
 const Reviews = () => {
   const [reviews, setReviews] = useState<Review[]>([]);
-  const [loading, setLoading] = useState<boolean>(true); // Add loading state
+  const [loading, setLoading] = useState<boolean>(true);
   const [currentPage, setCurrentPage] = useState<number>(1);
   const reviewsPerPage = 464;
   const renderStars = (rating: number) => {

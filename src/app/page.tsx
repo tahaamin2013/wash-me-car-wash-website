@@ -129,11 +129,12 @@ const Home: React.FC = () => {
       <Image
         src="https://raw.githubusercontent.com/aimahusnain/Washme-CarWash-Images/main/washhouse.webp"
         alt="image of house"
-        width={3200}
-        height={390}
+        width={1200} // Adjusted width based on display size requirement
+        height={146} // Adjusted height based on aspect ratio and required display size
         className="w-screen md:mt-1 mt-20"
         loading="lazy"
       />
+
       <Map />
       <main>
         <div className="-mt-3">

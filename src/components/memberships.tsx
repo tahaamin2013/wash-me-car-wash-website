@@ -6,22 +6,6 @@ import { FaPhoneAlt } from "react-icons/fa";
 const Memberships = () => {
   const [scrollMargin, setScrollMargin] = useState(0);
 
-  //   const goToBottom = () => {
-  //     window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
-  //   };
-
-  //   useEffect(() => {
-  //     const button = document.getElementById('goTopBtn');
-
-  //     if (button) {
-  //       button.addEventListener('click', goToBottom);
-
-  //       return () => {
-  //         button.removeEventListener('click', goToBottom);
-  //       };
-  //     }
-  //   }, []);
-
   const handleButtonClick = (e: any, myelement: string) => {
     const newScrollMargin = 60;
     setScrollMargin(newScrollMargin);
@@ -42,7 +26,6 @@ const Memberships = () => {
         onClick={(e) => handleButtonClick(e, "#MemberShips")}
         id="goTopBtn"
         aria-label="We are now offering MEMBERSHIPS!!! button"
-        // px-5 flex-wrap cursor-pointer z-50 fixed mb-4 justify-center sm:justify-between items-center
       >
         <p className="underline">We are now offering MEMBERSHIPS!!!</p>
       </button>
