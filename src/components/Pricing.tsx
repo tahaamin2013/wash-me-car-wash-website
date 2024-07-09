@@ -41,15 +41,15 @@ const Pricing: React.FC = () => {
             width: "205px",
           }}
         >
-          <Image
-            src="/0365053m.png"
-            alt="Postcard Advertising"
-            width={300}
-            height={200}
-            layout="responsive"
-            objectFit="cover"
-            className="rounded-lg"
-          />
+                <Image
+          src="/0365053m.png"
+          alt="Postcard Advertising"
+          width={300}
+          height={200}
+          layout="responsive"
+          objectFit="cover"
+          className="rounded-lg"
+        />
         </div>
         <div className="flex md:flex-row flex-col items-center gap-0 sm:gap-[40px]">
           <Image
