@@ -95,7 +95,10 @@ const Navbar = () => {
               </div>
               <div className="md:hidden block z-50">
                 <Sheet>
-                  <SheetTrigger className="text-white  -my-4 mt-1 text-2xl">
+                  <SheetTrigger
+                    className="text-white -my-4 mt-1 text-2xl"
+                    aria-label="Open menu"
+                  >
                     <AlignJustify fill="white" size={27} />
                   </SheetTrigger>
                   <SheetContent

@@ -68,26 +68,35 @@ const Home: React.FC = () => {
 
     return () => clearInterval(intervalId);
   }, []);
+
+  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+
+  const handleVideoLoad = () => {
+    setIsVideoLoaded(true);
+  };
   return (
     <>
-      <div className="relative">
-        <div className="absolute top-0 left-0 w-full h-full bg-black opacity-20"></div>
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="w-full pt-[50px] object-cover"
+      <div className="relative ">
+        <div className="absolute  top-0 left-0 w-full h-full bg-black opacity-20"></div>
+        <div className="relative w-full pb-[56.25%] h-0">
+          <iframe
+            src="https://www.youtube.com/embed/RUPrDc33QS8?si=WuryL4Qe883sW5go&autoplay=1&mute=1&loop=1&playlist=RUPrDc33QS8&controls=0&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1"
+            title="YouTube video player"
+            className="absolute top-0 md:mt-1 mt-20 left-0 w-full h-full pointer-events-none"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            onLoad={handleVideoLoad}
+          ></iframe>
+          {!isVideoLoaded && (
+            <div className="absolute top-0 left-0 w-full h-full bg-black"></div>
+          )}
+        </div>
+        <div
+          className="absolute top-[40%] sm:top-[35%] items-center justify-center w-full flex 
+        flex-col"
         >
-          <source
-            src="/WashMe Car Wash Video - Edited.mp4"
-            className="object-cover"
-            type="video/mp4"
-          />
-        </video>
-
-        <div className="absolute top-[40%] sm:top-[35%] items-center justify-center w-full flex flex-col">
-          <div className="text-white flex flex-col lg:!mx-52 sm:!mx-7 mx-auto justify-center max-w-fit items-center">
+          <div className="text-white mt-12 md:mt-0  flex flex-col lg:!mx-52 sm:!mx-7 mx-auto justify-center max-w-fit items-center">
             <motion.div
               className="text-transition"
               initial={{ y: "100%" }}
@@ -108,7 +117,7 @@ const Home: React.FC = () => {
                 {/* <p className="h-[25px] tracking-widest uppercase overflow-hidden bg-red-500 sm:text-lg text-sm mb-2 font-normal uppercase">
                     {data.texts[visibleIndex].desc}
                   </p> */}
-                <p className="text-4xl font-sans sm:text-7xl w-fit font-bold text-center">
+                <p className="text-3xl font-sans sm:text-7xl w-fit font-bold text-center">
                   {data.texts[visibleIndex].text}
                 </p>
               </motion.div>
@@ -116,12 +125,13 @@ const Home: React.FC = () => {
           </div>
         </div>
       </div>
+
       <Image
         src="https://raw.githubusercontent.com/aimahusnain/Washme-CarWash-Images/main/washhouse.webp"
         alt="image of house"
         width={3200}
         height={390}
-        className="w-screen"
+        className="w-screen md:mt-1 mt-20"
         loading="lazy"
       />
       <Map />
