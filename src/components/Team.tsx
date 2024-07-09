@@ -18,6 +18,7 @@ const Team = () => {
             height={800}
             className="w-full h-full object-center object-cover"
           />
+   
         </div>
         <div className="relative z-10 inset-0 text-center flex justify-between w-full gap-3 items-center h-full">
           <div className="flex flex-col gap-4 mt-[1px] sm:mt-[120px] w-full justify-center items-center">
