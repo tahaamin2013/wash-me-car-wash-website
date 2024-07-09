@@ -1,11 +1,6 @@
-import Autoplay from "embla-carousel-autoplay";
 import { Plus } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
-import React, { useRef } from "react";
-import { FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
-import { IoMdMail } from "react-icons/io";
-import { IoTime } from "react-icons/io5";
+import React from "react";
 
 const Git: React.FC = () => {
   return (
