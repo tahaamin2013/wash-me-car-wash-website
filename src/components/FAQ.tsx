@@ -6,6 +6,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { faqData } from "@/AllWebsiteData";
 
 const FAQ = () => {
   return (
@@ -26,76 +27,25 @@ const FAQ = () => {
             collapsible
             className="grid grid-cols-1 text-left gap-x-8 w-full"
           >
-            <AccordionItem className="border-b-zinc-800" value="item-1">
-              <h3>
-                <AccordionTrigger className="!text-left">
-                  1. How do I pay and renew my membership?
-                </AccordionTrigger>
-              </h3>
-              <h3>
-                <AccordionContent>
-                  You can conveniently pay and renew through our app.
-                </AccordionContent>
-              </h3>
-            </AccordionItem>
-            <AccordionItem className="border-b-zinc-800" value="item-2">
-              <AccordionTrigger className="!text-left">
-                2. How do you verify my identity?
-              </AccordionTrigger>
-              <AccordionContent>
-                When you sign into the app at our car wash location, we can
-                identify your car in our queue.
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem className="border-b-zinc-800" value="item-3">
-              <AccordionTrigger className="!text-left">
-                3. Can I use the membership with another car?
-              </AccordionTrigger>
-              <AccordionContent>
-                Unfortunately, our memberships are based on car size, so we only
-                offer one membership per car.
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem className="border-b-zinc-800" value="item-4">
-              <AccordionTrigger className="!text-left">
-                4. Can a family member use the membership?
-              </AccordionTrigger>
-              <AccordionContent>
-                Yes, anyone with the same app and membership can wash the car
-                associated with the membership.
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem className="border-b-zinc-800" value="item-5">
-              <AccordionTrigger className="!text-left">
-                5. Do I need an appointment?
-              </AccordionTrigger>
-              <AccordionContent>
-                No, simply come down during our open hours and we will serve
-                customers on a first-come, first-served basis.
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem className="border-b-zinc-800" value="item-6">
-              <AccordionTrigger className="!text-left">
-                6. Do you accept Apple Pay?
-              </AccordionTrigger>
-              <AccordionContent>
-                Yes, we accept both Apple Pay and Google Pay.
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem
-              className="border-b-zinc-800 !text-left"
-              value="item-7"
-            >
-              <AccordionTrigger className="!text-left">
-                7. Does the membership work for self-service bays?
-              </AccordionTrigger>
-              <AccordionContent>
-                We are currently working on making that possible. Stay tuned!
-              </AccordionContent>
-            </AccordionItem>
+            {faqData.map((faq, index) => (
+              <AccordionItem
+                key={index}
+                className="border-b-zinc-800"
+                value={faq.value}
+              >
+                <h3>
+                  <AccordionTrigger className="!text-left">
+                    {faq.question}
+                  </AccordionTrigger>
+                </h3>
+                <h3>
+                  <AccordionContent>{faq.answer}</AccordionContent>
+                </h3>
+              </AccordionItem>
+            ))}
           </Accordion>
         </div>
-      </div>{" "}
+      </div>
     </div>
   );
 };

@@ -6,7 +6,6 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { RouteChangeListener } from "@/provider/RouteChangeListener";
-import { OptinMonsterEmbed } from "@/provider/omEmbed";
 import Script from "next/script";
 import MyPopup from "@/components/Popup";
 

@@ -41,24 +41,10 @@ const Pricing: React.FC = () => {
             width: "205px",
           }}
         >
-          <Link
-            href="http://www.postcardmania.com/?bid=1130837"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
             <img
-              src="//mypostcardmania.com/mailbox/img/0365053m.png"
+              src="/0365053m.png"
               alt="Postcard Advertising"
             />
-          </Link>
-          <br />
-          <a
-            href="http://www.postcardmania.com/?bid=1130837"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Postcard Advertising
-          </a>
         </div>
         <div className="flex md:flex-row flex-col items-center gap-0 sm:gap-[40px]">
           <Image

@@ -1,5 +1,3 @@
-// CarouselItem.js
-import { motion } from 'framer-motion';
 import Image from 'next/image';
 
 const CarouselItem = ({ image, isSelected, onClick }:any) => {
