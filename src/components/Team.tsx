@@ -24,9 +24,9 @@ const Team = () => {
         <div className="relative z-10 inset-0 text-center flex justify-between w-full gap-3 items-center h-full">
           <div className="flex flex-col gap-4 mt-[1px] sm:mt-[120px] w-full justify-center items-center">
             <div className="absolute bottom-4 rounded-none w-fit h-fit left-6 right-4 text-left text-black transition-all bg-white backdrop-blur-sm px-7 py-7">
-              <h3 className="text-2xl font-semibold mb-1 text-blue">
+              <h2 className="text-2xl font-semibold mb-1 text-blue">
                 Meet the Team
-              </h3>
+              </h2>
               <div className="flex flex-col gap-2 w-full lg:w-[400px]">
                 <p className="text-[13px]">
                   Although Wash Me Car Wash was started in 1992, Randy and

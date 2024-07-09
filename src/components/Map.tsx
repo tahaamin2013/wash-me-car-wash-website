@@ -21,6 +21,7 @@ const Map = () => {
             src={mapData.location.iframeSrc}
             width="600"
             height="300"
+            title="Google Map of Wash me car wash long vieo"
             aria-hidden="false"
           />
         </div>

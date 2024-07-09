@@ -132,7 +132,7 @@ const Home: React.FC = () => {
         width={900} // Adjusted width based on display size requirement
         height={146} // Adjusted height based on aspect ratio and required display size
         className="w-screen md:mt-1 mt-20"
-        loading="lazy"
+        // loading="lazy"
       />
 
       <Map />
