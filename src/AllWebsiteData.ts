@@ -1,10 +1,13 @@
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import { BsTwitterX } from "react-icons/bs";
-import { Plus } from "lucide-react";
-import Image from "next/image";
-import React from "react";
-// FAQ Data
 
+export interface Plan {
+  name: string;
+  price: string;
+  options: string[];
+  nooptions: string[];
+  minutes: string;
+}
 export const faqData = [
   {
     value: "item-1",
@@ -99,3 +102,53 @@ export const mapData = {
   backgroundImageUrl:
     "url(https://raw.githubusercontent.com/aimahusnain/Washme-CarWash-Images/main/bubbles.png)",
 };
+
+
+
+export const plans: Plan[] = [
+  {
+    name: "Small Cars",
+    price: "$15",
+    options: [
+      "Tire and All over Pre-soak",
+      "Tri Color Foam",
+      "Full Body Hand Wash",
+      "High Pressure Dry",
+      "Spot Free Rinse",
+      "Free Vacuum",
+      "Add $2 For Wax",
+    ],
+    nooptions: [],
+    minutes: "15 minutes",
+  },
+  {
+    name: "Mid-Sized Cars",
+    price: "$16",
+    options: [
+      "Tire and All over Pre-soak",
+      "Tri Color Foam",
+      "Full Body Hand Wash",
+      "High Pressure Dry",
+      "Spot Free Rinse",
+      "Free Vacuum",
+      "Add $2 For Wax",
+    ],
+    nooptions: [],
+    minutes: "20 minutes",
+  },
+  {
+    name: "SUVs, Vans, Full-sized Pickups",
+    price: "$17",
+    options: [
+      "Tire and All over Pre-soak",
+      "Tri Color Foam",
+      "Full Body Hand Wash",
+      "High Pressure Dry",
+      "Spot Free Rinse",
+      "Free Vacuum",
+      "Add $2 For Wax",
+    ],
+    nooptions: [],
+    minutes: "25 minutes",
+  },
+];
