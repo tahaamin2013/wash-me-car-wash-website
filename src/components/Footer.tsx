@@ -34,14 +34,15 @@ export default function Footer() {
           />
 
           <div className="relative w-full pb-[56.25%] h-0">
-            {/* <iframe
+            
+            <iframe
               src="https://www.youtube.com/embed/Nnp8YUHGzBs?autoplay=1&mute=1&loop=1&playlist=Nnp8YUHGzBs&controls=0&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1"
               title="YouTube video player"
               className="w-[290px] lg:w-[470px] rounded-r-xl h-[193px] lg:h-[270px]  top-0 right-0 pointer-events-none"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;"
               referrerPolicy="strict-origin-when-cross-origin"
-            ></iframe> */}
+            ></iframe>
           </div>
         </div>
         <div className="flex sm:flex-row sm:justify-center items-center flex-col w-full mt-6 sm:gap-10">
