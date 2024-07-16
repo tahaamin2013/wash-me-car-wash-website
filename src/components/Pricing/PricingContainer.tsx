@@ -13,8 +13,6 @@ const PricingContainer = (data: any, index: any) => {
     Autoplay({ delay: 2000, stopOnInteraction: true })
   );
 
-  console.log("Images 123", Data.image);
-
   return (
     <div
       key={index}

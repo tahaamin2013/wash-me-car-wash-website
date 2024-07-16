@@ -44,7 +44,6 @@ const LeadGenForm = () => {
     });
     const result = await response.json();
     if (result.success) {
-      console.log(result);
       setShowSuccessMessage(true);
       setShowForm(false);
       setShowBottomBar(false);
