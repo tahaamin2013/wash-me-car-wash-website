@@ -1,56 +1,59 @@
-import React from "react";
+'use client'
+
+import React, { useMemo } from "react";
 import { mapData } from "@/AllWebsiteData";
 
+const HoursOfOperation = React.memo(() => (
+  <div className="w-full h-[305px] rounded-xl justify-between border-green border p-4 flex flex-col">
+    {mapData.hours.map((day) => (
+      <div
+        key={day.day}
+        className="flex w-full justify-between font-semibold text-lg"
+      >
+        <p>{day.day}</p>
+        <p>{day.time}</p>
+      </div>
+    ))}
+  </div>
+));
+
+HoursOfOperation.displayName = 'HoursOfOperation';
+
+const LocationInfo = React.memo(({ address }: any) => (
+  <>
+    <h1 className="text-2xl font-bold uppercase">Location</h1>
+    <p className="font-semibold text-lg mb-2">{address}</p>
+    {/* <iframe
+      className="sm:w-full sm:h-[300px] h-[400px] w-full overflow-hidden rounded-md"
+      src={mapData.location.iframeSrc}
+      width="600"
+      height="300"
+      aria-hidden="false"
+    /> */}
+  </>
+));
+
+LocationInfo.displayName = 'LocationInfo';
+
 const Map = () => {
+  const memoizedAddress = useMemo(() => mapData.location.address, []);
+
   return (
     <div
-      key="1"
       className="bg-primaryBlue-200 lg:grid gap-6 grid-cols-2 px-7 py-6 items-center text-white overflow-hidden shadow-xl"
-      style={{
-        backgroundImage: mapData.backgroundImageUrl,
-      }}
     >
       <div className="flex flex-col items-center mt-6 mb-1 justify-center">
         <div className="flex flex-col mb-4 lg:hidden w-full items-center mt-6 justify-center">
-          <h1 className="text-2xl mb-7 font-bold uppercase">Location</h1>
-          <p className="font-semibold text-lg mb-2">
-            {mapData.location.address}
-          </p>
-          {/* <iframe
-            className="sm:h-[300px] h-[400px] w-full overflow-hidden rounded-md"
-            src={mapData.location.iframeSrc}
-            width="600"
-            height="300"
-            title="Google Map of Wash me car wash long vieo"
-            aria-hidden="false"
-          /> */}
+          <LocationInfo address={memoizedAddress} />
         </div>
         <h1 className="text-2xl font-bold uppercase mb-8">
           HOURS OF OPERATION
         </h1>
-        <div className="w-full h-[305px] rounded-xl justify-between border-green border p-4 flex flex-col">
-          {mapData.hours.map((day, index) => (
-            <div
-              key={index}
-              className="flex w-full justify-between font-semibold text-lg"
-            >
-              <p>{day.day}</p>
-              <p>{day.time}</p>
-            </div>
-          ))}
-        </div>
+        <HoursOfOperation />
       </div>
 
       <div className="hidden lg:flex flex-col w-full items-center mt-6 mb-1 justify-center">
-        <h1 className="text-2xl font-bold uppercase">Location</h1>
-        <p className="font-semibold text-lg mb-2">{mapData.location.address}</p>
-        {/* <iframe
-          className="sm:w-full sm:h-[300px] h-[400px] w-full overflow-hidden rounded-md"
-          src={mapData.location.iframeSrc}
-          width="600"
-          height="300"
-          aria-hidden="false"
-        /> */}
+        <LocationInfo address={memoizedAddress} />
       </div>
     </div>
   );

@@ -1,16 +1,16 @@
 "use client";
 
-import Image from "next/image";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
-import React, { useState, useEffect } from "react";
-import { FaCheck } from "react-icons/fa";
 import Autoplay from "embla-carousel-autoplay";
-import { Button } from "./ui/button";
+import Image from "next/image";
 import Link from "next/link";
+import React from "react";
+import { FaCheck } from "react-icons/fa";
+import { Button } from "./ui/button";
 
 interface Plan {
   name: string;
