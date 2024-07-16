@@ -11,6 +11,7 @@ import Goy from "./goy";
 import { contactDetails, socialLinks, navLinks } from "@/AllWebsiteData";
 import { FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
+import { CldImage } from "next-cloudinary";
 
 export default function Footer() {
   return (
@@ -20,9 +21,9 @@ export default function Footer() {
     >
       <div className="flex flex-col">
         <div className="flex flex-col lg:flex-row items-center">
-          <Image
+          <CldImage
             loading="lazy"
-            src="/Hand Wash Open 9 - 4.png"
+            src="https://res.cloudinary.com/dni4hpqo3/image/upload/v1720826146/Hand_Wash_Open_9_-_4_bacijg.webp"
             width={100}
             height={400}
             className="sm:h-[163px] h-fit mt-4 lg:mt-0 relative w-[145px] lg:h-[270px] rounded-l-xl"
