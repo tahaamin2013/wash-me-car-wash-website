@@ -1,4 +1,4 @@
-import { WhatWeDoData } from "@/AllWebsiteData";
+import { washingSteps } from "@/AllWebsiteData";
 import {
   Carousel,
   CarouselContent,
@@ -7,6 +7,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
+import { CldImage } from "next-cloudinary";
 import Image from "next/image";
 import React, { useRef } from "react";
 
@@ -31,15 +32,15 @@ const WhatWeDo: React.FC = () => {
         onMouseLeave={plugin.current.reset}
       >
         <CarouselContent>
-          {WhatWeDoData.map((item, index) => (
+          {washingSteps.map((item, index) => (
             <CarouselItem
               key={index}
               className="z-10 flex flex-col lg:flex-row justify-center text-left bg-primaryBlue-200 rounded-xl h-[600px] sm:h-[400px] text-white overflow-hidden shadow-xl"
             >
-                <Image
+                <CldImage
                   width={500}
                   height={500}
-                  src={item.image}
+                  src={item.Image}
                   loading="lazy"
                   alt={`Step ${index + 1} image`}
                   className="w-[700px] h-[500px] object-cover object-top lg:block hidden"
@@ -50,11 +51,11 @@ const WhatWeDo: React.FC = () => {
                   </h1>
                   <p className="text-sm mt-3 mb-3">{item.description}</p>
                 </div>
-                <Image
+                <CldImage
                   width={500}
                   height={500}
                   loading="lazy"
-                  src={item.image}
+                  src={item.Image}
                   alt={`Step ${index + 1} image`}
                   className="w-screen h-screen object-cover object-top lg:hidden block"
                 />
