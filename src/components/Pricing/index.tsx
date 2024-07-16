@@ -78,7 +78,7 @@ const Pricing: React.FC = () => {
 
       <div className="flex md:flex-row flex-col w-full items-start mt-4 justify-center gap-[50px] mb-3">
         {pricingData.map((pricing, index) => (
-          <PricingContainer data={pricing} />
+          <PricingContainer key={index} data={pricing} />
         ))}
         {/* <div
           className="border p-4 bg-white w-full rounded-2xl flex flex-col justify-center items-center text-center sm:w-[400px] px-5 shadow-xl py-12"

@@ -4,11 +4,11 @@ import Link from "next/link";
 import { FaCheck } from "react-icons/fa";
 import { Button } from "../ui/button";
 
-const PricingContainer = (data: any) => {
+const PricingContainer = (data: any, index: any) => {
   const Data = data.data;
 
   return (
-    <div className="border p-4 bg-white w-full rounded-2xl flex flex-col justify-center items-center text-center sm:w-[400px] px-5 shadow-xl py-12">
+    <div key={index} className="border p-4 bg-white w-full rounded-2xl flex flex-col justify-center items-center text-center sm:w-[400px] px-5 shadow-xl py-12">
       <CldImage
         loading="lazy"
         alt="car image"
