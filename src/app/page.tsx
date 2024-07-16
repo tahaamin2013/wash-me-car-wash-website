@@ -105,9 +105,9 @@ const Home: React.FC = () => {
       />
 
       <Map />
+      <Facilities />
       {/*  <main>
        <div className="-mt-3">
-          <Facilities />
         </div>
         <div className="mx-5">
           {" "}
