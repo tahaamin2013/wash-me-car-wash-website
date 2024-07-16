@@ -103,11 +103,11 @@ const Home: React.FC = () => {
         priority
         className="w-screen"
       />
-
       <Map />
-      <Facilities />
+      
       {/*  <main>
        <div className="-mt-3">
+          <Facilities />
         </div>
         <div className="mx-5">
           {" "}
