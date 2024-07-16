@@ -23,13 +23,13 @@ const LocationInfo = React.memo(({ address }: any) => (
   <>
     <h1 className="text-2xl font-bold uppercase">Location</h1>
     <p className="font-semibold text-lg mb-2">{address}</p>
-    {/* <iframe
+    <iframe
       className="sm:w-full sm:h-[300px] h-[400px] w-full overflow-hidden rounded-md"
       src={mapData.location.iframeSrc}
       width="600"
       height="300"
       aria-hidden="false"
-    /> */}
+    />
   </>
 ));
 

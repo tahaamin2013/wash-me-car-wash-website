@@ -112,7 +112,7 @@ const Home: React.FC = () => {
         >
           <source
             type="video/webm"
-            src="https://res.cloudinary.com/dni4hpqo3/video/upload/af_8000,c_scale,500,q_auto,vc_auto/v1720997476/WashMe_Car_Wash_Video_-_Edited_emahsr.webm"
+            src="https://res.cloudinary.com/dni4hpqo3/video/upload/c_scale,f_auto,q_auto,w_886/v1720997476/WashMe_Car_Wash_Video_-_Edited_emahsr.mp4"
           />
           Your browser does not support the video tag.
         </video>
