@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import Map from '@/components/Map'
 import Team from "@/components/Team";
 import Facilities from "@/components/Facilities";
+import FAQ from "@/components/FAQ";
 
 type Data = {
   texts: { text: string; desc: string }[];
@@ -106,7 +107,7 @@ const Home: React.FC = () => {
         className="w-screen"
       />
       <Map />
-      <Facilities />
+      <FAQ />
       <Team />
       {/*  <main>
        <div className="-mt-3">
