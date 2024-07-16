@@ -1,5 +1,6 @@
 "use client";
 import { Contact } from "@/components/ContactForm";
+import HomeVideoPlayer from '@/components/HomeVideoPlayer'
 import FAQ from "@/components/FAQ";
 import Map from "@/components/Map";
 import Pricing from "@/components/Pricing";
@@ -77,21 +78,7 @@ const Home: React.FC = () => {
   return (
     <>
       <div className="relative ">
-        <div className="absolute  top-0 left-0 w-full h-full bg-black opacity-20"></div>
-        <div className="relative w-full pb-[56.25%] h-0">
-          <iframe
-            src="https://www.youtube.com/embed/RUPrDc33QS8?si=WuryL4Qe883sW5go&autoplay=1&mute=1&loop=1&playlist=RUPrDc33QS8&controls=0&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1"
-            title="YouTube video player"
-            className="absolute top-0 md:mt-1 mt-20 left-0 w-full h-full pointer-events-none"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerPolicy="strict-origin-when-cross-origin"
-            onLoad={handleVideoLoad}
-          ></iframe>
-          {!isVideoLoaded && (
-            <div className="absolute top-0 left-0 w-full h-full bg-black"></div>
-          )}
-        </div>
+       {/* <HomeVideoPlayer /> */}
         <div
           className="absolute top-[40%] sm:top-[35%] items-center justify-center w-full flex 
         flex-col"

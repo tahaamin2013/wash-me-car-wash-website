@@ -5,6 +5,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import CustomTabs from '@/components/CustomTabs'
 import Autoplay from "embla-carousel-autoplay";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import React, { useRef } from "react";
@@ -12,6 +13,35 @@ import Image from "next/image";
 
 const Facilities: React.FC = () => {
   const plugin = useRef(Autoplay({ delay: 5000, stopOnInteraction: false }));
+
+  const tabsData = [
+    {
+      label: '50-Foot Hand Wash Tunnel',
+      content: (
+        <p>
+          Indulge your vehicle in the ultimate pampering experience at Wash Me Car Wash. 
+          Our 50-foot hand wash tunnel combines cutting-edge technology with a gentle touch, 
+          ensuring a pristine finish every time. No brushes here – just a safe and effective 
+          brush-free system. Simply put your vehicle in neutral, relax, and let Wash Me Car 
+          Wash elevate your car care routine.
+        </p>
+      ),
+    },
+    {
+      label: '5 Self-Service Bays (Open 24 Hrs)',
+      content: (
+        <p>
+          Take control of your car care journey with Wash Me Car Wash's five self-service bays, 
+          available 24/7 for your convenience. Whether you're driving a car, motorcycle, or 
+          towing a trailer, our self-service bays cater to all your needs. Enjoy a bright and 
+          clean environment, equipped with user-friendly tools that make maintaining your 
+          vehicle a breeze. At Wash Me Car Wash, it's more than just self-service – it's a 
+          personalized experience designed for you.
+        </p>
+      ),
+    },
+  ];
+
   return (
     <div
       className="flex flex-col w-full justify-center items-center mt-3 bg-myBlue px-5 pb-3 text-white"
@@ -109,8 +139,7 @@ const Facilities: React.FC = () => {
           <h1 className="text-2xl sm:text-3xl font-bold mt-8">
             State-of-the-Art Car Wash Facilities
           </h1>
-          <div>
-            <Tabs defaultValue="account" className="w-fit my-4">
+            {/* <Tabs defaultValue="account" className="w-fit my-4">
               <TabsList className="h-fit">
                 <TabsTrigger value="account" className="">
                   50-Foot Hand <br className="sm:hidden" /> Wash Tunnel
@@ -139,8 +168,9 @@ const Facilities: React.FC = () => {
                 At Wash Me Car Wash, it&lsquo;s more than just self-service –
                 it&lsquo;s a personalized experience designed for you.
               </TabsContent>
-            </Tabs>
-          </div>
+            </Tabs> */}
+                  <CustomTabs tabs={tabsData} />
+
         </div>
         <Image
           loading="lazy"
