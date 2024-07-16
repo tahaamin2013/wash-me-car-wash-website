@@ -132,7 +132,7 @@ const Facilities: React.FC = () => {
         />
       </div>
 
-      <div className="w-full flex justify-center items-center text-black">
+      <div className="w-full flex justify-center items-center">
         <OptimizedCarousel>
           {carouselImages.map((img, index) => (
             <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3 flex justify-center items-center">

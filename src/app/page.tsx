@@ -1,6 +1,7 @@
 "use client";
 
 import { Contact } from "@/components/ContactForm";
+import Facilities from "@/components/Facilities";
 import FAQ from "@/components/FAQ";
 import GiftCertificate from "@/components/GiftCertificate";
 import Map from '@/components/Map';
@@ -121,6 +122,7 @@ const Home: React.FC = () => {
         className="w-screen"
       />
       <Map />
+      <Facilities />
       <WhatWeDo />
       <Team />
       <Pricing />
