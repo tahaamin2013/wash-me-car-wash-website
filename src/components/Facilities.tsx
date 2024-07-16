@@ -9,6 +9,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { CldImage } from 'next-cloudinary';
 
 const MemoizedCustomTabs = React.memo(CustomTabs);
 
@@ -58,12 +59,17 @@ const Facilities: React.FC = () => {
   ], []);
 
   const carouselImages = useMemo(() => [
-    { src: "https://raw.githubusercontent.com/aimahusnain/Washme-CarWash-Images/main/fot.webp", alt: "Step 1" },
-    { src: "https://raw.githubusercontent.com/aimahusnain/Washme-CarWash-Images/main/fet.webp", alt: "Step 2" },
-    { src: "https://raw.githubusercontent.com/aimahusnain/Washme-CarWash-Images/main/hou.webp", alt: "Step 3" },
-    { src: "https://raw.githubusercontent.com/aimahusnain/Washme-CarWash-Images/main/moter.webp", alt: "Step 4" },
-    { src: "https://raw.githubusercontent.com/aimahusnain/Washme-CarWash-Images/main/sddsfaa.webp", alt: "Step 5" },
-    { src: "https://raw.githubusercontent.com/aimahusnain/Washme-CarWash-Images/main/phone.webp", alt: "Step 6" },
+    { src: "https://res.cloudinary.com/dni4hpqo3/image/upload/c_scale,f_auto,q_auto,w_44/v1720893306/Wash%20Me%20Car%20Wash%20Images/Facilities/image_bvusa5.jpg", alt: "Step 1" },
+
+    { src: "https://res.cloudinary.com/dni4hpqo3/image/upload/c_scale,f_auto,q_auto,w_62/v1720893338/Wash%20Me%20Car%20Wash%20Images/Facilities/image_firree.jpg", alt: "Step 2" },
+
+    { src: "https://res.cloudinary.com/dni4hpqo3/image/upload/c_scale,f_auto,q_auto,w_49/v1720893366/Wash%20Me%20Car%20Wash%20Images/Facilities/image_vt2x39.jpg", alt: "Step 3" },
+
+    { src: "https://res.cloudinary.com/dni4hpqo3/image/upload/c_scale,f_auto,q_auto,w_40/v1720893374/Wash%20Me%20Car%20Wash%20Images/Facilities/image_pjzrkd.jpg", alt: "Step 4" },
+
+    { src: "https://res.cloudinary.com/dni4hpqo3/image/upload/c_scale,f_auto,q_auto,w_34/v1720893391/Wash%20Me%20Car%20Wash%20Images/Facilities/image_hekejf.jpg", alt: "Step 5" },
+
+    { src: "https://res.cloudinary.com/dni4hpqo3/image/upload/c_scale,f_auto,q_auto,w_15/v1720893395/Wash%20Me%20Car%20Wash%20Images/Facilities/image_klkfy0.jpg", alt: "Step 6" },
   ], []);
 
   return (
@@ -130,7 +136,7 @@ const Facilities: React.FC = () => {
         <OptimizedCarousel>
           {carouselImages.map((img, index) => (
             <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3 flex justify-center items-center">
-              <Image
+              <CldImage
                 src={img.src}
                 alt={img.alt}
                 width={365}
