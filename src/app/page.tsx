@@ -1,5 +1,6 @@
 "use client";
-import Image from "next/image";
+
+import { CldImage } from "next-cloudinary";
 import { useEffect, useState } from "react";
 
 type Data = {
@@ -93,13 +94,13 @@ const Home: React.FC = () => {
         </div>
       </div> */}
 
-      <Image
-        src="https://raw.githubusercontent.com/aimahusnain/Washme-CarWash-Images/main/washhouse.webp"
-        alt="image of house"
-        width={900} // Adjusted width based on display size requirement
-        height={146} // Adjusted height based on aspect ratio and required display size
-        className="w-screen md:mt-1 mt-20"
-        // loading="lazy"
+      <CldImage
+        src="https://res.cloudinary.com/dni4hpqo3/image/upload/c_scale,h_50,q_80/v1720801124/Wash%20Me%20Car%20Wash%20Images/washhouse.webp"
+        alt="WashHouse Image"
+        width={400}
+        height={146}
+        priority
+        className="w-screen"
       />
 
       {/*<Map />
