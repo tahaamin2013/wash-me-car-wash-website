@@ -1,15 +1,4 @@
 "use client";
-import { Contact } from "@/components/ContactForm";
-import HomeVideoPlayer from '@/components/HomeVideoPlayer'
-import FAQ from "@/components/FAQ";
-import Map from "@/components/Map";
-import Pricing from "@/components/Pricing";
-import Team from "@/components/Team";
-import WhatWeDo from "@/components/WhatWeDo";
-import Git from "@/components/fsdklfsjd";
-import Facilities from "@/components/Facilities";
-import Reviews from "@/components/reviews";
-import { motion } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
@@ -69,16 +58,10 @@ const Home: React.FC = () => {
 
     return () => clearInterval(intervalId);
   }, []);
-
-  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
-
-  const handleVideoLoad = () => {
-    setIsVideoLoaded(true);
-  };
   return (
     <>
-      <div className="relative ">
-       {/* <HomeVideoPlayer /> */}
+      {/* <div className="relative ">
+       <HomeVideoPlayer />
         <div
           className="absolute top-[40%] sm:top-[35%] items-center justify-center w-full flex 
         flex-col"
@@ -101,9 +84,6 @@ const Home: React.FC = () => {
                 animate={{ y: shouldAnimateDown ? "100%" : 0 }}
                 transition={{ duration: 0.5 }}
               >
-                {/* <p className="h-[25px] tracking-widest uppercase overflow-hidden bg-red-500 sm:text-lg text-sm mb-2 font-normal uppercase">
-                    {data.texts[visibleIndex].desc}
-                  </p> */}
                 <p className="text-3xl font-sans sm:text-7xl w-fit font-bold text-center">
                   {data.texts[visibleIndex].text}
                 </p>
@@ -111,7 +91,7 @@ const Home: React.FC = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       <Image
         src="https://raw.githubusercontent.com/aimahusnain/Washme-CarWash-Images/main/washhouse.webp"
@@ -122,9 +102,9 @@ const Home: React.FC = () => {
         // loading="lazy"
       />
 
-      <Map />
-      <main>
-        <div className="-mt-3">
+      {/*<Map />
+        <main>
+       <div className="-mt-3">
           <Facilities />
         </div>
         <div className="mx-5">
@@ -138,11 +118,11 @@ const Home: React.FC = () => {
         <Git />
         <Reviews />
         <FAQ />
-        <Contact />
-        {/* <div className="mx-5">
+        <Contact /> 
+        <div className="mx-5">
           <Contact />
-        </div> */}
-      </main>
+        </div> 
+      </main>*/}
     </>
   );
 };
