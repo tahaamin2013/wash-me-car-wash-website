@@ -11,7 +11,6 @@ import Goy from "./goy";
 import { contactDetails, socialLinks, navLinks } from "@/AllWebsiteData";
 import { FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
-import { CldImage } from "next-cloudinary";
 
 export default function Footer() {
   return (
@@ -21,9 +20,9 @@ export default function Footer() {
     >
       <div className="flex flex-col">
         <div className="flex flex-col lg:flex-row items-center">
-          <CldImage
+          <Image
             loading="lazy"
-            src="https://res.cloudinary.com/dni4hpqo3/image/upload/v1720826146/Hand_Wash_Open_9_-_4_bacijg.webp"
+            src="/Hand Wash Open 9 - 4.png"
             width={100}
             height={400}
             className="sm:h-[163px] h-fit mt-4 lg:mt-0 relative w-[145px] lg:h-[270px] rounded-l-xl"
@@ -107,18 +106,14 @@ export default function Footer() {
 
         <nav className="flex flex-col justify-center -mx-5 -my-2 sm:text-center text-left space-y-7">
           {navLinks.map((link, index) => (
-            <div
-              key={index}
-              className="text-white/70 hover:text-white transition-all w-fit"
-            >
               <Goy
                 aria-label={link.label}
                 id={link.id}
-                className="text-base leading-6"
+                key={index}
+                className="text-base leading-6 text-white/70 hover:text-white transition-all w-fit"
               >
                 {link.label}
               </Goy>
-            </div>
           ))}
         </nav>
         <p className="sm:relative mb-7 sm:hidden block !text-white/70 left-44">

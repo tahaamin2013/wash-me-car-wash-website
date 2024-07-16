@@ -4,7 +4,7 @@ import { Contact } from "@/components/ContactForm";
 import Facilities from "@/components/Facilities";
 import FAQ from "@/components/FAQ";
 import GiftCertificate from "@/components/GiftCertificate";
-import Map from '@/components/Map';
+import Map from "@/components/Map";
 import Pricing from "@/components/Pricing";
 import Team from "@/components/Team";
 import WhatWeDo from "@/components/WhatWeDo";
@@ -71,7 +71,6 @@ const Home: React.FC = () => {
   return (
     <>
       {/* <div className="relative ">
-       <HomeVideoPlayer />
         <div
           className="absolute top-[40%] sm:top-[35%] items-center justify-center w-full flex 
         flex-col"
@@ -103,31 +102,21 @@ const Home: React.FC = () => {
         </div>
       </div> */}
 
-{/* <iframe
-  src="https://player.cloudinary.com/embed/?public_id=WashMe_Car_Wash_Video_-_Edited_emahsr&cloud_name=dni4hpqo3&player[controls]=false&player[muted]=true&player[hideContextMenu]=true&player[autoplay]=true&player[loop]=true"
-  width="640"
-  height="360" 
-  style={{height: "auto", width: "100%", aspectRatio: "640 / 360"}}
-  allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
-  allowFullScreen
-  frameBorder="0"
-></iframe> */}
-
-<div className="relative w-full h-[580px]">
-      <video
-        className="absolute top-0 left-0 w-full h-full object-cover"
-        autoPlay
-        loop
-        muted
-        playsInline
-      >
-        <source
-          type="video/webm"
-          src="https://res.cloudinary.com/dni4hpqo3/video/upload/af_8000,c_scale,500,q_auto,vc_auto/v1720997476/WashMe_Car_Wash_Video_-_Edited_emahsr.webm"
-        />
-        Your browser does not support the video tag.
-      </video>
-    </div>
+      <div className="relative w-full h-[580px]">
+        <video
+          className="absolute top-0 left-0 w-full h-full object-cover"
+          autoPlay
+          loop
+          muted
+          playsInline
+        >
+          <source
+            type="video/webm"
+            src="https://res.cloudinary.com/dni4hpqo3/video/upload/af_8000,c_scale,500,q_auto,vc_auto/v1720997476/WashMe_Car_Wash_Video_-_Edited_emahsr.webm"
+          />
+          Your browser does not support the video tag.
+        </video>
+      </div>
 
       <CldImage
         src="https://res.cloudinary.com/dni4hpqo3/image/upload/c_scale,h_40,q_70/v1720801124/Wash%20Me%20Car%20Wash%20Images/washhouse.webp"
