@@ -6,6 +6,7 @@ import GiftCertificate from "@/components/GiftCertificate";
 import Map from '@/components/Map';
 import Pricing from "@/components/Pricing";
 import Team from "@/components/Team";
+import WhatWeDo from "@/components/WhatWeDo";
 import { CldImage } from "next-cloudinary";
 
 // type Data = {
@@ -120,6 +121,7 @@ const Home: React.FC = () => {
         className="w-screen"
       />
       <Map />
+      <WhatWeDo />
       <Team />
       <Pricing />
       <GiftCertificate />
