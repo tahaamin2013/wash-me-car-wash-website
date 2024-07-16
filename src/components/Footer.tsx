@@ -19,27 +19,31 @@ export default function Footer() {
       className="sm:grid mt-4 grid-cols-2 w-full lg:p-9 bg-black items-center justify-center flex-col sm:text-left text-center flex text-white h-fit"
     >
       <div className="flex flex-col">
-        <div className="flex">
+        <div className="flex flex-col lg:flex-row items-center">
           <Image
             loading="lazy"
             src="/Hand Wash Open 9 - 4.png"
             width={100}
-            height={300}
-            className="h-[163px] mt-4 lg:mt-0 relative w-[145px] lg:h-[270px] rounded-l-xl"
+            height={400}
+            className="sm:h-[163px] h-fit mt-4 lg:mt-0 relative w-[145px] lg:h-[270px] rounded-l-xl"
             alt="wash me car wash timing image with pink and blue color"
           />
 
-          {/* <div className="relative w-full pb-[56.25%] h-0">
-            <iframe
-              src="https://www.youtube.com/embed/Nnp8YUHGzBs?autoplay=1&mute=1&loop=1&playlist=Nnp8YUHGzBs&controls=0&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1"
-              title="YouTube video player"
-              className="w-[290px] lg:w-[470px] rounded-r-xl h-[193px] lg:h-[270px]  top-0 right-0 pointer-events-none"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;"
-              referrerPolicy="strict-origin-when-cross-origin"
-            ></iframe>
-          </div> */}
+          <video
+            className="w-full h-auto lg:max-w-[30rem] object-cover mt-4 lg:mt-0"
+            autoPlay
+            loop
+            muted
+            playsInline
+          >
+            <source
+              type="video/webm"
+              src="https://res.cloudinary.com/dni4hpqo3/video/upload/v1721000398/car_glqu60.mp4"
+            />
+            Your browser does not support the video tag.
+          </video>
         </div>
+
         <div className="flex sm:flex-row sm:justify-center items-center flex-col w-full mt-6 sm:gap-10">
           <h1 className="!text-white/60 sm:block hidden">
             Designed By{" "}
