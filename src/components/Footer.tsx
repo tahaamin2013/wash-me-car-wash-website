@@ -33,8 +33,7 @@ export default function Footer() {
             alt="wash me car wash timing image with pink and blue color"
           />
 
-          <div className="relative w-full pb-[56.25%] h-0">
-            
+          {/* <div className="relative w-full pb-[56.25%] h-0">
             <iframe
               src="https://www.youtube.com/embed/Nnp8YUHGzBs?autoplay=1&mute=1&loop=1&playlist=Nnp8YUHGzBs&controls=0&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1"
               title="YouTube video player"
@@ -43,7 +42,7 @@ export default function Footer() {
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;"
               referrerPolicy="strict-origin-when-cross-origin"
             ></iframe>
-          </div>
+          </div> */}
         </div>
         <div className="flex sm:flex-row sm:justify-center items-center flex-col w-full mt-6 sm:gap-10">
           <h1 className="!text-white/60 sm:block hidden">

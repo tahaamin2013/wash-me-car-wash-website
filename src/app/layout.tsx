@@ -1,13 +1,7 @@
-import Footer from "@/components/Footer";
-import Navbar from "@/components/Navbar";
-import Topbutton from "@/components/Topbutton";
-import { Toaster } from "@/components/ui/sonner";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
-import { RouteChangeListener } from "@/provider/RouteChangeListener";
 import Script from "next/script";
-import MyPopup from "@/components/Popup";
+import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,15 +16,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="overflow-x-hidden">
+    <html lang="en">
       <body className={inter.className}>
         {/* <MyPopup /> */}
-        <Navbar />
-        <Toaster />
-        <RouteChangeListener />
+        {/* <Navbar /> */}
         {children}
-        <Topbutton />
-        <Footer />
+        {/* <Topbutton /> */}
+        {/* <Footer /> */}
         <Script
           id="omappapi-script"
           dangerouslySetInnerHTML={{
