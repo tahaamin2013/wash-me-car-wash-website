@@ -6,6 +6,7 @@ import Map from '@/components/Map'
 import Team from "@/components/Team";
 import Facilities from "@/components/Facilities";
 import FAQ from "@/components/FAQ";
+import { Contact } from "@/components/ContactForm";
 
 type Data = {
   texts: { text: string; desc: string }[];
@@ -109,6 +110,7 @@ const Home: React.FC = () => {
       <Map />
       <FAQ />
       <Team />
+      <Contact />
       {/*  <main>
        <div className="-mt-3">
           <Facilities />
