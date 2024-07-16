@@ -4,6 +4,7 @@ import { CldImage } from "next-cloudinary";
 import { useEffect, useState } from "react";
 import Map from '@/components/Map'
 import Team from "@/components/Team";
+import Facilities from "@/components/Facilities";
 
 type Data = {
   texts: { text: string; desc: string }[];
@@ -97,7 +98,7 @@ const Home: React.FC = () => {
       </div> */}
 
       <CldImage
-        src="https://res.cloudinary.com/dni4hpqo3/image/upload/c_scale,h_50,q_80/v1720801124/Wash%20Me%20Car%20Wash%20Images/washhouse.webp"
+        src="https://res.cloudinary.com/dni4hpqo3/image/upload/c_scale,h_40,q_70/v1720801124/Wash%20Me%20Car%20Wash%20Images/washhouse.webp"
         alt="WashHouse Image"
         width={400}
         height={146}
@@ -105,7 +106,7 @@ const Home: React.FC = () => {
         className="w-screen"
       />
       <Map />
-      
+      <Facilities />
       <Team />
       {/*  <main>
        <div className="-mt-3">
@@ -122,7 +123,7 @@ const Home: React.FC = () => {
         <Git />
         <Reviews />
         <FAQ />
-        <Contact /> 
+        <Contact />
         <div className="mx-5">
           <Contact />
         </div> 
