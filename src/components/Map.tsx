@@ -5,7 +5,7 @@ const Map = () => {
   return (
     <div
       key="1"
-      className="bg-myBlue lg:grid gap-6 grid-cols-2 px-7 py-6 items-center text-white overflow-hidden shadow-xl"
+      className="bg-primaryBlue-200 lg:grid gap-6 grid-cols-2 px-7 py-6 items-center text-white overflow-hidden shadow-xl"
       style={{
         backgroundImage: mapData.backgroundImageUrl,
       }}

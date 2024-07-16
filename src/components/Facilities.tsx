@@ -44,7 +44,7 @@ const Facilities: React.FC = () => {
 
   return (
     <div
-      className="flex flex-col w-full justify-center items-center mt-3 bg-myBlue px-5 pb-3 text-white"
+      className="flex flex-col w-full justify-center items-center mt-3 bg-primaryBlue-200 px-5 pb-3 text-white"
       style={{
         backgroundImage:
           "url(https://raw.githubusercontent.com/aimahusnain/Washme-CarWash-Images/main/bubbles.png)",
@@ -110,7 +110,7 @@ const Facilities: React.FC = () => {
           </Carousel>
         </div>
         <div className="w-full">
-          <div className="flex w-full items-center sm:flex hidden justify-center mt-7">
+          <div className="w-full items-center sm:flex hidden justify-center mt-7">
             <Image
               loading="lazy"
               src="https://raw.githubusercontent.com/aimahusnain/Washme-CarWash-Images/main/1stlogo.png"

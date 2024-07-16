@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 
-const CustomTabs = ({ tabs }) => {
+const CustomTabs = ({ tabs }: any) => {
   const [activeTab, setActiveTab] = useState(0);
 
   return (
     <div className="w-full my-4">
       <div className="flex mb-4">
-        {tabs.map((tab, index) => (
+        {tabs.map((tab: any, index: number) => (
           <button
             key={index}
             className={`px-4 py-2 text-sm font-medium ${

@@ -8,7 +8,7 @@ const Git: React.FC = () => {
       <div id="#MemberShips">
         <div
           key="2"
-          className="bg-myBlue my-6 items-center sm:grid grid-cols-2 rounded-xl text-white overflow-hidden shadow-xl"
+          className="bg-primaryBlue-200 my-6 items-center sm:grid grid-cols-2 rounded-xl text-white overflow-hidden shadow-xl"
           style={{
             backgroundImage:
               "url(https://raw.githubusercontent.com/aimahusnain/Washme-CarWash-Images/main/bubbles.png)",
