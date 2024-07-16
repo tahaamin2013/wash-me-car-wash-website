@@ -1,3 +1,5 @@
+'use client'
+
 import {
   Sheet,
   SheetClose,
@@ -5,11 +7,10 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { AlignJustify } from "lucide-react";
-import Image from "next/image";
+import { CldImage } from "next-cloudinary";
 import Link from "next/link";
 import { FaPhoneAlt } from "react-icons/fa";
 import Goy from "./goy";
-import { CldImage } from "next-cloudinary";
 
 const Navbar = () => {
   return (
