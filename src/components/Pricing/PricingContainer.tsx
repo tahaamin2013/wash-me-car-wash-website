@@ -27,7 +27,7 @@ const PricingContainer = (data: any) => {
       </p>
       <div className="flex flex-col gap-1 mb-1">
         {Data.services.map((service: any, index: any) => (
-          <span className="flex items-center justify-center w-full gap-2">
+          <span key={index} className="flex items-center justify-center w-full gap-2">
             <FaCheck fill="green" />
             {service}
           </span>
