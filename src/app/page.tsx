@@ -122,7 +122,7 @@ const Home: React.FC = () => {
         className="w-screen"
       />
       <Map />
-      <Facilities />
+      {/* <Facilities /> */}
       <WhatWeDo />
       <Team />
       <Pricing />
