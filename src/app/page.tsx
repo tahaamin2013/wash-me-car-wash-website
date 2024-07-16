@@ -2,6 +2,7 @@
 
 import { CldImage } from "next-cloudinary";
 import { useEffect, useState } from "react";
+import Map from '@/components/Map'
 
 type Data = {
   texts: { text: string; desc: string }[];
@@ -103,8 +104,8 @@ const Home: React.FC = () => {
         className="w-screen"
       />
 
-      {/*<Map />
-        <main>
+      <Map />
+      {/*  <main>
        <div className="-mt-3">
           <Facilities />
         </div>
