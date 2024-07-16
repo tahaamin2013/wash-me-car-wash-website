@@ -16,10 +16,6 @@ export default function Footer() {
   return (
     <div
       id="Contact"
-      style={{
-        backgroundImage:
-          "url(https://raw.githubusercontent.com/aimahusnain/Washme-CarWash-Images/main/bubbles.png)",
-      }}
       className="sm:grid mt-4 grid-cols-2 w-full lg:p-9 bg-black items-center justify-center flex-col sm:text-left text-center flex text-white h-fit"
     >
       <div className="flex flex-col">
