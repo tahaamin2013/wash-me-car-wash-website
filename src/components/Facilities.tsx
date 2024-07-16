@@ -31,11 +31,11 @@ const Facilities: React.FC = () => {
       label: '5 Self-Service Bays (Open 24 Hrs)',
       content: (
         <p>
-          Take control of your car care journey with Wash Me Car Wash's five self-service bays, 
-          available 24/7 for your convenience. Whether you're driving a car, motorcycle, or 
+          Take control of your car care journey with Wash Me Car Wash&apos;s five self-service bays, 
+          available 24/7 for your convenience. Whether you&apos;re driving a car, motorcycle, or 
           towing a trailer, our self-service bays cater to all your needs. Enjoy a bright and 
           clean environment, equipped with user-friendly tools that make maintaining your 
-          vehicle a breeze. At Wash Me Car Wash, it's more than just self-service – it's a 
+          vehicle a breeze. At Wash Me Car Wash, it&apos;s more than just self-service – it&apos;s a 
           personalized experience designed for you.
         </p>
       ),
