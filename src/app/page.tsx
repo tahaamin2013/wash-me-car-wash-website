@@ -1,12 +1,12 @@
 "use client";
 
+import { Contact } from "@/components/ContactForm";
+import FAQ from "@/components/FAQ";
+import GiftCertificate from "@/components/GiftCertificate";
+import Map from '@/components/Map';
+import Team from "@/components/Team";
 import { CldImage } from "next-cloudinary";
 import { useEffect, useState } from "react";
-import Map from '@/components/Map'
-import Team from "@/components/Team";
-import Facilities from "@/components/Facilities";
-import FAQ from "@/components/FAQ";
-import { Contact } from "@/components/ContactForm";
 
 type Data = {
   texts: { text: string; desc: string }[];
@@ -111,6 +111,7 @@ const Home: React.FC = () => {
       <FAQ />
       <Team />
       <Contact />
+      <GiftCertificate />
       {/*  <main>
        <div className="-mt-3">
           <Facilities />

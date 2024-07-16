@@ -32,10 +32,10 @@ const Navbar = () => {
       </div>
       <div
         className="bg-primaryBlue-200 text-white transition-all duration-200 shadow-xl px-5 lg:px-20 py-2 items-center justify-between w-full"
-        style={{
-          backgroundImage:
-            "url(https://raw.githubusercontent.com/aimahusnain/Washme-CarWash-Images/main/bubbles.png)",
-        }}
+        // style={{
+        //   backgroundImage:
+        //     "url(https://raw.githubusercontent.com/aimahusnain/Washme-CarWash-Images/main/bubbles.png)",
+        // }}
       >
         <div className={`flex justify-between items-center`}>
           <Link href="/" className="outline-none absolute">
