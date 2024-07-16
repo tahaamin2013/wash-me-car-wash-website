@@ -120,11 +120,11 @@ const Home: React.FC = () => {
         className="w-screen"
       />
       <Map />
-      <FAQ />
       <Team />
-      <Contact />
-      <GiftCertificate />
       <Pricing />
+      <GiftCertificate />
+      <FAQ />
+      <Contact />
       {/*  <main>
        <div className="-mt-3">
           <Facilities />
