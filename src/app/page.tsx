@@ -6,64 +6,65 @@ import GiftCertificate from "@/components/GiftCertificate";
 import Map from '@/components/Map';
 import Team from "@/components/Team";
 import { CldImage } from "next-cloudinary";
-import { useEffect, useState } from "react";
 
-type Data = {
-  texts: { text: string; desc: string }[];
-};
+// type Data = {
+//   texts: { text: string; desc: string }[];
+// };
+
 const Home: React.FC = () => {
-  const [data, setData] = useState<Data>({
-    texts: [
-      {
-        text: "2 Miles from I-5 Longview exit",
-        desc: "Welcome to Wash me car wash",
-      },
-      { text: "No brushes no machinery", desc: "The Only Handwash Tunnel" },
-      {
-        text: "5 DIY Self Service Bays open 24/7",
-        desc: "Safest Wash in Town.",
-      },
-      {
-        text: "Free Vacuums with Car Wash",
-        desc: "Our goal is to make you happy",
-      },
-      {
-        text: "Hands-on service lambs wool wash",
-        desc: "a complete rejuvenation for your vehicle",
-      },
-      {
-        text: "We treat your car the way you would treat it",
-        desc: "Satisfaction guaranteed if we goof!",
-      },
-      {
-        text: "Spot Free rinse and teflon wax",
-        desc: "Dedicated team of experts",
-      },
-    ],
-  });
+  // const [data, setData] = useState<Data>({
+  //   texts: [
+  //     {
+  //       text: "2 Miles from I-5 Longview exit",
+  //       desc: "Welcome to Wash me car wash",
+  //     },
+  //     { text: "No brushes no machinery", desc: "The Only Handwash Tunnel" },
+  //     {
+  //       text: "5 DIY Self Service Bays open 24/7",
+  //       desc: "Safest Wash in Town.",
+  //     },
+  //     {
+  //       text: "Free Vacuums with Car Wash",
+  //       desc: "Our goal is to make you happy",
+  //     },
+  //     {
+  //       text: "Hands-on service lambs wool wash",
+  //       desc: "a complete rejuvenation for your vehicle",
+  //     },
+  //     {
+  //       text: "We treat your car the way you would treat it",
+  //       desc: "Satisfaction guaranteed if we goof!",
+  //     },
+  //     {
+  //       text: "Spot Free rinse and teflon wax",
+  //       desc: "Dedicated team of experts",
+  //     },
+  //   ],
+  // });
 
-  const [visibleIndex, setVisibleIndex] = useState(0);
-  const [shouldAnimateDown, setShouldAnimateDown] = useState(false);
+  // const [visibleIndex, setVisibleIndex] = useState(0);
+  // const [shouldAnimateDown, setShouldAnimateDown] = useState(false);
 
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      setShouldAnimateDown(true);
-    }, 5000);
+  // useEffect(() => {
+  //   const timeout = setTimeout(() => {
+  //     setShouldAnimateDown(true);
+  //   }, 5000);
 
-    return () => clearTimeout(timeout);
-  }, []);
+  //   return () => clearTimeout(timeout);
+  // }, []);
 
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setShouldAnimateDown(true);
-      setTimeout(() => {
-        setVisibleIndex((prevIndex) => (prevIndex + 1) % data.texts.length);
-        setShouldAnimateDown(false);
-      }, 500);
-    }, 6000);
+  // useEffect(() => {
+  //   const intervalId = setInterval(() => {
+  //     setShouldAnimateDown(true);
+  //     setTimeout(() => {
+  //       setVisibleIndex((prevIndex) => (prevIndex + 1) % data.texts.length);
+  //       setShouldAnimateDown(false);
+  //     }, 500);
+  //   }, 6000);
 
-    return () => clearInterval(intervalId);
-  }, []);
+  //   return () => clearInterval(intervalId);
+  // }, []);
+
   return (
     <>
       {/* <div className="relative ">
@@ -98,6 +99,16 @@ const Home: React.FC = () => {
           </div>
         </div>
       </div> */}
+
+<iframe
+  src="https://player.cloudinary.com/embed/?public_id=car_glqu60&cloud_name=dni4hpqo3&player[controls]=false&player[muted]=true&player[hideContextMenu]=true&player[floatingWhenNotVisible]=false&player[autoplay]=true&player[loop]=true"
+  width="640"
+  height="360" 
+  style={{height: "auto", width: "100%", aspectRatio: "640 / 360"}}
+  allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
+  allowFullScreen
+  frameBorder="0"
+></iframe>
 
       <CldImage
         src="https://res.cloudinary.com/dni4hpqo3/image/upload/c_scale,h_40,q_70/v1720801124/Wash%20Me%20Car%20Wash%20Images/washhouse.webp"

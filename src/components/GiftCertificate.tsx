@@ -40,9 +40,9 @@ const GiftCertificate: React.FC = () => {
             </li>
           </ul>
         </div>
-        <span className="text-[#f60a11] font-extrabold">
+        <p className="text-[#f60a11] font-extrabold">
           TOTAL SAVINGS of $61.00
-        </span>
+        </p>
       </div>
 
       <CldImage
@@ -51,7 +51,7 @@ const GiftCertificate: React.FC = () => {
             width={640}
             loading="lazy"
             height={263}
-            className="w-full lg:w-1/2 transform hover:scale-105 transition-transform duration-300"
+            className="w-full transform hover:scale-105 transition-transform duration-300"
           />
     </div>
   );
