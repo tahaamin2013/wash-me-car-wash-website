@@ -113,6 +113,22 @@ const Home: React.FC = () => {
   frameBorder="0"
 ></iframe> */}
 
+<div className="relative w-full h-[580px]">
+      <video
+        className="absolute top-0 left-0 w-full h-full object-cover"
+        autoPlay
+        loop
+        muted
+        playsInline
+      >
+        <source
+          type="video/webm"
+          src="https://res.cloudinary.com/dni4hpqo3/video/upload/af_8000,c_scale,500,q_auto,vc_auto/v1720997476/WashMe_Car_Wash_Video_-_Edited_emahsr.webm"
+        />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
       <CldImage
         src="https://res.cloudinary.com/dni4hpqo3/image/upload/c_scale,h_40,q_70/v1720801124/Wash%20Me%20Car%20Wash%20Images/washhouse.webp"
         alt="WashHouse Image"
