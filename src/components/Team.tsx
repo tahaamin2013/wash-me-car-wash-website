@@ -1,85 +1,32 @@
-import Image from "next/image";
 import React from "react";
+import { CldImage } from "next-cloudinary";
 
 const Team = () => {
   return (
-    <>
-      {/* Desktop View */}
-      <div
-        id="Meet the Team"
-        className="hidden sm:block relative bg-primaryBlue-200 h-[520px] text-white overflow-hidden rounded-xl"
-      >
-        <div className="absolute inset-0">
-          <Image
-            alt="Wash me car wash team image"
-            src="https://raw.githubusercontent.com/aimahusnain/Washme-CarWash-Images/main/unnamed.jpg"
-            width={1200}
-            height={800}
-            layout="responsive"
-            objectFit="cover"
-            loading="lazy"
-            className="rounded-lg"
-          />
-        </div>
-        <div className="relative z-10 inset-0 text-center flex justify-between w-full gap-3 items-center h-full">
-          <div className="flex flex-col gap-4 mt-[1px] sm:mt-[120px] w-full justify-center items-center">
-            <div className="absolute bottom-4 rounded-none w-fit h-fit left-6 right-4 text-left text-black transition-all bg-white backdrop-blur-sm px-7 py-7">
-              <h2 className="text-2xl font-semibold mb-1 text-blue">
-                Meet the Team
-              </h2>
-              <div className="flex flex-col gap-2 w-full lg:w-[400px]">
-                <p className="text-[13px]">
-                  Although Wash Me Car Wash was started in 1992, Randy and
-                  Eileen Tefft bought the car wash in March of 2021. Why did
-                  they buy Wash Me Car Wash Longview? Because it was the only
-                  hand wash car wash around and all the wonderful staff stayed
-                  on with us. We’ll keep on the good work!
-                </p>
-                <p className="text-[13px]">
-                  We are local owners with a long history of owning and managing
-                  businesses. We love that we can serve this community.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Mobile View */}
-      <div
-        id="Meet the Team - mobile"
-        className="sm:hidden block text-white overflow-hidden rounded-xl"
-      >
-        <Image
+    <div id="Meet the Team" className="relative">
+      <div className="h-[520px]">
+        <CldImage
           alt="Wash me car wash team image"
-          src="https://raw.githubusercontent.com/aimahusnain/Washme-CarWash-Images/main/teem.webp"
-          loading="lazy"
-          width={600}
-          height={400}
-          className="w-full h-full object-center object-cover"
+          src="https://res.cloudinary.com/dni4hpqo3/image/upload/c_scale,f_auto,q_auto,w_480/v1720904495/Team_Image_zx0lyx.jpg"
+          fill
+         loading="lazy"
+          className="object-cover absolute inset-0 object-center w-screen"
         />
-        <div className="flex flex-col gap-4 w-full justify-center items-center">
-          <div className="rounded-none w-fit h-fit text-left text-black transition-all bg-white px-7 py-7">
-            <h3 className="text-2xl font-semibold mb-1 text-blue">
-              Meet the Team
-            </h3>
-            <div className="flex flex-col gap-2 w-full lg:w-[400px]">
-              <p className="text-[13px]">
-                Although Wash Me Car Wash was started in 1992, Randy and Eileen
-                Tefft bought the car wash in March of 2021. Why did they buy
-                Wash Me Car Wash Longview? Because it was the only hand wash car
-                wash around and all the wonderful staff stayed on with us. We’ll
-                keep on the good work!
-              </p>
-              <p className="text-[13px]">
-                We are local owners with a long history of owning and managing
-                businesses. We love that we can serve this community.
-              </p>
-            </div>
-          </div>
+      </div>
+      <div className="absolute bottom-0 left-0 right-auto sm:left-5 sm:right-0 sm:top-auto sm:bottom-5 rounded-none w-full sm:w-[400px] h-fit text-left text-black transition-all bg-white p-7">
+        <h3 className="text-2xl font-bold mb-3 text-primaryBlue-200">
+          Meet the Team
+        </h3>
+        <div className="flex flex-col gap-2 w-full text-sm">
+          <p>
+            Wash Me Car Wash, founded in 1992, was acquired by Randy and Eileen Tefft in March 2021. As the area&apos;s only hand wash car wash, we&apos;re proud that our wonderful staff continued with us.
+          </p>
+          <p>
+            As local owners with extensive business experience, we&apos;re committed to serving our community and maintaining the high standards you&apos;ve come to expect.
+          </p>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
