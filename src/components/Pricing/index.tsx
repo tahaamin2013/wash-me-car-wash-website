@@ -10,7 +10,7 @@ const Pricing: React.FC = () => {
       title: "Small Cars",
       price: "15",
       image:
-        "https://res.cloudinary.com/dni4hpqo3/image/upload/v1721148674/car3_fksbjh.webp",
+        "https://res.cloudinary.com/dni4hpqo3/image/upload/v1721148674/car3_fksbjh.webp", 
       services: [
         "Tire and All over Pre-soak",
         "Tri Color Foam",
@@ -26,11 +26,11 @@ const Pricing: React.FC = () => {
         link: "https://touch4wash.com/hugesavings/hugesavingmembers.php?flk=2266b543ddd7762a69f0a4c0173dfbdd",
       },
     },
-    
+
     {
       title: "Mid-Sized Cars",
       price: "16",
-      image:
+      image: 
         "https://res.cloudinary.com/dni4hpqo3/image/upload/v1721149659/sedan_n4mh1x.webp",
       services: [
         "Tire and All over Pre-soak",
@@ -45,6 +45,30 @@ const Pricing: React.FC = () => {
         title: "Mid Size Club",
         price: "36.95",
         link: "https://touch4wash.com/hugesavings/hugesavingmembers.php?flk=d283035156d4b2fd9776ac54c0a05cd7",
+      },
+    },
+
+    {
+      title: "SUV. Vans Full-Sized Pickups",
+      price: "17",
+      image: [
+        "https://res.cloudinary.com/dni4hpqo3/image/upload/v1721151091/image_gkz2ey.png",
+        "https://res.cloudinary.com/dni4hpqo3/image/upload/v1721151137/image_kgbel4.png",
+        "https://res.cloudinary.com/dni4hpqo3/image/upload/c_scale,f_auto,h_103,q_auto/v1721152889/image_qy0epu.png",
+      ],
+      services: [
+        "Tire and All over Pre-soak",
+        "Tri Color Foam",
+        "Full Body Hand Wash",
+        "High Pressure Dry",
+        "Spot Free Rinse",
+        "Free Vacuum",
+        "Add $2 For Wax",
+      ],
+      membership: {
+        title: "SUV TRUCK Club",
+        price: "39.95",
+        link: "https://touch4wash.com/hugesavings/hugesavingmembers.php?flk=a68d0e837cb627acbfc0e9a24343e4ac",
       },
     },
   ];

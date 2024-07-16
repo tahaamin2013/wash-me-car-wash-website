@@ -3,20 +3,53 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaCheck } from "react-icons/fa";
 import { Button } from "../ui/button";
+import { Carousel, CarouselContent, CarouselItem } from "../ui/carousel";
+import React from "react";
+import Autoplay from "embla-carousel-autoplay";
 
 const PricingContainer = (data: any, index: any) => {
   const Data = data.data;
+  const plugin = React.useRef(
+    Autoplay({ delay: 2000, stopOnInteraction: true })
+  );
+
+  console.log("Images 123", Data.image);
 
   return (
-    <div key={index} className="border p-4 bg-white w-full rounded-2xl flex flex-col justify-center items-center text-center sm:w-[400px] px-5 shadow-xl py-12">
-      <CldImage
-        loading="lazy"
-        alt="car image"
-        src={Data.image}
-        width={320}
-        height={250}
-        className="w-52 hover:scale-110 transition-all duration-300"
-      />
+    <div
+      key={index}
+      className="border p-4 bg-white w-full rounded-2xl flex flex-col justify-center items-center text-center sm:w-[400px] px-5 shadow-xl py-12"
+    >
+      {Array.isArray(Data.image) && Data.image.length > 1 ? (
+        <Carousel plugins={[plugin.current]} className="w-full h-20 p-0">
+          <CarouselContent>
+            {Data.image.map((img: string, imgIndex: number) => (
+              <CarouselItem
+                key={imgIndex}
+                className="w-fit h-fit flex justify-center items-center"
+              >
+                <CldImage
+                  loading="lazy"
+                  alt={`${Data.title} image ${imgIndex + 1}`}
+                  src={img}
+                  width={280}
+                  height={200}
+                  className={`w-44 hover:scale-110 transition-all duration-300`}
+                />
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+        </Carousel>
+      ) : (
+        <CldImage
+          loading="lazy"
+          alt={`${Data.title} image`}
+          src={Array.isArray(Data.image) ? Data.image[0] : Data.image}
+          width={320}
+          height={250}
+          className="w-52 hover:scale-110 transition-all duration-300"
+        />
+      )}
       <h1 className="text-2xl font-bold capitalize">{Data.title}</h1>
       <h2 className="text-2xl font-bold mt-2 uppercase">
         hand wash <br /> ONE-TIME
@@ -27,7 +60,10 @@ const PricingContainer = (data: any, index: any) => {
       </p>
       <div className="flex flex-col gap-1 mb-1">
         {Data.services.map((service: any, index: any) => (
-          <span key={index} className="flex items-center justify-center w-full gap-2">
+          <span
+            key={index}
+            className="flex items-center justify-center w-full gap-2"
+          >
             <FaCheck fill="green" />
             {service}
           </span>
