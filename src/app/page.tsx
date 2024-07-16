@@ -4,6 +4,7 @@ import { Contact } from "@/components/ContactForm";
 import FAQ from "@/components/FAQ";
 import GiftCertificate from "@/components/GiftCertificate";
 import Map from '@/components/Map';
+import Pricing from "@/components/Pricing";
 import Team from "@/components/Team";
 import { CldImage } from "next-cloudinary";
 
@@ -100,15 +101,15 @@ const Home: React.FC = () => {
         </div>
       </div> */}
 
-<iframe
-  src="https://player.cloudinary.com/embed/?public_id=car_glqu60&cloud_name=dni4hpqo3&player[controls]=false&player[muted]=true&player[hideContextMenu]=true&player[floatingWhenNotVisible]=false&player[autoplay]=true&player[loop]=true"
+{/* <iframe
+  src="https://player.cloudinary.com/embed/?public_id=WashMe_Car_Wash_Video_-_Edited_emahsr&cloud_name=dni4hpqo3&player[controls]=false&player[muted]=true&player[hideContextMenu]=true&player[autoplay]=true&player[loop]=true"
   width="640"
   height="360" 
   style={{height: "auto", width: "100%", aspectRatio: "640 / 360"}}
   allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
   allowFullScreen
   frameBorder="0"
-></iframe>
+></iframe> */}
 
       <CldImage
         src="https://res.cloudinary.com/dni4hpqo3/image/upload/c_scale,h_40,q_70/v1720801124/Wash%20Me%20Car%20Wash%20Images/washhouse.webp"
@@ -123,6 +124,7 @@ const Home: React.FC = () => {
       <Team />
       <Contact />
       <GiftCertificate />
+      <Pricing />
       {/*  <main>
        <div className="-mt-3">
           <Facilities />
