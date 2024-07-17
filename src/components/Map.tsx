@@ -23,18 +23,29 @@ HoursOfOperation.displayName = "HoursOfOperation";
 
 const LocationInfo = React.memo(({ address }: any) => {
   const center = { lat: 46.14494173764884, lng: -122.92794998751265 };
+  const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
+
+  if (!apiKey) {
+    return (
+      <>
+        <h1 className="text-2xl font-bold uppercase">Location</h1>
+        <p className="font-semibold text-lg mb-2">{address}</p>
+        <p className="text-red-500">Error: Google Maps API key is missing</p>
+      </>
+    );
+  }
 
   return (
     <>
       <h1 className="text-2xl font-bold uppercase">Location</h1>
       <p className="font-semibold text-lg mb-2">{address}</p>
-   <GoogleMap 
-        apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || ''}
+      <GoogleMap 
+        apiKey={apiKey}
         center={center}
         zoom={17}
       />   
     </>
-  )
+  );
 });
 
 LocationInfo.displayName = "LocationInfo";
