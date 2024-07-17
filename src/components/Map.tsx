@@ -1,9 +1,8 @@
 "use client";
 
-import React, { useMemo } from "react";
 import { mapData } from "@/AllWebsiteData";
-import LeafletMap from "./GoogleMapsApi";
-import GoogleMap from "./GoogleMaps";
+import React, { useMemo } from "react";
+import ShowGoogleMaps from "./ShowGoogleMaps";
 
 const HoursOfOperation = React.memo(() => (
   <div className="w-full h-[305px] rounded-xl justify-between border-green border p-4 flex flex-col">
@@ -22,32 +21,13 @@ const HoursOfOperation = React.memo(() => (
 HoursOfOperation.displayName = "HoursOfOperation";
 
 const LocationInfo = React.memo(({ address }: any) => {
-  const center = { lat: 46.14494173764884, lng: -122.92794998751265 };
-  const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
-
-  console.log("NEXT_PUBLIC_GOOGLE_MAPS_API_KEY", apiKey)
-
-  if (!apiKey) {
-    return (
-      <>
-        <h1 className="text-2xl font-bold uppercase">Location</h1>
-        <p className="font-semibold text-lg mb-2">{address}</p>
-        <p className="text-red-500">Error: Google Maps API key is missing</p>
-      </>
-    );
-  }
-
   return (
     <>
       <h1 className="text-2xl font-bold uppercase">Location</h1>
       <p className="font-semibold text-lg mb-2">{address}</p>
-      <GoogleMap 
-        apiKey={apiKey}
-        center={center}
-        zoom={17}
-      />   
+      <ShowGoogleMaps />
     </>
-  );
+  )
 });
 
 LocationInfo.displayName = "LocationInfo";
