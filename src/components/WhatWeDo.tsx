@@ -1,4 +1,3 @@
-import React, { useRef, useMemo } from "react";
 import { washingSteps } from "@/AllWebsiteData";
 import {
   Carousel,
@@ -8,8 +7,8 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
-import Image from "next/image";
 import { CldImage } from "next-cloudinary";
+import React, { useMemo, useRef } from "react";
 
 const WhatWeDo: React.FC = () => {
   const plugin = useRef(Autoplay({ delay: 4000, stopOnInteraction: true }));

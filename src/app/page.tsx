@@ -1,118 +1,77 @@
 "use client";
 
-import { Contact } from "@/components/ContactForm";
-import Facilities from "@/components/Facilities";
-import FAQ from "@/components/FAQ";
-import GiftCertificate from "@/components/GiftCertificate";
-import Map from "@/components/Map";
-import Pricing from "@/components/Pricing";
-import Team from "@/components/Team";
-import WhatWeDo from "@/components/WhatWeDo";
+import { useEffect, useState, useMemo } from "react";
+import { motion } from "framer-motion";
 import { CldImage } from "next-cloudinary";
+import Map from "@/components/Map";
+import Facilities from "@/components/Facilities";
+import WhatWeDo from "@/components/WhatWeDo";
+import Team from "@/components/Team";
+import Pricing from "@/components/Pricing";
+import GiftCertificate from "@/components/GiftCertificate";
+import FAQ from "@/components/FAQ";
+import { Contact } from "@/components/ContactForm";
 
-// type Data = {
-//   texts: { text: string; desc: string }[];
-// };
+const texts = [
+  { text: "2 Miles from I-5 Longview exit", desc: "Welcome to Wash me car wash" },
+  { text: "No brushes no machinery", desc: "The Only Handwash Tunnel" },
+  { text: "5 DIY Self Service Bays open 24/7", desc: "Safest Wash in Town." },
+  { text: "Free Vacuums with Car Wash", desc: "Our goal is to make you happy" },
+  { text: "Hands-on service lambs wool wash", desc: "a complete rejuvenation for your vehicle" },
+  { text: "We treat your car the way you would treat it", desc: "Satisfaction guaranteed if we goof!" },
+  { text: "Spot Free rinse and teflon wax", desc: "Dedicated team of experts" },
+];
 
 const Home: React.FC = () => {
-  // const [data, setData] = useState<Data>({
-  //   texts: [
-  //     {
-  //       text: "2 Miles from I-5 Longview exit",
-  //       desc: "Welcome to Wash me car wash",
-  //     },
-  //     { text: "No brushes no machinery", desc: "The Only Handwash Tunnel" },
-  //     {
-  //       text: "5 DIY Self Service Bays open 24/7",
-  //       desc: "Safest Wash in Town.",
-  //     },
-  //     {
-  //       text: "Free Vacuums with Car Wash",
-  //       desc: "Our goal is to make you happy",
-  //     },
-  //     {
-  //       text: "Hands-on service lambs wool wash",
-  //       desc: "a complete rejuvenation for your vehicle",
-  //     },
-  //     {
-  //       text: "We treat your car the way you would treat it",
-  //       desc: "Satisfaction guaranteed if we goof!",
-  //     },
-  //     {
-  //       text: "Spot Free rinse and teflon wax",
-  //       desc: "Dedicated team of experts",
-  //     },
-  //   ],
-  // });
+  const [visibleIndex, setVisibleIndex] = useState(0);
+  const [shouldAnimateDown, setShouldAnimateDown] = useState(false);
 
-  // const [visibleIndex, setVisibleIndex] = useState(0);
-  // const [shouldAnimateDown, setShouldAnimateDown] = useState(false);
+  useEffect(() => {
+    const animationInterval = setInterval(() => {
+      setShouldAnimateDown(true);
+      setTimeout(() => {
+        setVisibleIndex((prevIndex) => (prevIndex + 1) % texts.length);
+        setShouldAnimateDown(false);
+      }, 500);
+    }, 6000);
 
-  // useEffect(() => {
-  //   const timeout = setTimeout(() => {
-  //     setShouldAnimateDown(true);
-  //   }, 5000);
+    return () => clearInterval(animationInterval);
+  }, []);
 
-  //   return () => clearTimeout(timeout);
-  // }, []);
-
-  // useEffect(() => {
-  //   const intervalId = setInterval(() => {
-  //     setShouldAnimateDown(true);
-  //     setTimeout(() => {
-  //       setVisibleIndex((prevIndex) => (prevIndex + 1) % data.texts.length);
-  //       setShouldAnimateDown(false);
-  //     }, 500);
-  //   }, 6000);
-
-  //   return () => clearInterval(intervalId);
-  // }, []);
+  const AnimatedText = useMemo(() => (
+    <motion.div
+      className="text-transition"
+      initial={{ y: "100%" }}
+      animate={{ y: shouldAnimateDown ? "100%" : 0 }}
+      transition={{ duration: 0.5 }}
+    >
+      <p className="text-center text-[#0097dd] tracking-widest uppercase sm:text-xl font-semibold text-sm mb-2">
+        {texts[visibleIndex].desc}
+      </p>
+      <p className="text-3xl font-sans sm:text-7xl font-bold text-center text-white">
+        {texts[visibleIndex].text}
+      </p>
+    </motion.div>
+  ), [visibleIndex, shouldAnimateDown]);
 
   return (
     <>
-      {/* <div className="relative ">
-        <div
-          className="absolute top-[40%] sm:top-[35%] items-center justify-center w-full flex 
-        flex-col"
-        >
-          <div className="text-white mt-12 md:mt-0  flex flex-col lg:!mx-52 sm:!mx-7 mx-auto justify-center max-w-fit items-center">
-            <motion.div
-              className="text-transition"
-              initial={{ y: "100%" }}
-              animate={{ y: shouldAnimateDown ? "100%" : 0 }}
-              transition={{ duration: 0.5 }}
-            >
-              <p className="h-fit text-center text-[#0097dd] tracking-widest uppercase overflow-hidden sm:text-xl font-semibold text-sm mb-2">
-                {data.texts[visibleIndex].desc}
-              </p>
-            </motion.div>
-            <div className="h-fit pb-3 text-left tracking-widest flex justify-center items-center text-white w-full overflow-hidden">
-              <motion.div
-                className="text-transition"
-                initial={{ y: "100%" }}
-                animate={{ y: shouldAnimateDown ? "100%" : 0 }}
-                transition={{ duration: 0.5 }}
-              >
-                <p className="text-3xl font-sans sm:text-7xl w-fit font-bold text-center">
-                  {data.texts[visibleIndex].text}
-                </p>
-              </motion.div>
-            </div>
+      <div className="relative w-full h-fit sm:pt-0 pt-[101px]">
+        <div className="absolute inset-0 flex items-center justify-center z-10 px-4">
+          <div className="text-white max-w-4xl w-full">
+            {AnimatedText}
           </div>
         </div>
-      </div> */}
-
-      <div className="relative w-full h-[580px]">
         <video
-          className="absolute top-0 left-0 w-full h-full object-cover"
+          className="w-full h-full"
           autoPlay
           loop
           muted
           playsInline
         >
           <source
-            type="video/webm"
             src="https://res.cloudinary.com/dni4hpqo3/video/upload/c_scale,f_auto,q_auto,w_886/v1720997476/WashMe_Car_Wash_Video_-_Edited_emahsr.mp4"
+            type="video/mp4"
           />
           Your browser does not support the video tag.
         </video>
@@ -124,38 +83,19 @@ const Home: React.FC = () => {
         width={400}
         height={146}
         priority
-        className="w-screen"
+        className="w-full"
       />
+
       <Map />
       <Facilities />
       <WhatWeDo />
       <Team />
       <Pricing />
       <GiftCertificate />
-      {/* <Reviews /> */}
       <FAQ />
       <Contact />
-      {/*  <main>
-       <div className="-mt-3">
-          <Facilities />
-        </div>
-        <div className="mx-5">
-          {" "}
-          <WhatWeDo />
-        </div>
-        <div className="mt-5 mx-5">
-          <Team />
-        </div>
-        <Pricing />
-        <Git />
-        <Reviews />
-        <FAQ />
-        <Contact />
-        <div className="mx-5">
-          <Contact />
-        </div> 
-      </main>*/}
     </>
   );
 };
+
 export default Home;
