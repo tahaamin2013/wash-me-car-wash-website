@@ -13,7 +13,6 @@ const GoogleMap: React.FC<GoogleMapProps> = ({ apiKey, center, zoom }) => {
 
   useEffect(() => {
     if (isLoaded && mapRef.current) {
-      // Use type assertion to tell TypeScript that 'google' exists on 'window'
       const google = (window as any).google;
       new google.maps.Map(mapRef.current, {
         center,
