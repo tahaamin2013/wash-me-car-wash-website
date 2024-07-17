@@ -1,7 +1,7 @@
 "use client";
 
 import { mapData } from "@/AllWebsiteData";
-import Image from "next/image";
+import { CldImage } from "next-cloudinary";
 import Link from "next/link";
 import React, { useMemo } from "react";
 import FoamBubbles from "./FoamBubbles";
@@ -27,17 +27,16 @@ const LocationInfo = React.memo(({ address }: any) => {
     <>
       <h1 className="text-2xl font-bold uppercase">Location</h1>
       <p className="font-semibold text-lg mb-2">{address}</p>
-      {/* <ShowGoogleMaps /> */}
       <Link
         target="_blank"
         href="https://www.google.com/maps/place/Wash+Me+Car+Wash/@46.144836,-122.9307085,17z/data=!4m6!3m5!1s0x54946c94ec9bed79:0x41eb6feac6768b1b!8m2!3d46.14486!4d-122.9279929!16s%2Fg%2F1tds6drw?entry=ttu"
       >
-        <Image
+        <CldImage
           draggable={false}
           width={1000}
           height={400}
           alt="Map Image"
-          src="/mapimage.png"
+          src="https://res.cloudinary.com/dni4hpqo3/image/upload/v1721253270/Wash%20Me%20Car%20Wash%20Images/Reviews/mapimage_ehgm78.png"
         />
       </Link>
     </>
