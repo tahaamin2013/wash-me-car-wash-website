@@ -2,6 +2,7 @@
 
 import { mapData } from "@/AllWebsiteData";
 import React, { useMemo } from "react";
+import ShowGoogleMaps from "./ShowGoogleMaps";
 
 const HoursOfOperation = React.memo(() => (
   <div className="w-full h-[305px] rounded-xl justify-between border-green border p-4 flex flex-col">
@@ -24,7 +25,7 @@ const LocationInfo = React.memo(({ address }: any) => {
     <>
       <h1 className="text-2xl font-bold uppercase">Location</h1>
       <p className="font-semibold text-lg mb-2">{address}</p>
-      {/* <ShowGoogleMaps /> */}
+      <ShowGoogleMaps />
     </>
   )
 });
