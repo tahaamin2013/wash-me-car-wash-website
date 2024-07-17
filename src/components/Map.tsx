@@ -25,6 +25,8 @@ const LocationInfo = React.memo(({ address }: any) => {
   const center = { lat: 46.14494173764884, lng: -122.92794998751265 };
   const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
 
+  console.log("NEXT_PUBLIC_GOOGLE_MAPS_API_KEY", apiKey)
+
   if (!apiKey) {
     return (
       <>
