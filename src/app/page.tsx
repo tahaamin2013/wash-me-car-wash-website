@@ -12,6 +12,7 @@ import GiftCertificate from "@/components/GiftCertificate";
 import FAQ from "@/components/FAQ";
 import { Contact } from "@/components/ContactForm";
 import HeroSection from "@/components/Herosection";
+import Reviews from "@/components/reviews";
 
 
 
@@ -38,6 +39,7 @@ const Home: React.FC = () => {
       <Pricing />
       <GiftCertificate />
       <FAQ />
+      <Reviews />
       <Contact />
     </>
   );
