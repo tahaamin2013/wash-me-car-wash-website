@@ -127,10 +127,10 @@ const Home: React.FC = () => {
         priority
         className="w-screen"
       />
-      <Map />
+      {/* <Map />
       <Facilities />
       <WhatWeDo />
-      <Team />
+      <Team /> */}
       <Pricing />
       <GiftCertificate />
       <Reviews />
