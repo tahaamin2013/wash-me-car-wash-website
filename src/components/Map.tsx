@@ -1,7 +1,8 @@
-'use client'
+"use client";
 
 import React, { useMemo } from "react";
 import { mapData } from "@/AllWebsiteData";
+import LazyMap from "./LazyMap";
 
 const HoursOfOperation = React.memo(() => (
   <div className="w-full h-[305px] rounded-xl justify-between border-green border p-4 flex flex-col">
@@ -17,7 +18,7 @@ const HoursOfOperation = React.memo(() => (
   </div>
 ));
 
-HoursOfOperation.displayName = 'HoursOfOperation';
+HoursOfOperation.displayName = "HoursOfOperation";
 
 const LocationInfo = React.memo(({ address }: any) => (
   <>
@@ -30,18 +31,17 @@ const LocationInfo = React.memo(({ address }: any) => (
       height="300"
       aria-hidden="false"
     /> */}
+    <LazyMap src={mapData.location.iframeSrc} />
   </>
 ));
 
-LocationInfo.displayName = 'LocationInfo';
+LocationInfo.displayName = "LocationInfo";
 
 const Map = () => {
   const memoizedAddress = useMemo(() => mapData.location.address, []);
 
   return (
-    <div
-      className="bg-primaryBlue-200 lg:grid gap-6 grid-cols-2 px-7 py-6 items-center text-white overflow-hidden shadow-xl"
-    >
+    <div className="bg-primaryBlue-200 lg:grid gap-6 grid-cols-2 px-7 py-6 items-center text-white overflow-hidden shadow-xl">
       <div className="flex flex-col items-center mt-6 mb-1 justify-center">
         <div className="flex flex-col mb-4 lg:hidden w-full items-center mt-6 justify-center">
           <LocationInfo address={memoizedAddress} />
