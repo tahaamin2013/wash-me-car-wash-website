@@ -45,7 +45,7 @@ export default function Footer() {
         </div>
 
         <div className="flex sm:flex-row sm:justify-center items-center flex-col w-full mt-6 sm:gap-10">
-          <h1 className="!text-white/60 sm:block hidden">
+          <p className="!text-white/60 sm:block hidden">
             Designed By{" "}
             <Link
               href="https://webkin-solutions.vercel.app/"
@@ -54,7 +54,7 @@ export default function Footer() {
             >
               WebKin Solutions
             </Link>
-          </h1>
+          </p>
           <p className="sm:relative sm:block hidden !text-white/70 left-44">
             CopyRight Wash Me Carwash Longview
           </p>
@@ -64,10 +64,10 @@ export default function Footer() {
       <div className="flex lg:flex-row flex-col w-full h-full items-center justify-center gap-7 sm:gap-[7rem]">
         <div className="flex flex-col">
           <div className="space-y-5">
-            <div className="flex gap-3 items-center">
+            <p className="flex gap-3 items-center">
               <FaMapMarkerAlt className="fill-green" />
               {contactDetails.address}
-            </div>
+            </p>
             <p className="flex gap-3 items-center">
               <IoMdMail className="mt-0.5 fill-green" />
               {contactDetails.email}
