@@ -25,7 +25,7 @@ const LocationInfo = React.memo(({ address }: any) => {
     <>
       <h1 className="text-2xl font-bold uppercase">Location</h1>
       <p className="font-semibold text-lg mb-2">{address}</p>
-      <ShowGoogleMaps />
+      {/* <ShowGoogleMaps /> */}
     </>
   )
 });
