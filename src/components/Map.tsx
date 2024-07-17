@@ -2,7 +2,7 @@
 
 import React, { useMemo } from "react";
 import { mapData } from "@/AllWebsiteData";
-import LazyMap from "./LazyMap";
+import LeafletMap from "./Leaflet";
 
 const HoursOfOperation = React.memo(() => (
   <div className="w-full h-[305px] rounded-xl justify-between border-green border p-4 flex flex-col">
@@ -31,7 +31,8 @@ const LocationInfo = React.memo(({ address }: any) => (
       height="300"
       aria-hidden="false"
     /> */}
-    <LazyMap src={mapData.location.iframeSrc} />
+    <LeafletMap osmUrl="https://www.openstreetmap.org/#map=19/46.14481/-122.92836" />
+    
   </>
 ));
 
