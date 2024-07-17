@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
+import { CldImage } from "next-cloudinary";
 
 const WhatWeDo: React.FC = () => {
   const plugin = useRef(Autoplay({ delay: 4000, stopOnInteraction: true }));
@@ -18,7 +19,7 @@ const WhatWeDo: React.FC = () => {
       key={index}
       className="z-10 flex flex-col lg:flex-row justify-center text-left bg-primaryBlue-200 rounded-xl h-[600px] sm:h-[400px] text-white overflow-hidden shadow-xl"
     >
-      <Image
+      <CldImage
         width={700}
         height={500}
         src={item.Image}
@@ -31,7 +32,7 @@ const WhatWeDo: React.FC = () => {
         </h2>
         <p className="text-sm mt-3 mb-3">{item.description}</p>
       </div>
-      <Image
+      <CldImage
         width={500}
         height={500}
         src={item.Image}

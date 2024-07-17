@@ -6,7 +6,6 @@ import FAQ from "@/components/FAQ";
 import GiftCertificate from "@/components/GiftCertificate";
 import Map from "@/components/Map";
 import Pricing from "@/components/Pricing";
-import Reviews from "@/components/reviews";
 import Team from "@/components/Team";
 import WhatWeDo from "@/components/WhatWeDo";
 import { CldImage } from "next-cloudinary";
