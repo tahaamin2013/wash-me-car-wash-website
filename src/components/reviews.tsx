@@ -11,7 +11,14 @@ import {
 import { CldImage } from "next-cloudinary";
 import Autoplay from "embla-carousel-autoplay";
 
-const reviews = [
+interface Review {
+  reviewer_name: string;
+  rating: number;
+  reviewer_picture_url: string;
+  message: string;
+}
+
+const reviews: Review[] = [
   {
     reviewer_name: "Rich White",
     rating: 5,
@@ -23,7 +30,7 @@ const reviews = [
   // ... other reviews
 ];
 
-const RenderStars = React.memo(({ rating }: any) => {
+const RenderStars: React.FC<{ rating: number }> = React.memo(({ rating }) => {
   return Array(5)
     .fill(0)
     .map((_, i) => (
@@ -36,8 +43,9 @@ const RenderStars = React.memo(({ rating }: any) => {
       />
     ));
 });
+RenderStars.displayName = 'RenderStars';
 
-const ReviewItem = React.memo(({ review }: any) => (
+const ReviewItem: React.FC<{ review: Review }> = React.memo(({ review }) => (
   <div className="p-2 border border-white rounded-lg py-3 sm:py-5 w-full h-full ml-3">
     <div className="flex gap-3 items-center">
       <CldImage
@@ -55,8 +63,9 @@ const ReviewItem = React.memo(({ review }: any) => (
     <p className="mt-2">{review.message}</p>
   </div>
 ));
+ReviewItem.displayName = 'ReviewItem';
 
-const Reviews = () => {
+const Reviews: React.FC = () => {
   const [isClient, setIsClient] = useState(false);
   const plugin = useRef(Autoplay({ delay: 2000, stopOnInteraction: true }));
 
