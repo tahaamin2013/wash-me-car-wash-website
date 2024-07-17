@@ -1,5 +1,5 @@
 import { Plus } from "lucide-react";
-import Image from "next/image";
+import { CldImage } from "next-cloudinary";
 import React, { memo } from "react";
 
 const GiftCertificate: React.FC = memo(() => {
@@ -45,10 +45,10 @@ const GiftCertificate: React.FC = memo(() => {
       </div>
 
       <div className="relative w-full h-full min-h-[263px]">
-        <Image
+        <CldImage
           src="https://res.cloudinary.com/dni4hpqo3/image/upload/c_scale,w_62/v1720962938/Wash%20Me%20Car%20Wash%20Images/RealMockup_jn2xyv.webp"
           alt="Gift Certificate Image"
-          layout="fill"
+          fill
           objectFit="cover"
           priority
           className="transform hover:scale-105 transition-transform duration-300"
