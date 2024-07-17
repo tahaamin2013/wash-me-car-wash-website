@@ -2,7 +2,8 @@
 
 import React, { useMemo } from "react";
 import { mapData } from "@/AllWebsiteData";
-import LeafletMap from "./Leaflet";
+import LeafletMap from "./GoogleMapsApi";
+import GoogleMap from "./GoogleMaps";
 
 const HoursOfOperation = React.memo(() => (
   <div className="w-full h-[305px] rounded-xl justify-between border-green border p-4 flex flex-col">
@@ -20,21 +21,21 @@ const HoursOfOperation = React.memo(() => (
 
 HoursOfOperation.displayName = "HoursOfOperation";
 
-const LocationInfo = React.memo(({ address }: any) => (
-  <>
-    <h1 className="text-2xl font-bold uppercase">Location</h1>
-    <p className="font-semibold text-lg mb-2">{address}</p>
-    {/* <iframe
-      className="sm:w-full sm:h-[300px] h-[400px] w-full overflow-hidden rounded-md"
-      src={mapData.location.iframeSrc}
-      width="600"
-      height="300"
-      aria-hidden="false"
-    /> */}
-    <LeafletMap osmUrl="https://www.openstreetmap.org/#map=19/46.14481/-122.92836" />
-    
-  </>
-));
+const LocationInfo = React.memo(({ address }: any) => {
+  const center = { lat: 46.14494173764884, lng: -122.92794998751265 };
+
+  return (
+    <>
+      <h1 className="text-2xl font-bold uppercase">Location</h1>
+      <p className="font-semibold text-lg mb-2">{address}</p>
+   <GoogleMap 
+        apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || ''}
+        center={center}
+        zoom={17}
+      />   
+    </>
+  )
+});
 
 LocationInfo.displayName = "LocationInfo";
 
