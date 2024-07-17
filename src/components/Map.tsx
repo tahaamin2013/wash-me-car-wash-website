@@ -2,7 +2,6 @@
 
 import { mapData } from "@/AllWebsiteData";
 import React, { useMemo } from "react";
-import ShowGoogleMaps from "./ShowGoogleMaps";
 
 const HoursOfOperation = React.memo(() => (
   <div className="w-full h-[305px] rounded-xl justify-between border-green border p-4 flex flex-col">
