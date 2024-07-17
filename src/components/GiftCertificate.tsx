@@ -1,6 +1,5 @@
 import { Plus } from "lucide-react";
 import { CldImage } from "next-cloudinary";
-import Image from "next/image";
 import React from "react";
 
 const GiftCertificate: React.FC = () => {
