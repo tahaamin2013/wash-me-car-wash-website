@@ -28,20 +28,20 @@ const reviews: Review[] = [
       "These guys are always friendly, and they do a fantastic job!! Best car wash on the west coast, we a...",
   },
   {
-    reviewer_name: "Rich White",
+    reviewer_name: "Shirley Simms",
     rating: 5,
     reviewer_picture_url:
       "https://res.cloudinary.com/dni4hpqo3/image/upload/v1721242842/Wash%20Me%20Car%20Wash%20Images/Reviews/ACg8ocLS4qNmrPf2IXpZF99eJaZjxaqVomQ94IOuFm98Lm-x_s40-c-rp-mo-br100_jrv2hp.webp",
     message:
-      "These guys are always friendly, and they do a fantastic job!! Best car wash on the west coast, we a...",
+      "Oh my goodness these folks do a FANTASTIC job ! They hand wash your car! Making sure it's CLEAN!!! Highly recommend",
   },
   {
-    reviewer_name: "Rich White",
+    reviewer_name: "Rick Foster",
     rating: 5,
     reviewer_picture_url:
       "https://res.cloudinary.com/dni4hpqo3/image/upload/v1721242842/Wash%20Me%20Car%20Wash%20Images/Reviews/ACg8ocLS4qNmrPf2IXpZF99eJaZjxaqVomQ94IOuFm98Lm-x_s40-c-rp-mo-br100_jrv2hp.webp",
     message:
-      "These guys are always friendly, and they do a fantastic job!! Best car wash on the west coast, we a...",
+      "Just moved to Longview and found a hand wash car wash....they did a fantastic job and very reasonably priced.  I will be going there again , a lot better than machine washes.",
   },
 ];
 
@@ -121,9 +121,9 @@ const Reviews: React.FC = () => {
                   <ReviewItem review={review} />
                 </CarouselItem>
               ))}
-              <CarouselItem className="pl-1 md:basis-1/1 text-white lg:basis-1/3 px-3">
+              <CarouselItem className="pl-1 md:basis-1/1 text-white lg:basis-1/3 px-3 flex justify-center items-center">
                 <Link
-                  href=""
+                  href="https://www.google.com/maps/place/Wash+Me+Car+Wash/@46.14486,-122.9305678,17z/data=!3m1!4b1!4m17!1m8!4m7!1m0!1m5!1m1!1s0x54946c94ec9bed79:0x41eb6feac6768b1b!2m2!1d-122.9280156!2d46.1448855!3m7!1s0x54946c94ec9bed79:0x41eb6feac6768b1b!8m2!3d46.14486!4d-122.9279929!9m1!1b1!16s%2Fg%2F1tds6drw?entry=ttu"
                   target="_blank"
                   className="bg-primaryGreen p-4 rounded-xl mt-6"
                 >
