@@ -41,7 +41,7 @@ const reviews: Review[] = [
     reviewer_picture_url:
       "https://res.cloudinary.com/dni4hpqo3/image/upload/v1721242842/Wash%20Me%20Car%20Wash%20Images/Reviews/ACg8ocLS4qNmrPf2IXpZF99eJaZjxaqVomQ94IOuFm98Lm-x_s40-c-rp-mo-br100_jrv2hp.webp",
     message:
-      "Just moved to Longview and found a hand wash car wash....they did a fantastic job and very reasonably priced.  I will be going there again , a lot better than machine washes.",
+      "Just moved to Longview and found a hand wash car wash.... they did a fantastic job and very reasonably priced.  I will be going there again , a lot better than machine washes.",
   },
 ];
 
