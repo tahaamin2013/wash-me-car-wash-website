@@ -18,7 +18,6 @@ import Reviews from "@/components/reviews";
 
 const Home: React.FC = () => {
 
-
   return (
     <>
     <HeroSection />

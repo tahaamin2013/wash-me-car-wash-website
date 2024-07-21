@@ -85,7 +85,7 @@ const Pricing: React.FC = () => {
           width={200}
           alt="PostCard Wash me car wash image"
           loading="lazy"
-          className="w-auto h-auto max-w-full"
+          className="w-auto max-w-full"
         />
         <CldImage
           src="https://res.cloudinary.com/dni4hpqo3/image/upload/c_scale,f_auto,q_auto,w_137/v1720984059/Wash%20Me%20Car%20Wash%20Images/pricing/Frame-1_j60xj5.webp"
@@ -93,7 +93,7 @@ const Pricing: React.FC = () => {
           width={232}
           alt="Simonize Double Bond image"
           loading="lazy"
-          className="w-auto h-auto max-w-full"
+          className="w-auto max-w-full"
         />
         <h1 className="font-bold text-3xl sm:text-4xl capitalize text-center sm:text-left">
           Choose your plan
