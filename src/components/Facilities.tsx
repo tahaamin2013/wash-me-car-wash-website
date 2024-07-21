@@ -143,10 +143,8 @@ const Facilities = () => {
           className="text-black mt-12 sm:mt-16 lg:mt-20 max-w-7xl mx-auto"
         >
           {memoizedCarouselContent}
-          <div className="hidden sm:block">
-            <DynamicCarouselPrevious className="absolute left-4 top-1/2" />
-            <DynamicCarouselNext className="absolute right-4 top-1/2" />
-          </div>
+            <DynamicCarouselPrevious className="absolute -left-8 top-1/2" />
+            <DynamicCarouselNext className="absolute -right-8 top-1/2" />
         </DynamicCarousel>
       )}
     </div>
