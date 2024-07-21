@@ -3,8 +3,6 @@ import dynamic from "next/dynamic";
 import { useEffect, useMemo, useState } from "react";
 import CustomTabs from "./CustomTabs";
 
-// const FoamBubbles = lazy(() => import("./FoamBubbles"));
-
 const DynamicCarousel = dynamic(
   () => import("@/components/ui/carousel").then((mod) => mod.Carousel),
   { ssr: false }

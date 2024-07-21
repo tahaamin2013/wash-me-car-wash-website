@@ -31,7 +31,7 @@ const reviews: Review[] = [
     reviewer_name: "Shirley Simms",
     rating: 5,
     reviewer_picture_url:
-      "https://res.cloudinary.com/dni4hpqo3/image/upload/v1721242842/Wash%20Me%20Car%20Wash%20Images/Reviews/ACg8ocLS4qNmrPf2IXpZF99eJaZjxaqVomQ94IOuFm98Lm-x_s40-c-rp-mo-br100_jrv2hp.webp",
+      "https://res.cloudinary.com/dni4hpqo3/image/upload/v1721567433/ACg8ocJhWDWjzAbNedCS0zyGM4sjkMGoVOuzuZVfkL2emsc4ivSWaw_w36-h36-p-rp-mo-ba5-br100_mffyfd.png",
     message:
       "Oh my goodness these folks do a FANTASTIC job ! They hand wash your car! Making sure it's CLEAN!!! Highly recommend",
   },
@@ -39,7 +39,7 @@ const reviews: Review[] = [
     reviewer_name: "Rick Foster",
     rating: 5,
     reviewer_picture_url:
-      "https://res.cloudinary.com/dni4hpqo3/image/upload/v1721242842/Wash%20Me%20Car%20Wash%20Images/Reviews/ACg8ocLS4qNmrPf2IXpZF99eJaZjxaqVomQ94IOuFm98Lm-x_s40-c-rp-mo-br100_jrv2hp.webp",
+      "https://res.cloudinary.com/dni4hpqo3/image/upload/v1721567486/unnamed_kxom9j.png",
     message:
       "Just moved to Longview and found a hand wash car wash.... they did a fantastic job and very reasonably priced.  I will be going there again , a lot better than machine washes.",
   },
