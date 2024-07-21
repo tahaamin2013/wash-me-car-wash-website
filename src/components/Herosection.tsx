@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useCallback, useRef, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const texts = [
@@ -14,6 +14,7 @@ const texts = [
 const HeroSection = () => {
   const [index, setIndex] = useState(0);
   const [isTextVisible, setIsTextVisible] = useState(true);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   const nextText = useCallback(() => {
     setIsTextVisible(false);
@@ -23,10 +24,31 @@ const HeroSection = () => {
     }, 500);
   }, []);
 
-  useEffect(() => {
-    const textTimer = setInterval(nextText, 5000);
-    return () => clearInterval(textTimer);
+  const startTimer = useCallback(() => {
+    if (timerRef.current === null) {
+      timerRef.current = setInterval(nextText, 5000);
+    }
   }, [nextText]);
+
+  const stopTimer = useCallback(() => {
+    if (timerRef.current !== null) {
+      clearInterval(timerRef.current);
+      timerRef.current = null;
+    }
+  }, []);
+
+  const memoizedAnimationProps = useMemo(() => ({
+    initial: { opacity: 0, scale: 0.8 },
+    animate: { opacity: 1, scale: 1 },
+    exit: { opacity: 0, scale: 1.2 },
+    transition: { duration: 0.5, ease: "easeInOut" }
+  }), []);
+
+  const memoizedTextProps = useMemo(() => ({
+    initial: { y: 20 },
+    animate: { y: 0 },
+    transition: { duration: 0.5 }
+  }), []);
 
   return (
     <div className="relative w-full h-[580px] overflow-hidden">
@@ -36,6 +58,8 @@ const HeroSection = () => {
         loop
         muted
         playsInline
+        onPlay={startTimer}
+        onPause={stopTimer}
       >
         <source
           src="https://res.cloudinary.com/dni4hpqo3/video/upload/c_scale,f_auto,q_auto,w_886/v1720997476/WashMe_Car_Wash_Video_-_Edited_emahsr.mp4"
@@ -48,25 +72,20 @@ const HeroSection = () => {
           {isTextVisible && (
             <motion.div
               key={index}
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 1.2 }}
-              transition={{ duration: 0.5, ease: "easeInOut" }}
+              {...memoizedAnimationProps}
               className="text-white text-center px-4"
             >
               <motion.p 
                 className="text-blue-500 font-bold text-xl md:text-2xl"
-                initial={{ y: 20 }}
-                animate={{ y: 0 }}
-                transition={{ delay: 0.4, duration: 0.5 }}
+                {...memoizedTextProps}
+                transition={{ ...memoizedTextProps.transition, delay: 0.4 }}
               >
                 {texts[index].desc}
               </motion.p>
               <motion.h2 
                 className="text-4xl md:text-5xl font-bold mb-4"
-                initial={{ y: 20 }}
-                animate={{ y: 0 }}
-                transition={{ delay: 0.2, duration: 0.5 }}
+                {...memoizedTextProps}
+                transition={{ ...memoizedTextProps.transition, delay: 0.2 }}
               >
                 {texts[index].text}
               </motion.h2>
@@ -78,4 +97,4 @@ const HeroSection = () => {
   );
 };
 
-export default HeroSection;
+export default React.memo(HeroSection);

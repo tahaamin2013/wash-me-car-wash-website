@@ -5,14 +5,14 @@ const CustomTabs = ({ tabs }: any) => {
 
   return (
     <div className='flex flex-col items-center justify-center mt-5'>
-      <div>
+      <div className='bg-zinc-300 rounded-xl opacity-80 p-1'>
         {tabs.map((tab: any, index: number) => (
           <button
             key={index}
             className={`px-4 py-2 text-sm font-medium ${
               activeTab === index
-                ? 'bg-white text-primaryBlue-200 border-b-2 border-primaryBlue-200'
-                : 'bg-gray-100 text-gray-600'
+                ? 'bg-white rounded-xl text-black'
+                : 'text-gray-600'
             }`}
             onClick={() => setActiveTab(index)}
           >

@@ -151,8 +151,6 @@ export const plans: Plan[] = [
   },
 ];
 
-
-
 export const washingSteps = [
   {
     Image:

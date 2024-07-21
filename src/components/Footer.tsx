@@ -15,8 +15,7 @@ import FoamBubbles from "./FoamBubbles";
 
 export default function Footer() {
   return (
-    <footer className="relative">
-      <FoamBubbles bubbleCount={20} />
+    <footer className="bg-black">
       <div
         id="Contact"
         className="sm:grid mt-4 grid-cols-2 w-full lg:p-9 bg-black items-center justify-center flex-col sm:text-left text-center flex text-white h-fit"
