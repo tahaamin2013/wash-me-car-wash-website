@@ -1,6 +1,8 @@
 "use client";
+
+
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { FaPhoneAlt } from "react-icons/fa";
 
 const Memberships = () => {

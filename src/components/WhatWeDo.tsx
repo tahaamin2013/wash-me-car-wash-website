@@ -1,4 +1,4 @@
-import { WhatWeDoData } from "@/AllWebsiteData";
+import { washingSteps } from "@/AllWebsiteData";
 import {
   Carousel,
   CarouselContent,
@@ -7,16 +7,44 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
-import Image from "next/image";
-import React, { useRef } from "react";
-
+import { CldImage } from "next-cloudinary";
+import React, { useMemo, useRef } from "react";
 
 const WhatWeDo: React.FC = () => {
   const plugin = useRef(Autoplay({ delay: 4000, stopOnInteraction: true }));
+
+  const carouselItems = useMemo(() => washingSteps.map((item, index) => (
+    <CarouselItem
+      key={index}
+      className="z-10 flex flex-col lg:flex-row justify-center text-left bg-primaryBlue-200 rounded-xl h-[600px] sm:h-[400px] text-white overflow-hidden shadow-xl"
+    >
+      <CldImage
+        width={700}
+        height={500}
+        src={item.Image}
+        alt={`Step ${index + 1} image`}
+        className="w-[700px] h-[500px] object-cover object-top lg:block hidden"
+      />
+      <div className="mt-4 flex flex-col flex-wrap ml-6">
+        <h2 className="text-left text-white font-bold text-2xl">
+          {item.title}
+        </h2>
+        <p className="text-sm mt-3 mb-3">{item.description}</p>
+      </div>
+      <CldImage
+        width={500}
+        height={500}
+        src={item.Image}
+        alt={`Step ${index + 1} image`}
+        className="w-screen h-screen object-cover object-top lg:hidden block"
+      />
+    </CarouselItem>
+  )), []);
+
   return (
-    <div
+    <section
       id="Our Services"
-      className="flex flex-col w-full justify-center items-center mt-3"
+      className="flex mx-7 flex-col justify-center items-center my-5"
     >
       <div className="text-center flex flex-col gap-2 mb-2">
         <p className="tracking-widest text-blue">WHAT WE DO</p>
@@ -32,47 +60,12 @@ const WhatWeDo: React.FC = () => {
         onMouseLeave={plugin.current.reset}
       >
         <CarouselContent>
-          {WhatWeDoData.map((item, index) => (
-            <CarouselItem key={index}>
-              <div
-                className="bg-myBlue rounded-xl h-[600px] sm:h-[400px] text-white overflow-hidden shadow-xl"
-                style={{
-                  backgroundImage:
-                    "url(https://raw.githubusercontent.com/aimahusnain/Washme-CarWash-Images/main/bubbles.png)",
-                }}
-              >
-                <div className="z-10 flex flex-col lg:flex-row justify-center h-full text-left">
-                  <Image
-                    width={500}
-                    height={500}
-                    src={item.image}
-                    loading="lazy"
-                    alt={`Step ${index + 1} image`}
-                    className="w-[700px] h-[500px] object-cover object-top lg:block hidden"
-                  />
-                  <div className="mt-4 flex flex-col flex-wrap ml-6">
-                    <h1 className="text-left text-white font-bold text-2xl">
-                      {item.title}
-                    </h1>
-                    <p className="text-sm mt-3 mb-3">{item.description}</p>
-                  </div>
-                  <Image
-                    width={500}
-                    height={500}
-                    loading="lazy"
-                    src={item.image}
-                    alt={`Step ${index + 1} image`}
-                    className="w-screen h-screen object-cover object-top lg:hidden block"
-                  />
-                </div>
-              </div>
-            </CarouselItem>
-          ))}
+          {carouselItems}
         </CarouselContent>
         <CarouselPrevious />
         <CarouselNext />
       </Carousel>
-    </div>
+    </section>
   );
 };
 

@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Button } from './ui/button';
-import { toast } from "sonner"
 
 export function Contact() {
   const [formData, setFormData] = useState({
@@ -26,8 +25,8 @@ export function Contact() {
     });
     const result = await response.json();
     if (result.success) {
-      toast("Form Submitted Successfully")
-      console.log(result);
+      // toast("Form Submitted Successfully")
+      // console.log(result);
       setFormData({
         name: '',
         email: '',

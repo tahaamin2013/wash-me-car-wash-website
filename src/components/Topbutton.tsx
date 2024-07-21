@@ -34,7 +34,6 @@ const GoTopButton = () => {
   }, []);
 
   useEffect(() => {
-    // Use Framer Motion to animate the button's visibility
     controls.start({ opacity: isVisible ? 1 : 0, scale: isVisible ? 1 : 0 });
   }, [isVisible, controls]);
 

@@ -44,7 +44,6 @@ const LeadGenForm = () => {
     });
     const result = await response.json();
     if (result.success) {
-      console.log(result);
       setShowSuccessMessage(true);
       setShowForm(false);
       setShowBottomBar(false);
@@ -61,7 +60,7 @@ const LeadGenForm = () => {
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.8 }}
               transition={{ duration: 0.3 }}
-              className="bg-myBlue text-white rounded-lg shadow-lg w-full relative max-w-md text-center"
+              className="bg-primaryBlue-200 text-white rounded-lg shadow-lg w-full relative max-w-md text-center"
             >
               <div className="px-8 pt-8">
                 <button
@@ -113,7 +112,7 @@ const LeadGenForm = () => {
             transition={{ duration: 0.3 }}
             className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50"
           >
-            <div className="bg-myBlue text-white rounded-lg shadow-lg w-full max-w-md text-center p-8">
+            <div className="bg-primaryBlue-200 text-white rounded-lg shadow-lg w-full max-w-md text-center p-8">
               <h2 className="text-2xl mb-4">Success!</h2>
               <p>Your form has been submitted successfully.</p>
               <Button
@@ -136,7 +135,7 @@ const LeadGenForm = () => {
             exit={{ y: 100 }}
             transition={{ duration: 0.3 }}
             onClick={handleBottomBarClick}
-            className="bottom-[0px] left-[0px] fixed bg-myBlue text-white cursor-pointer w-fit py-3 px-[20px] text-sm rounded-md z-50 text-left shadow-lg"
+            className="bottom-[0px] left-[0px] fixed bg-primaryBlue-200 text-white cursor-pointer w-fit py-3 px-[20px] text-sm rounded-md z-50 text-left shadow-lg"
           >
             Get 50% OFF
           </motion.div>
