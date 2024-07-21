@@ -1,18 +1,16 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { CldImage } from "next-cloudinary";
-import Map from "@/components/Map";
-import Facilities from "@/components/Facilities";
-import WhatWeDo from "@/components/WhatWeDo";
-import Team from "@/components/Team";
-import Pricing from "@/components/Pricing";
-import GiftCertificate from "@/components/GiftCertificate";
-import FAQ from "@/components/FAQ";
 import { Contact } from "@/components/ContactForm";
+import Facilities from "@/components/Facilities";
+import FAQ from "@/components/FAQ";
+import GiftCertificate from "@/components/GiftCertificate";
 import HeroSection from "@/components/Herosection";
+import Map from "@/components/Map";
+import Pricing from "@/components/Pricing";
 import Reviews from "@/components/reviews";
+import Team from "@/components/Team";
+import WhatWeDo from "@/components/WhatWeDo";
+import { CldImage } from "next-cloudinary";
 
 const Home: React.FC = () => {
   return (
