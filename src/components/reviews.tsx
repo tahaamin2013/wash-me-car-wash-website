@@ -98,7 +98,7 @@ const Reviews: React.FC = () => {
       <div className="flex flex-row justify-center items-center w-full text-2xl font-bold">
         What our customers say
       </div>
-      <div className="flex flex-col gap-2 justify-center items-center w-full bg-primaryBlue-200 text-white py-7 px-16 mt-4">
+      <div className="flex flex-col gap-2 justify-center items-center w-full bg-primaryBlue-200 text-white py-7 px-4 mt-4">
         <Link
           href="https://www.google.com/search?hl=en-BR&gl=br&q=Wash+Me+Car+Wash,+1953+9th+Ave,+Longview,+WA+98632,+United+States&ludocid=4750013286135008027&lsig=AB86z5V2TG630eID1b_fI-RNBxns#lrd=0x54946c94ec9bed79:0x41eb6feac6768b1b,3"
           className="bg-primaryGreen text-black px-3 py-2 rounded-lg text-lg mb-3 w-fit ml-auto"
@@ -116,7 +116,7 @@ const Reviews: React.FC = () => {
               {reviews.map((review, index) => (
                 <CarouselItem
                   key={index}
-                  className="pl-1 md:basis-1/1 text-white lg:basis-1/3 px-3 sm:px-6"
+                  className="pl-1 md:basis-1/2 text-white lg:basis-1/3 px-3 sm:px-6"
                 >
                   <ReviewItem review={review} />
                 </CarouselItem>

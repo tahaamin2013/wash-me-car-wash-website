@@ -15,24 +15,24 @@ import FoamBubbles from "./FoamBubbles";
 
 export default function Footer() {
   return (
-    <footer className="bg-black">
+    <footer className="bg-black overflow-x-auto">
       <div
         id="Contact"
         className="sm:grid mt-4 grid-cols-2 w-full lg:p-9 bg-black items-center justify-center flex-col sm:text-left text-center flex text-white h-fit"
       >
         <div className="flex flex-col">
-          <div className="flex flex-col lg:flex-row items-center">
+          <div className="flex  items-center">
             <Image
               loading="lazy"
               src="/Hand Wash Open 9 - 4.png"
               width={100}
               height={400}
-              className="sm:h-[163px] h-fit mt-4 lg:mt-0 relative w-[145px] lg:h-[270px] rounded-l-xl"
+              className="sm:h-[163px] h-[190px] mt-4 lg:mt-0 relative w-[145px] lg:h-[270px] rounded-l-xl"
               alt="wash me car wash timing image with pink and blue color"
             />
 
             <video
-              className="w-full h-auto lg:max-w-[30rem] object-cover mt-4 lg:mt-0"
+              className="w-[250px] md:w-full h-[190px] md:h-auto lg:max-w-[30rem] object-cover mt-4 lg:mt-0"
               autoPlay
               loop
               muted

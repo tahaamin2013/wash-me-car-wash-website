@@ -36,6 +36,7 @@ const LocationInfo = React.memo(({ address }: any) => {
           width={1000}
           height={400}
           alt="Map Image"
+          className="rounded-xl"
           src="https://res.cloudinary.com/dni4hpqo3/image/upload/v1721253270/Wash%20Me%20Car%20Wash%20Images/Reviews/mapimage_ehgm78.png"
         />
       </Link>

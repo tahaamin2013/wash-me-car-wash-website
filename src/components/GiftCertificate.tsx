@@ -50,7 +50,7 @@ const GiftCertificate: React.FC = () => {
             width={600}
             loading="lazy"
             height={200}
-            className="w-full transform hover:scale-105 transition-transform duration-300"
+            className="sm:mb-0 mb-5 w-full transform hover:scale-105 transition-transform duration-300"
           />
     </div>
   );
