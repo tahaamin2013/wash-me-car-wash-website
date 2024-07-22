@@ -32,16 +32,16 @@ const Home: React.FC = () => {
       />
       </Suspense>
 
-      <Map />
+      {/* <Map /> */}
       <Facilities />
       <WhatWeDo />
       <Team />
       <Pricing />
       <GiftCertificate />
       <FAQ />
-      <Suspense fallback={<LoadingPlaceholder />}>
-        <Reviews />
-      </Suspense>
+      {/* <Suspense fallback={<LoadingPlaceholder />}> */}
+        <Reviews   />
+      {/* </Suspense> */}
       <Suspense fallback={<LoadingPlaceholder />}>
         <Contact />
       </Suspense>

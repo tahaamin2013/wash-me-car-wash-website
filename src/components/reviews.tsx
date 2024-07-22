@@ -131,8 +131,8 @@ const Reviews: React.FC = () => {
                 </Link>
               </CarouselItem>
             </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
+            <CarouselPrevious className="left-1" />
+            <CarouselNext className="right-1" />
           </Carousel>
         </div>
       </div>
