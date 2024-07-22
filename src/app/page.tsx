@@ -32,8 +32,8 @@ const Home: React.FC = () => {
       />
       </Suspense>
 
-      {/* <Map />
-      <Facilities /> */}
+      {/* <Map /> */}
+      <Facilities />
       <WhatWeDo />
       <Team />
       <Pricing />
