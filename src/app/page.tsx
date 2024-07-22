@@ -36,7 +36,7 @@ const Home: React.FC = () => {
       <Facilities />
       <WhatWeDo />
       <Team />
-      <Pricing />
+      {/* <Pricing /> */}
       <GiftCertificate />
       <FAQ />
       <Suspense fallback={<LoadingPlaceholder />}>
