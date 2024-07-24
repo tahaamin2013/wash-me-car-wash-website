@@ -33,7 +33,7 @@ const LocationInfo = React.memo(({ address }: any) => {
       >
         <CldImage
           draggable={false}
-          width={1000}
+          width={700}
           height={400}
           alt="Map Image"
           className="rounded-xl"

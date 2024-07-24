@@ -1,23 +1,27 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import dynamic from 'next/dynamic';
+import { Suspense, lazy } from 'react';
 import { CldImage } from "next-cloudinary";
-import Map from "@/components/Map";
-import Facilities from "@/components/Facilities";
-import WhatWeDo from "@/components/WhatWeDo";
-import Team from "@/components/Team";
-import Pricing from "@/components/Pricing";
-import GiftCertificate from "@/components/GiftCertificate";
-import FAQ from "@/components/FAQ";
-import { Contact } from "@/components/ContactForm";
-import HeroSection from "@/components/Herosection";
-import Reviews from "@/components/reviews";
+
+const HeroSection = dynamic(() => import('@/components/Herosection'), { ssr: true });
+const Map = dynamic(() => import('@/components/Map'), { ssr: false });
+const Facilities = dynamic(() => import('@/components/Facilities'));
+const WhatWeDo = dynamic(() => import('@/components/WhatWeDo'));
+const Team = dynamic(() => import('@/components/Team'));
+const Pricing = dynamic(() => import('@/components/Pricing'));
+const GiftCertificate = dynamic(() => import('@/components/GiftCertificate'));
+const FAQ = dynamic(() => import('@/components/FAQ'));
+const Reviews = lazy(() => import('@/components/reviews'));
+const Contact = lazy(() => import('@/components/ContactForm').then(mod => ({ default: mod.Contact })));
+
+const LoadingPlaceholder = () => <div>Loading...</div>;
 
 const Home: React.FC = () => {
   return (
     <>
-    <HeroSection />
+      <HeroSection />
+      <Suspense fallback={<LoadingPlaceholder />}>
       <CldImage
         src="https://res.cloudinary.com/dni4hpqo3/image/upload/c_scale,h_40,q_70/v1720801124/Wash%20Me%20Car%20Wash%20Images/washhouse.webp"
         alt="WashHouse Image"
@@ -26,16 +30,21 @@ const Home: React.FC = () => {
         priority
         className="w-full"
       />
+      </Suspense>
 
-      <Map />
+      {/* <Map /> */}
       <Facilities />
       <WhatWeDo />
       <Team />
       <Pricing />
       <GiftCertificate />
       <FAQ />
-      <Reviews />
-      <Contact />
+      {/* <Suspense fallback={<LoadingPlaceholder />}> */}
+        <Reviews   />
+      {/* </Suspense> */}
+      <Suspense fallback={<LoadingPlaceholder />}>
+        <Contact />
+      </Suspense>
     </>
   );
 };

@@ -1,17 +1,17 @@
 "use client";
-import Image from "next/image";
-import Link from "next/link";
+
+import { contactDetails, navLinks, socialLinks } from "@/AllWebsiteData";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import Goy from "./goy";
-import { contactDetails, socialLinks, navLinks } from "@/AllWebsiteData";
+import Image from "next/image";
+import Link from "next/link";
 import { FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
-import FoamBubbles from "./FoamBubbles";
+import Goy from "./goy";
 
 export default function Footer() {
   return (

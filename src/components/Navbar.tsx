@@ -18,13 +18,6 @@ const Navbar = () => {
       <div className="bg-[#1b3e63] w-full text-white capitalize flex sm:flex-row flex-col flex-wrap justify-between px-5 text-center items-center">
         <div></div>
         <Goy id="#MemberShips">We are now offering MEMBERSHIPS!!!</Goy>
-        {/* <button
-          onClick={(e) => handleButtonClick(e, "#MemberShips")}
-          id="goTopBtn"
-          aria-label="We are now offering MEMBERSHIPS!!! button"
-        >
-          <p className="underline">We are now offering MEMBERSHIPS!!!</p>
-        </button> */}
         <div className="flex items-center">
           <FaPhoneAlt className="fill-green mr-3" />{" "}
           <Link href="tel:360-4304126">360-4304126</Link>
@@ -32,10 +25,6 @@ const Navbar = () => {
       </div>
       <div
         className="bg-primaryBlue-200 text-white transition-all duration-200 shadow-xl px-5 lg:px-20 py-2 items-center justify-between w-full"
-        // style={{
-        //   backgroundImage:
-        //     "url(https://raw.githubusercontent.com/aimahusnain/Washme-CarWash-Images/main/bubbles.png)",
-        // }}
       >
         <div className={`flex justify-between items-center`}>
           <Link href="/" className="outline-none absolute">
