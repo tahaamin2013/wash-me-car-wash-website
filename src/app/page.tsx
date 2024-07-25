@@ -35,7 +35,6 @@ const Home: React.FC = () => {
           className="w-full"
         />
       </Suspense>
-
       <Map />
        <Facilities /> 
       <WhatWeDo />
@@ -43,7 +42,6 @@ const Home: React.FC = () => {
       <Pricing />
       <GiftCertificate />
       <FAQ />
-
       <Reviews />
       <Suspense fallback={<LoadingPlaceholder />}>
         <Contact />
