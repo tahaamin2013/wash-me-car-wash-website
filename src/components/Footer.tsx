@@ -78,15 +78,16 @@ export default function Footer() {
             </div>
             <div className="flex text-right justify-center mt-8 space-x-6">
               {socialLinks.map((link, index) => (
-                      <Link
-                        aria-label={link.label}
-                        target="_blank"
-                        href={link.url}
-                        className="text-green hover:text-white"
-                      >
-                        <span className="sr-only">{link.label}</span>
-                        <link.icon />
-                      </Link>
+                <Link
+                  aria-label={link.label}
+                  target="_blank"
+                  href={link.url}
+                  key={index}
+                  className="text-green hover:text-white"
+                >
+                  <span className="sr-only">{link.label}</span>
+                  <link.icon />
+                </Link>
               ))}
             </div>
           </div>
