@@ -4,11 +4,13 @@ import { useEffect, useMemo, useState } from "react";
 import CustomTabs from "./CustomTabs";
 import Head from "next/head";
 import React from "react";
+
 interface LogoImageProps {
   src: string;
   alt: string;
   className?: string;
 }
+
 const DynamicCarousel = dynamic(
   () => import("@/components/ui/carousel").then((mod) => mod.Carousel),
   { ssr: false }
@@ -65,15 +67,16 @@ const LogoImage: React.FC<LogoImageProps> = React.memo(
   )
 );
 
-const Facilities = () => {
+LogoImage.displayName = "LogoImage";
+
+const Facilities: React.FC = () => {
   const [isClient, setIsClient] = useState(false);
-  const [autoplayPlugin, setAutoplayPlugin] = useState(null);
+  const [autoplayPlugin, setAutoplayPlugin] = useState<any>(null);
 
   useEffect(() => {
     setIsClient(true);
     import("embla-carousel-autoplay").then((Autoplay) => {
       setAutoplayPlugin(
-        // @ts-ignore
         Autoplay.default({ delay: 3000, stopOnInteraction: false })
       );
     });
@@ -165,5 +168,7 @@ const Facilities = () => {
     </>
   );
 };
+
+Facilities.displayName = "Facilities";
 
 export default React.memo(Facilities);
