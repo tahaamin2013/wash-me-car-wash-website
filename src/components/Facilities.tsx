@@ -91,14 +91,13 @@ const Facilities = () => {
       width={100}
       height={75}
       className={className}
-      priority
+      loading="lazy"
     />
   );
 
   return (
-    <div className="relative mb-4 bg-primaryBlue-200 text-white px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-15">
-      <section className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center">
-        {/* Logo section */}
+    <div className="mb-4 mt-3 bg-primaryBlue-200 text-white px-4 max-w-7xl flex flex-col justify-between items-center sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-15">
+      <div className="flex flex-col  items-center md:flex-row">
         <div className="md:w-1/4 flex flex-row md:flex-col justify-center md:justify-start gap-3 mb-6 md:mb-0">
           <LogoImage
             src="https://res.cloudinary.com/dni4hpqo3/image/upload/c_scale,f_auto,q_auto,w_58/v1720806179/Wash%20Me%20Car%20Wash%20Images/logo11_sl8tqx.png"
@@ -120,7 +119,6 @@ const Facilities = () => {
           <CustomTabs tabs={tabsData} />
         </div>
 
-        {/* Additional logos */}
         <div className="md:w-1/4 flex flex-row md:flex-col justify-end items-end gap-3 mt-6 md:mt-0">
           <LogoImage
             src="https://res.cloudinary.com/dni4hpqo3/image/upload/c_scale,f_auto,q_auto,w_217/v1720807321/Wash%20Me%20Car%20Wash%20Images/100_yqhh3l.png"
@@ -133,17 +131,19 @@ const Facilities = () => {
             className="w-32 sm:w-40 md:w-32"
           />
         </div>
-      </section>
-      {isClient && autoplayPlugin && (
-        <DynamicCarousel
-          plugins={[autoplayPlugin]}
-          className="text-black mt-12 sm:mt-16 lg:mt-20 max-w-7xl mx-auto"
-        >
-          {memoizedCarouselContent}
-          <DynamicCarouselPrevious className="absolute -left-8 top-1/2" />
-          <DynamicCarouselNext className="absolute -right-8 top-1/2" />
-        </DynamicCarousel>
-      )}
+      </div>
+      <div>
+        {isClient && autoplayPlugin && (
+          <DynamicCarousel
+            plugins={[autoplayPlugin]}
+            className="text-black mt-12 sm:mt-16 lg:mt-20 max-w-7xl mx-auto"
+          >
+            {memoizedCarouselContent}
+            <DynamicCarouselPrevious className="absolute -left-8 top-1/2" />
+            <DynamicCarouselNext className="absolute -right-8 top-1/2" />
+          </DynamicCarousel>
+        )}
+      </div>
     </div>
   );
 };
