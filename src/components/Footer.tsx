@@ -9,10 +9,9 @@ import Goy from "./goy";
 
 export default function Footer() {
   return (
-    <footer className="bg-black overflow-x-auto">
       <div
         id="Contact"
-        className="sm:grid mt-4 grid-cols-2 w-full lg:p-9 bg-black items-center justify-center flex-col sm:text-left text-center flex text-white h-fit"
+        className="sm:grid mt-4 grid-cols-2 overflow-x-auto w-full lg:p-9 bg-black items-center justify-center flex-col sm:text-left text-center flex text-white h-fit"
       >
         <div className="flex flex-col">
           <div className="flex  items-center">
@@ -109,6 +108,5 @@ export default function Footer() {
           </p>
         </div>
       </div>
-    </footer>
   );
 }
