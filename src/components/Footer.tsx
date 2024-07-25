@@ -1,12 +1,6 @@
 "use client";
 
 import { contactDetails, navLinks, socialLinks } from "@/AllWebsiteData";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
 import Image from "next/image";
 import Link from "next/link";
 import { FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
@@ -84,9 +78,6 @@ export default function Footer() {
             </div>
             <div className="flex text-right justify-center mt-8 space-x-6">
               {socialLinks.map((link, index) => (
-                <TooltipProvider key={index}>
-                  <Tooltip>
-                    <TooltipTrigger>
                       <Link
                         aria-label={link.label}
                         target="_blank"
@@ -96,12 +87,6 @@ export default function Footer() {
                         <span className="sr-only">{link.label}</span>
                         <link.icon />
                       </Link>
-                    </TooltipTrigger>
-                    <TooltipContent>
-                      <p>{link.label}</p>
-                    </TooltipContent>
-                  </Tooltip>
-                </TooltipProvider>
               ))}
             </div>
           </div>
