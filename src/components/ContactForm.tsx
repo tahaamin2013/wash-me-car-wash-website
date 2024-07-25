@@ -25,8 +25,6 @@ export function Contact() {
     });
     const result = await response.json();
     if (result.success) {
-      // toast("Form Submitted Successfully")
-      // console.log(result);
       setFormData({
         name: "",
         email: "",

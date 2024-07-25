@@ -50,7 +50,6 @@ export const faqData = [
   },
 ];
 
-// Footer Data
 
 export const contactDetails = {
   address: "1953 9th Ave, Longview, WA",
