@@ -9,8 +9,8 @@ const Team = () => {
           <CldImage
             alt="Wash me car wash team image"
             src="https://res.cloudinary.com/dni4hpqo3/image/upload/c_scale,f_auto,q_auto,w_480/v1720904495/Team_Image_zx0lyx.jpg"
-            width={800}
-            height={800}
+            width={700}
+            height={700}
             loading="lazy"
             className="object-cover w-fit sm:w-screen h-fit sm:h-[510px]  absolute inset-0 object-center "
           />
