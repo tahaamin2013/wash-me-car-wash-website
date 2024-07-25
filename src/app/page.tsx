@@ -23,7 +23,7 @@ const LoadingPlaceholder = () => <div>Loading...</div>;
 
 const Home: React.FC = () => {
   return (
-    <>
+    <div className="overflow-x-hidden">
       <HeroSection />
       <Suspense fallback={<LoadingPlaceholder />}>
         <CldImage
@@ -49,7 +49,7 @@ const Home: React.FC = () => {
       <Suspense fallback={<LoadingPlaceholder />}>
         <Contact />
       </Suspense>
-    </>
+    </div>
   );
 };
 
