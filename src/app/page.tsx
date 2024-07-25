@@ -43,9 +43,8 @@ const Home: React.FC = () => {
       <Pricing />
       <GiftCertificate />
       <FAQ />
-      {/* <Suspense fallback={<LoadingPlaceholder />}> */}
+
       <Reviews />
-      {/* </Suspense> */}
       <Suspense fallback={<LoadingPlaceholder />}>
         <Contact />
       </Suspense>

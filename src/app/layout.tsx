@@ -9,7 +9,8 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Wash Me Car Wash Longview | The Only Handwash Tunnel Around!",
-  description: "Wash Me Car Wash in Longview offers handwash tunnel services, featuring a unique approach that combines the convenience of a tunnel wash with the thoroughness of handwashing.",
+  description:
+    "Wash Me Car Wash in Longview offers handwash tunnel services, featuring a unique approach that combines the convenience of a tunnel wash with the thoroughness of handwashing.",
 };
 
 export default function RootLayout({
@@ -20,10 +21,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className}`}>
-        {/* <MyPopup /> */}
         <Navbar />
         {children}
-        {/* <Topbutton /> */}
         <Footer />
         <Script
           id="omappapi-script"
