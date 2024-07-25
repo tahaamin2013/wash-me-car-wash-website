@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
-import { Button } from './ui/button';
+import React, { useState } from "react";
+import { Button } from "./ui/button";
 
 export function Contact() {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
+    name: "",
+    email: "",
+    phone: "",
   });
 
   async function handleSubmit(e: any) {
@@ -20,7 +20,7 @@ export function Contact() {
         access_key: "93f23dc4-ded0-42ad-bd57-c07ab9a01f25",
         name: formData.name,
         email: formData.email,
-        phone: formData.phone,  
+        phone: formData.phone,
       }),
     });
     const result = await response.json();
@@ -28,9 +28,9 @@ export function Contact() {
       // toast("Form Submitted Successfully")
       // console.log(result);
       setFormData({
-        name: '',
-        email: '',
-        phone: '',
+        name: "",
+        email: "",
+        phone: "",
       });
     }
   }
@@ -44,62 +44,60 @@ export function Contact() {
   }
 
   return (
-    <>
-      <form
-        onSubmit={handleSubmit}
-        className="sm:max-w-sm w-full my-10 mx-auto flex flex-col items-center justify-center"
+    <form
+      onSubmit={handleSubmit}
+      className="sm:max-w-sm w-full my-10 mx-auto flex flex-col items-center justify-center"
+    >
+      <h1 className="text-4xl font-bold mx-auto mb-2">Contact Form</h1>
+      <div className="mb-4">
+        <label htmlFor="name" className="block mb-1">
+          Name
+        </label>
+        <input
+          type="text"
+          name="name"
+          value={formData.name}
+          onChange={handleChange}
+          required
+          placeholder="Your name"
+          className="w-full px-4 py-2 rounded border border-gray-300 focus:border-blue-500 focus:outline-none"
+        />
+      </div>
+      <div className="mb-4">
+        <label htmlFor="email" className="block mb-1">
+          Email
+        </label>
+        <input
+          type="email"
+          name="email"
+          value={formData.email}
+          onChange={handleChange}
+          required
+          placeholder="email@example.com"
+          className="w-full px-4 py-2 rounded border border-gray-300 focus:border-blue-500 focus:outline-none"
+        />
+      </div>
+      <div className="mb-4">
+        <label htmlFor="phone" className="block mb-1">
+          Phone Number
+        </label>
+        <input
+          type="tel"
+          name="phone"
+          value={formData.phone}
+          onChange={handleChange}
+          required
+          placeholder="+ 0123 456 789"
+          className="w-full px-4 py-2 rounded border border-gray-300 focus:border-blue-500 focus:outline-none"
+        />
+      </div>
+      <Button
+        type="submit"
+        aria-label="Submit Form"
+        className="bg-black text-white"
       >
-        <h1 className="text-4xl font-bold mx-auto mb-2">Contact Form</h1>
-        <div className="mb-4">
-          <label htmlFor="name" className="block mb-1">
-            Name
-          </label>
-          <input
-            type="text"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-            placeholder="Your name"
-            className="w-full px-4 py-2 rounded border border-gray-300 focus:border-blue-500 focus:outline-none"
-          />
-        </div>
-        <div className="mb-4">
-          <label htmlFor="email" className="block mb-1">
-            Email
-          </label>
-          <input
-            type="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-            placeholder="email@example.com"
-            className="w-full px-4 py-2 rounded border border-gray-300 focus:border-blue-500 focus:outline-none"
-          />
-        </div>
-        <div className="mb-4">
-          <label htmlFor="phone" className="block mb-1">
-            Phone Number
-          </label>
-          <input
-            type="tel"
-            name="phone"
-            value={formData.phone}
-            onChange={handleChange}
-            required
-            placeholder="+ 0123 456 789"
-            className="w-full px-4 py-2 rounded border border-gray-300 focus:border-blue-500 focus:outline-none"
-          />
-        </div>
-        <Button
-          type="submit"
-          aria-label="Submit Form"
-          className="bg-black text-white"
-        >
-          Submit Form
-        </Button>
-      </form>
-    </>
+        Submit Form
+      </Button>
+    </form>
   );
 }

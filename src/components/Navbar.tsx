@@ -55,10 +55,6 @@ const Navbar = () => {
                 </SheetTrigger>
                 <SheetContent
                   className="flex-col flex gap-3 text-left items-start font-bold"
-                  style={{
-                    backgroundImage:
-                      "url(https://raw.githubusercontent.com/aimahusnain/Washme-CarWash-Images/main/bubbles.png)",
-                  }}
                 >
                   <SheetClose>
                     <Goy id="Our Services">Our Services</Goy>

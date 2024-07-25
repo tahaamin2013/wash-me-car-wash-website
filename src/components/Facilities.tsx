@@ -97,7 +97,6 @@ const Facilities = () => {
 
   return (
     <div className="relative mb-4 bg-primaryBlue-200 text-white px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-15">
- 
       <section className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center">
         {/* Logo section */}
         <div className="md:w-1/4 flex flex-row md:flex-col justify-center md:justify-start gap-3 mb-6 md:mb-0">
@@ -141,8 +140,8 @@ const Facilities = () => {
           className="text-black mt-12 sm:mt-16 lg:mt-20 max-w-7xl mx-auto"
         >
           {memoizedCarouselContent}
-            <DynamicCarouselPrevious className="absolute -left-8 top-1/2" />
-            <DynamicCarouselNext className="absolute -right-8 top-1/2" />
+          <DynamicCarouselPrevious className="absolute -left-8 top-1/2" />
+          <DynamicCarouselNext className="absolute -right-8 top-1/2" />
         </DynamicCarousel>
       )}
     </div>

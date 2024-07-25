@@ -99,8 +99,6 @@ export const mapData = {
     { day: "Friday", time: "9:00 AM - 6:00 PM" },
     { day: "Saturday", time: "9:00 AM - 6:00 PM" },
   ],
-  backgroundImageUrl:
-    "url(https://raw.githubusercontent.com/aimahusnain/Washme-CarWash-Images/main/bubbles.png)",
 };
 
 export const plans: Plan[] = [
