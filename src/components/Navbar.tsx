@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import {
   Sheet,
@@ -23,10 +23,7 @@ const Navbar = () => {
           <Link href="tel:360-4304126">360-4304126</Link>
         </div>
       </div>
-      <div
-        className="bg-primaryBlue-200 text-white transition-all duration-200 shadow-xl px-5 lg:px-20 py-2 items-center justify-between w-full"
-      >
-        <div className={`flex justify-between items-center`}>
+      <div className="bg-primaryBlue-200 flex justify-between items-center text-white transition-all duration-200 shadow-xl px-5 lg:px-20 py-2 w-full">
           <Link href="/" className="outline-none absolute">
             <CldImage
               src="https://res.cloudinary.com/dni4hpqo3/image/upload/v1720827052/Wash-Me-Logo_nmqgji.png"
@@ -53,9 +50,7 @@ const Navbar = () => {
                 >
                   <AlignJustify fill="white" size={27} />
                 </SheetTrigger>
-                <SheetContent
-                  className="flex-col flex gap-3 text-left items-start font-bold"
-                >
+                <SheetContent className="flex-col flex gap-3 text-left items-start font-bold">
                   <SheetClose>
                     <Goy id="Our Services">Our Services</Goy>
                   </SheetClose>
@@ -77,7 +72,6 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-    </div>
   );
 };
 
