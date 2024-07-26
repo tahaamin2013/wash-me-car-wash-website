@@ -47,7 +47,7 @@ const FAQ = () => {
       className="border mt-4 max-w-2xl mx-auto text-sm text-left sm:text-md mb-4 p-6"
     >
       <h1 className="font-bold text-2xl text-center mb-4">
-        Got Questions? We've Got Answers!
+        Got Questions? We&apos;ve Got Answers!
       </h1>
       <div className="grid grid-cols-1 text-left gap-x-8 w-full">
         {memoizedFAQItems}
