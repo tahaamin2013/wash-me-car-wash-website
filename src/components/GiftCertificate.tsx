@@ -4,21 +4,28 @@ import React from "react";
 
 const GiftCertificate: React.FC = () => {
   return (
-    <div
-      id="#MemberShips"
-      className="bg-primaryBlue-200 my-6 py-8 w-full h-full justify-center items-center gap-3 sm:grid grid-cols-2 text-white overflow-hidden shadow-xl"
+    <section
+      id="MemberShips"
+      className="bg-primaryBlue-200 my-6 py-8 w-full flex flex-col sm:grid sm:grid-cols-2 text-white overflow-hidden shadow-xl"
+      aria-labelledby="gift-certificate-title"
     >
-      <div className="">
-        <h1 className="text-2xl text-center sm:text-3xl font-bold mb-1 tracking-widest">
+      <div className="flex flex-col items-center">
+        <h2
+          id="gift-certificate-title"
+          className="text-2xl text-center sm:text-3xl font-bold mb-1 tracking-widest"
+        >
           GIFT CERTIFICATE
-        </h1>
-        <p className="mb-4 text-center">
+        </h2>
+        <p className="mb-4 text-center max-w-prose">
           Gift the joy of a pristine ride with Wash Me Car Wash Gift
           Certificates - the perfect, eco-friendly way to say &quot;thank you
           &quot; or celebrate any occasion in style!
         </p>
-        <div className="flex flex-col sm:flex-row justify-center items-center">
-          <ul className="list-disc border-2 border-white w-fit ml-3 py-6 px-10 rounded-lg">
+        <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
+          <ul
+            className="list-disc border-2 border-white w-fit py-6 px-10 rounded-lg"
+            aria-label="Savings on washes"
+          >
             <li>Equals to $10.90 per wash</li>
             <li>Regularly ($15.00) each</li>
             <li>
@@ -26,8 +33,11 @@ const GiftCertificate: React.FC = () => {
               <span className="text-[#f60a11] font-extrabold">SAVE $41.00</span>
             </li>
           </ul>
-          <Plus size="40" stroke="white" />
-          <ul className="list-disc border-2 border-white w-fit pl-9 pr-3 px-10 py-6 rounded-lg">
+          <Plus size="40" aria-hidden="true" />
+          <ul
+            className="list-disc border-2 border-white w-fit py-6 px-10 rounded-lg"
+            aria-label="Additional bonus savings"
+          >
             <li>You receive a bonus of 50% OFF </li>
             <li>Teflon Simoniz Wax for an additional</li>
             <li>
@@ -37,17 +47,22 @@ const GiftCertificate: React.FC = () => {
             </li>
           </ul>
         </div>
-        <p className="text-[#f60a11] font-extrabold text-center">TOTAL SAVINGS of $61.00</p>
+        <p className="text-[#f60a11] font-extrabold text-center mt-4">
+          TOTAL SAVINGS of $61.00
+        </p>
       </div>
 
-      <CldImage
-        src="https://res.cloudinary.com/dni4hpqo3/image/upload/c_scale,w_62/v1720962938/Wash%20Me%20Car%20Wash%20Images/RealMockup_jn2xyv.webp"
-        alt="Gift Certificate Image"
-        width={700}
-        loading="lazy"
-        height={230}
-      />
-    </div>
+      <div className="flex justify-center items-center mt-6 sm:mt-0">
+        <CldImage
+          src="https://res.cloudinary.com/dni4hpqo3/image/upload/c_scale,w_62/v1720962938/Wash%20Me%20Car%20Wash%20Images/RealMockup_jn2xyv.webp"
+          alt="Gift Certificate mockup"
+          width={700}
+          height={230}
+          loading="lazy"
+          className="max-w-full h-auto"
+        />
+      </div>
+    </section>
   );
 };
 
