@@ -1,5 +1,5 @@
-import React, { useState, useCallback, useRef, useMemo } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+"use client";
+import React, { useState, useCallback, useRef, useEffect } from "react";
 
 const texts = [
   {
@@ -23,7 +23,7 @@ const texts = [
 const HeroSection = () => {
   const [index, setIndex] = useState(0);
   const [isTextVisible, setIsTextVisible] = useState(true);
-  const timerRef = useRef<NodeJS.Timeout | null>(null);
+  const timerRef = useRef<number | null>(null);
 
   const nextText = useCallback(() => {
     setIsTextVisible(false);
@@ -35,35 +35,21 @@ const HeroSection = () => {
 
   const startTimer = useCallback(() => {
     if (timerRef.current === null) {
-      timerRef.current = setInterval(nextText, 5000);
+      timerRef.current = window.setInterval(nextText, 5000);
     }
   }, [nextText]);
 
   const stopTimer = useCallback(() => {
     if (timerRef.current !== null) {
-      clearInterval(timerRef.current);
+      window.clearInterval(timerRef.current);
       timerRef.current = null;
     }
   }, []);
 
-  const memoizedAnimationProps = useMemo(
-    () => ({
-      initial: { opacity: 0, scale: 0.8 },
-      animate: { opacity: 1, scale: 1 },
-      exit: { opacity: 0, scale: 1.2 },
-      transition: { duration: 0.5, ease: "easeInOut" },
-    }),
-    []
-  );
-
-  const memoizedTextProps = useMemo(
-    () => ({
-      initial: { y: 20 },
-      animate: { y: 0 },
-      transition: { duration: 0.5 },
-    }),
-    []
-  );
+  useEffect(() => {
+    startTimer();
+    return () => stopTimer();
+  }, [startTimer, stopTimer]);
 
   return (
     <div className="relative w-full h-[580px] overflow-hidden">
@@ -83,30 +69,26 @@ const HeroSection = () => {
         Your browser does not support the video tag.
       </video>
       <div className="absolute inset-0 flex items-center justify-center">
-        <AnimatePresence mode="wait">
-          {isTextVisible && (
-            <motion.div
-              key={index}
-              {...memoizedAnimationProps}
-              className="text-white text-center px-4"
-            >
-              <motion.p
-                className="text-blue-500 font-bold text-xl md:text-2xl"
-                {...memoizedTextProps}
-                transition={{ ...memoizedTextProps.transition, delay: 0.4 }}
-              >
-                {texts[index].desc}
-              </motion.p>
-              <motion.h2
-                className="text-4xl md:text-5xl font-bold mb-4"
-                {...memoizedTextProps}
-                transition={{ ...memoizedTextProps.transition, delay: 0.2 }}
-              >
-                {texts[index].text}
-              </motion.h2>
-            </motion.div>
-          )}
-        </AnimatePresence>
+        <div
+          className={`text-white text-center px-4 transition-all duration-500 ease-in-out ${
+            isTextVisible
+              ? "opacity-100 scale-100 translate-y-0"
+              : "opacity-0 scale-90 translate-y-4"
+          }`}
+        >
+          <p
+            className="text-blue-500 font-bold text-xl md:text-2xl mb-2 transition-all duration-500 ease-in-out"
+            style={{ transitionDelay: "200ms" }}
+          >
+            {texts[index].desc}
+          </p>
+          <h2
+            className="text-4xl md:text-5xl font-bold transition-all duration-500 ease-in-out"
+            style={{ transitionDelay: "400ms" }}
+          >
+            {texts[index].text}
+          </h2>
+        </div>
       </div>
     </div>
   );
