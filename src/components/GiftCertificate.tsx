@@ -6,7 +6,7 @@ const GiftCertificate: React.FC = () => {
   return (
     <section
       id="MemberShips"
-      className="bg-primaryBlue-200 my-6 py-8 w-full flex flex-col sm:grid sm:grid-cols-2 text-white overflow-hidden shadow-xl"
+      className="bg-primaryBlue-200 my-6 py-8 pl-4 w-full flex flex-col sm:grid sm:grid-cols-2 text-white overflow-hidden shadow-xl"
       aria-labelledby="gift-certificate-title"
     >
       <div className="flex flex-col items-center">
