@@ -32,7 +32,6 @@ const Home: React.FC = () => {
           width={1200}
           height={206}
           loading="lazy"
-          className="w-full"
         />
       </Suspense>
       {/* <Map /> */}
