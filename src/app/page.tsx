@@ -36,7 +36,7 @@ const Home: React.FC = () => {
           className="hidden sm:block"
         />
         <Image
-          src="/Mobilewashhouse.webp"
+          src="/washhouse_11zon.jpg"
           alt="WashHouse Image"
           width={400}
           height={206}
