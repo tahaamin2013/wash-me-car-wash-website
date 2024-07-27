@@ -35,6 +35,14 @@ const Home: React.FC = () => {
           loading="lazy"
           className="hidden sm:block"
         />
+        <Image
+          src="/washhouse.webp"
+          alt="WashHouse Image"
+          width={380}
+          height={206}
+          loading="lazy"
+          className=" block sm:hidden"
+        />
       </Suspense>
       {/* <Map /> */}
       <Facilities />
