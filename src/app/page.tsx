@@ -3,6 +3,7 @@
 import dynamic from "next/dynamic";
 import { CldImage } from "next-cloudinary";
 import { Suspense, lazy } from "react";
+import Image from "next/image";
 
 const HeroSection = dynamic(() => import("@/components/Herosection"), {
   ssr: true,
@@ -26,13 +27,13 @@ const Home: React.FC = () => {
     <div className="overflow-x-hidden">
       <HeroSection />
       <Suspense fallback={<LoadingPlaceholder />}>
-        {/* <CldImage
-          src="https://res.cloudinary.com/dni4hpqo3/image/upload/c_scale,h_40,q_70/v1720801124/Wash%20Me%20Car%20Wash%20Images/washhouse.webp"
+        <Image
+          src="/washhouse.webp"
           alt="WashHouse Image"
           width={1300}
           height={206}
           loading="lazy"
-        /> */}
+        />
       </Suspense>
       {/* <Map /> */}
       <Facilities />
