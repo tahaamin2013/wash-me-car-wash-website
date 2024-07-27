@@ -30,7 +30,7 @@ const Home: React.FC = () => {
         <Image
           src="/washhouse.jpg"
           alt="WashHouse Image"
-          width={1300}
+          width={1700}
           height={206}
           loading="lazy"
           className="hidden sm:block"
