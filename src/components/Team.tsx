@@ -15,7 +15,7 @@ const Team = () => {
         />
         <Image
           alt="Wash me car wash team image"
-          src="/MobileTeam.jpg  "
+          src="/MobileTeam.jpg"
           width={500}
           height={500}
           loading="lazy"
