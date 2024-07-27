@@ -7,7 +7,7 @@ const GiftCertificate: React.FC = () => {
     <section
       id="MemberShips"
       className="bg-primaryBlue-200 my-6 py-8 pl-4 w-full flex flex-col sm:grid sm:grid-cols-2 text-white overflow-hidden shadow-xl"
-      aria-labelledby="gift-certificate-title"
+    // aria-labelledby="gift-certificate-title"
     >
       <div className="flex flex-col items-center">
         <h2
@@ -30,7 +30,7 @@ const GiftCertificate: React.FC = () => {
             <li>Regularly ($15.00) each</li>
             <li>
               You{" "}
-              <span className="text-[#f60a11] font-extrabold">SAVE $41.00</span>
+              <p className="text-[#f60a11] font-extrabold">SAVE $41.00</p>
             </li>
           </ul>
           <Plus size="40" aria-hidden="true" />
@@ -41,9 +41,9 @@ const GiftCertificate: React.FC = () => {
             <li>You receive a bonus of 50% OFF </li>
             <li>Teflon Simoniz Wax for an additional</li>
             <li>
-              <span className="text-[#f60a11] font-extrabold">
+              <p className="text-[#f60a11] font-extrabold">
                 Savings of $20.00
-              </span>
+              </p>
             </li>
           </ul>
         </div>
@@ -59,7 +59,7 @@ const GiftCertificate: React.FC = () => {
           width={700}
           height={230}
           loading="lazy"
-          className="max-w-full h-auto"
+          className="full h-auto"
         />
       </div>
     </section>

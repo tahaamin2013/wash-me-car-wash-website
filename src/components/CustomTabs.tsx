@@ -15,6 +15,7 @@ const CustomTabs = ({ tabs }: any) => {
                 : "text-gray-600"
             }`}
             onClick={() => setActiveTab(index)}
+            aria-label="Tabs"
           >
             {tab.label}
           </button>

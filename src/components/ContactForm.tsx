@@ -45,7 +45,7 @@ export function Contact() {
     <form
       id="Contact"
       onSubmit={handleSubmit}
-      className="sm:max-w-sm w-full my-10 mx-auto flex flex-col items-center justify-center"
+      className="w-full my-10 mx-auto flex flex-col items-center justify-center"
     >
       <h1 className="text-4xl font-bold mx-auto mb-2">Contact Form</h1>
       <div className="mb-4">
