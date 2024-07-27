@@ -33,6 +33,7 @@ const Home: React.FC = () => {
           width={1300}
           height={206}
           loading="lazy"
+          className="hidden sm:block"
         />
       </Suspense>
       {/* <Map /> */}
