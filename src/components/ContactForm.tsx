@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Button } from "./ui/button";
 
 export function Contact() {
   const [formData, setFormData] = useState({
@@ -44,7 +45,7 @@ export function Contact() {
     <form
       id="Contact"
       onSubmit={handleSubmit}
-      className="w-full my-10 mx-auto flex flex-col items-center justify-center"
+      className="sm:max-w-sm w-full my-10 mx-auto flex flex-col items-center justify-center"
     >
       <h1 className="text-4xl font-bold mx-auto mb-2">Contact Form</h1>
       <div className="mb-4">
@@ -89,13 +90,13 @@ export function Contact() {
           className="w-full px-4 py-2 rounded border border-gray-300 focus:border-blue-500 focus:outline-none"
         />
       </div>
-      <button
+      <Button
         type="submit"
         aria-label="Submit Form"
-        className="bg-black px-3 py-3 text-white"
+        className="bg-black text-white"
       >
         Submit Form
-      </button>
+      </Button>
     </form>
   );
 }
