@@ -1,13 +1,14 @@
 import React from "react";
 import { CldImage } from "next-cloudinary";
+import Image from "next/image";
 
 const Team = () => {
   return (
     <div id="Meet the Team" className="relative overflow-x-hidden">
       <div className="h-[520px]">
-        <CldImage
+        <Image
           alt="Wash me car wash team image"
-          src="https://res.cloudinary.com/dni4hpqo3/image/upload/c_scale,f_auto,q_auto,w_480/v1720904495/Team_Image_zx0lyx.jpg"
+          src="/Team.webp"
           width={700}
           height={510}
           loading="lazy"
