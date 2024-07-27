@@ -21,7 +21,7 @@ const GiftCertificate: React.FC = () => {
           Certificates - the perfect, eco-friendly way to say &quot;thank you
           &quot; or celebrate any occasion in style!
         </p>
-        <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
+        <div className="flex flex-col sm:flex-row jus ify-center items-center gap-4">
           <ul
             className="list-disc border-2 border-white w-fit py-6 px-10 rounded-lg"
             aria-label="Savings on washes"
@@ -30,24 +30,24 @@ const GiftCertificate: React.FC = () => {
             <li>Regularly ($15.00) each</li>
             <li>
               You{" "}
-              <p className="text-[#f60a11] font-extrabold">SAVE $41.00</p>
+              <p className="text-[#f60a11] w-fit font-extrabold">SAVE $41.00</p>
             </li>
           </ul>
           <Plus size="40" aria-hidden="true" />
           <ul
-            className="list-disc border-2 border-white w-fit py-6 px-10 rounded-lg"
+            className="list-disc   border-2 border-white w-fit py-6 px-10 rounded-lg"
             aria-label="Additional bonus savings"
           >
             <li>You receive a bonus of 50% OFF </li>
             <li>Teflon Simoniz Wax for an additional</li>
             <li>
-              <p className="text-[#f60a11] font-extrabold">
+              <p className="text-[#f60a11] w-fit font-extrabold">
                 Savings of $20.00
               </p>
             </li>
           </ul>
         </div>
-        <p className="text-[#f60a11] font-extrabold text-center mt-4">
+        <p className="text-[#f60a11]  w-fit font-extrabold text-center mt-4">
           TOTAL SAVINGS of $61.00
         </p>
       </div>
