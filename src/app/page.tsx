@@ -28,7 +28,7 @@ const Home: React.FC = () => {
       <HeroSection />
       <Suspense fallback={<LoadingPlaceholder />}>
         <Image
-          src="/washhouse_11zon.jpg"
+          src="/washhouse.jpg"
           alt="WashHouse Image"
           width={1300}
           height={206}
