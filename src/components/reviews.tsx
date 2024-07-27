@@ -47,7 +47,7 @@ RenderStars.displayName = "RenderStars";
 const ReviewItem: React.FC<{ review: Review }> = React.memo(({ review }) => (
   <div className="p-2 border border-white rounded-lg py-3 sm:py-5 w-full h-[210px] ml-3">
     <div className="flex w-full">
-      <h3 className="text-lg font-bold mt-2">{review.reviewer_name}</h3>
+      <p className="text-lg font-bold mt-2">{review.reviewer_name}</p>
     </div>
     <div className="flex mt-2">
       <RenderStars rating={review.rating} />
