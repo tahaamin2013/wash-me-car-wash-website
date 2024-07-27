@@ -30,7 +30,7 @@ const GiftCertificate: React.FC = () => {
             <li>Regularly ($15.00) each</li>
             <li>
               You{" "}
-              <p className=" w-fit font-extrabold">SAVE $41.00</p>
+              <p className="text-[#f60a11] w-fit font-extrabold">SAVE $41.00</p>
             </li>
           </ul>
           <Plus size="40" aria-hidden="true" />
@@ -41,13 +41,13 @@ const GiftCertificate: React.FC = () => {
             <li>You receive a bonus of 50% OFF </li>
             <li>Teflon Simoniz Wax for an additional</li>
             <li>
-              <p className=" w-fit font-extrabold">
+              <p className="text-[#f60a11] w-fit font-extrabold">
                 Savings of $20.00
               </p>
             </li>
           </ul>
         </div>
-        <p className="  w-fit font-extrabold text-center mt-4">
+        <p className="text-[#f60a11]  w-fit font-extrabold text-center mt-4">
           TOTAL SAVINGS of $61.00
         </p>
       </div>
