@@ -49,7 +49,7 @@ const PricingContainer: React.FC<any> = ({ data }: any) => {
     }
   }, [data.image, data.title]);
 
-  const renderServices = useMemo(() => 
+  const renderServices = useMemo(() =>
     data.services.map((service: string) => (
       <span
         key={service}
@@ -88,14 +88,13 @@ const PricingContainer: React.FC<any> = ({ data }: any) => {
           href="https://touch4wash.com/hugesavings/hugesavingmembers.php?flk=2266b543ddd7762a69f0a4c0173dfbdd"
           className="flex items-center text-xl rounded-md w-full justify-center my-2"
         >
-          <Button
-            size="lg"
+          <button
             aria-label="Compact Club Membership button"
-            className="bg-primaryGreen text-black font-bold py-8 hover:text-white text-lg"
+            className="bg-primaryGreen text-black  rounded-xl font-bold py-2 px-4 hover:text-white text-lg"
           >
             {data.membership.title} <br />
             Membership
-          </Button>
+          </button>
         </Link>
         <p className="font-bold text-5xl mb-2 text-black flex items-start justify-center">
           <span className="text-lg font-bold">$</span>
