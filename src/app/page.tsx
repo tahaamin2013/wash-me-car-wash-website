@@ -36,7 +36,7 @@ const Home: React.FC = () => {
           className="hidden sm:block"
         />
         <Image
-          src="/washhouse_11zon.jpg"
+          src="/washhouse - Copy.jpg"
           alt="WashHouse Image"
           width={450}
           height={206}
