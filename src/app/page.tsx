@@ -28,7 +28,7 @@ const Home: React.FC = () => {
       <HeroSection />
       <Suspense fallback={<LoadingPlaceholder />}>
         <Image
-          src="/washhouse.jpg"
+          src="/jpeg-optimizer_washhouse.jpg"
           alt="WashHouse Image"
           width={1540}
           height={206}
@@ -36,7 +36,7 @@ const Home: React.FC = () => {
           className="hidden sm:block"
         />
         <Image
-          src="/washhouse - Copy.jpg"
+          src="/jpeg-optimizer_washhouse - Copy.jpg"
           alt="WashHouse Image"
           width={450}
           height={206}
