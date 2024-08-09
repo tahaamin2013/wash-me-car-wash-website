@@ -85,7 +85,7 @@ const PricingContainer: React.FC<any> = ({ data }: any) => {
         </div>
         <Link
           target="_blank"
-          href="https://touch4wash.com/hugesavings/hugesavingmembers.php?flk=2266b543ddd7762a69f0a4c0173dfbdd"
+          href={data.membership.link}
           className="flex items-center text-xl rounded-md w-full justify-center my-2"
         >
           <button
@@ -111,7 +111,7 @@ const PricingContainer: React.FC<any> = ({ data }: any) => {
           <Image
             loading="lazy"
             className="mt-3"
-            src="https://raw.githubusercontent.com/aimahusnain/Washme-CarWash-Images/main/1st%20qr.png"
+            src={data.membership.img2}
             width={150}
             height={250}
             alt="Compact Club"

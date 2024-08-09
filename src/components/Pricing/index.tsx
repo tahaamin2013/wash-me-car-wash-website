@@ -23,6 +23,7 @@ const Pricing: React.FC = () => {
       membership: {
         title: "Compact Club",
         price: "34.95",
+        img2:'/1.png',
         link: "https://touch4wash.com/hugesavings/hugesavingmembers.php?flk=2266b543ddd7762a69f0a4c0173dfbdd",
       },
     },
@@ -44,6 +45,7 @@ const Pricing: React.FC = () => {
       membership: {
         title: "Mid Size Club",
         price: "36.95",
+        img2:"/2.png",
         link: "https://touch4wash.com/hugesavings/hugesavingmembers.php?flk=d283035156d4b2fd9776ac54c0a05cd7",
       },
     },
@@ -68,6 +70,7 @@ const Pricing: React.FC = () => {
       membership: {
         title: "SUV TRUCK Club",
         price: "39.95",
+        img2:"/3.png",
         link: "https://touch4wash.com/hugesavings/hugesavingmembers.php?flk=a68d0e837cb627acbfc0e9a24343e4ac",
       },
     },
