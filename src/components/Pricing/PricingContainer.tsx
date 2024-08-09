@@ -83,19 +83,21 @@ const PricingContainer: React.FC<any> = ({ data }: any) => {
           <p className="text-[#717c33]">&</p>
           <span className="text-red-600 text-xl">SAVE MONEY!</span>
         </div>
-        <Link
-          target="_blank"
-          href={data.membership.link}
-          className="flex items-center text-xl rounded-md w-full justify-center my-2"
+
+        <button
+          aria-label="Compact Club Membership button"
+          className="bg-primaryGreen text-black  rounded-xl font-bold py-2 px-4 hover:text-white text-lg"
         >
-          <button
-            aria-label="Compact Club Membership button"
-            className="bg-primaryGreen text-black  rounded-xl font-bold py-2 px-4 hover:text-white text-lg"
+          <Link
+            target="_blank"
+            href={data.membership.link}
+            className="flex items-center text-xl rounded-md w-full justify-center my-2"
           >
             {data.membership.title} <br />
             Membership
-          </button>
-        </Link>
+          </Link>
+
+        </button>
         <p className="font-bold text-5xl mb-2 text-black flex items-start justify-center">
           <span className="text-lg font-bold">$</span>
           {data.membership.price}
