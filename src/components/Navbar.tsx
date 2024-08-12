@@ -7,7 +7,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { AlignJustify } from "lucide-react";
-import { CldImage } from "next-cloudinary";
+import Image from 'next/image'
 import Link from "next/link";
 import { FaPhoneAlt } from "react-icons/fa";
 import Goy from "./goy";
@@ -25,8 +25,8 @@ const Navbar = () => {
       </div>
       <div className="bg-primaryBlue-200 flex justify-between items-center text-white transition-all duration-200 shadow-xl px-5 lg:px-20 py-2 w-full">
           <Link href="/" className="outline-none absolute">
-            <CldImage
-              src="https://res.cloudinary.com/dni4hpqo3/image/upload/v1720827052/Wash-Me-Logo_nmqgji.png"
+            <Image
+              src="https://raw.githubusercontent.com/aimahusnain/Washme-CarWash-Images/main/Wash-Me-Logo.png"
               alt="Wash Me Car Wash Logo"
               className="relative z-50"
               width={100}
