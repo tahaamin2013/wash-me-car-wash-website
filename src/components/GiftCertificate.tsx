@@ -1,5 +1,5 @@
 import { Plus } from "lucide-react";
-import { CldImage } from "next-cloudinary";
+import Image from 'next/image'
 import React from "react";
 
 const GiftCertificate: React.FC = () => {
@@ -53,8 +53,8 @@ const GiftCertificate: React.FC = () => {
       </div>
 
       <div className="flex justify-center items-center mt-6 sm:mt-0">
-        <CldImage
-          src="https://res.cloudinary.com/dni4hpqo3/image/upload/c_scale,w_62/v1720962938/Wash%20Me%20Car%20Wash%20Images/RealMockup_jn2xyv.webp"
+        <Image
+          src="https://raw.githubusercontent.com/aimahusnain/Washme-CarWash-Images/main/RealMockup.webp"
           alt="Gift Certificate mockup"
           width={700}
           height={230}

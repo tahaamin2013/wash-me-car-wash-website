@@ -7,7 +7,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
-import { CldImage } from "next-cloudinary";
+import Image from 'next/image'
 import React, { useMemo, useRef, useState, useCallback } from "react";
 
 const WhatWeDo: React.FC = () => {
@@ -28,7 +28,7 @@ const WhatWeDo: React.FC = () => {
       key={item.title}
       className="z-10 flex flex-col lg:flex-row justify-center text-left bg-primaryBlue-200 rounded-xl h-[600px] sm:h-[400px] text-white overflow-hidden shadow-xl"
     >
-      <CldImage
+      <Image
         width={700}
         height={500}
         src={item.Image}
