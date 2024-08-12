@@ -63,7 +63,7 @@ const HeroSection = () => {
         onPause={stopTimer}
       >
         <source
-          src="https://res.cloudinary.com/dni4hpqo3/video/upload/c_scale,f_auto,q_auto,w_886/v1720997476/WashMe_Car_Wash_Video_-_Edited_emahsr.mp4"
+          src="/WashMe Car Wash Video - Edited.mp4"
           type="video/mp4"
         />
         Your browser does not support the video tag.

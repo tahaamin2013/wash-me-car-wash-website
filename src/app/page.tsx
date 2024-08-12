@@ -38,10 +38,10 @@ const Home: React.FC = () => {
         <Image
           src="/jpeg-optimizer_washhouse - Copy.jpg"
           alt="WashHouse Image"
-          width={450}
+          width={500}
           height={206}
           loading="lazy"
-          className=" block sm:hidden"
+          className="block sm:hidden"
         />
       </Suspense>
       {/* <Map /> */}

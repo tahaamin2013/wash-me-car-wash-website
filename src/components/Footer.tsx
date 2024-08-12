@@ -33,7 +33,7 @@ export default function Footer() {
             >
               <source
                 type="video/webm"
-                src="https://res.cloudinary.com/dni4hpqo3/video/upload/v1721000398/car_glqu60.mp4"
+                src="/car.mp4"
               />
               Your browser does not support the video tag.
             </video>
