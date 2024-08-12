@@ -164,7 +164,7 @@ export const washingSteps = [
   },
   {
     Image:
-      "https://raw.githubusercontent.com/aimahusnain/Washme-CarWash-Images/main/fsd%20(2).webp",
+      "https://raw.githubusercontent.com/aimahusnain/Washme-CarWash-Images/main/fsd%20(2).webp  ",
     title: "Step 4: Full Body Hand Wash Before the Tunnel",
     description:
       "Before entering the automated cleaning tunnel, a meticulous hand wash is performed on the entire body of the car. This step ensures a detailed cleaning, addressing specific areas that may require extra attention.",

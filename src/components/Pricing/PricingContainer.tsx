@@ -1,5 +1,4 @@
 import React, { useMemo } from "react";
-import { CldImage } from "next-cloudinary";
 import Image from "next/image";
 import Link from "next/link";
 import { FaCheck } from "react-icons/fa";
@@ -22,7 +21,7 @@ const PricingContainer: React.FC<any> = ({ data }: any) => {
                 key={img}
                 className="w-fit h-fit flex justify-center items-center"
               >
-                <CldImage
+                <Image
                   loading="lazy"
                   alt={`${data.title} image ${imgIndex + 1}`}
                   src={img}
@@ -37,7 +36,7 @@ const PricingContainer: React.FC<any> = ({ data }: any) => {
       );
     } else {
       return (
-        <CldImage
+        <Image
           loading="lazy"
           alt={`${data.title} image`}
           src={Array.isArray(data.image) ? data.image[0] : data.image}
