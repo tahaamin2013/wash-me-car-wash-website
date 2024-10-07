@@ -4,6 +4,7 @@ import dynamic from "next/dynamic";
 import { CldImage } from "next-cloudinary";
 import { Suspense, lazy } from "react";
 import Image from "next/image";
+import Head from "next/head";
 
 const HeroSection = dynamic(() => import("@/components/Herosection"), {
   ssr: true,
@@ -23,7 +24,10 @@ const Contact = lazy(() =>
 const LoadingPlaceholder = () => <div>Loading...</div>;
 
 const Home: React.FC = () => {
-  return (
+  return (<>
+    <head>
+      <meta name="google-site-verification" content="VgreohTDk3E7_tNNr9g0rlDfoqJEwHRay9Z4x7ehScY" />
+    </head>
     <div className="overflow-x-hidden">
       <HeroSection />
       <Suspense fallback={<LoadingPlaceholder />}>
@@ -56,7 +60,8 @@ const Home: React.FC = () => {
         <Contact />
       </Suspense>
     </div>
-  );
+
+  </>);
 };
 
 export default Home;
