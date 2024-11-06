@@ -24,7 +24,7 @@ export default function Footer() {
               alt="wash me car wash timing image with pink and blue color"
             />
 
-            <video
+            {/* <video
               className="w-[250px] md:w-full h-[190px] md:h-auto lg:max-w-[30rem] object-cover mt-4 lg:mt-0"
               autoPlay
               loop
@@ -36,7 +36,7 @@ export default function Footer() {
                 src="/car.mp4"
               />
               Your browser does not support the video tag.
-            </video>
+            </video> */}
           </div>
 
           <div className="flex sm:flex-row sm:justify-center items-center flex-col w-full mt-6 sm:gap-10">

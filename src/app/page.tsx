@@ -51,7 +51,7 @@ const Home: React.FC = () => {
       {/* <Map /> */}
       <Facilities />
       <WhatWeDo />
-      <Team />
+      {/* <Team /> */}
       <Pricing />
       <GiftCertificate />
       <FAQ />
