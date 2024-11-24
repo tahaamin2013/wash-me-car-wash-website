@@ -1,6 +1,5 @@
 'use client'
 
-import { useEffect, useState } from "react"
 import {
   Dialog,
   DialogContent,
@@ -8,7 +7,7 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog"
-import Image from "next/image"
+import { useEffect, useState } from "react"
 
 interface ThanksgivingPopupProps {
   delay?: number
@@ -39,12 +38,10 @@ const ThanksgivingPopup: React.FC<ThanksgivingPopupProps> = ({ delay = 5000 }) =
           </DialogTitle>
           <DialogDescription className="text-center">
             <div className="relative w-full h-full my-4">
-              <Image
+              <img
                 src="/thanksgiving.jpg"
                 alt="Thanksgiving celebration"
-                fill
                 className="rounded-lg object-cover"
-                priority
               />
             </div>
             <p className="text-gray-700 mt-2">
