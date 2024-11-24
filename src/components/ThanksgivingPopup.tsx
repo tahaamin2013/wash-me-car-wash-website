@@ -38,7 +38,7 @@ const ThanksgivingPopup: React.FC<ThanksgivingPopupProps> = ({ delay = 5000 }) =
             Happy Thanksgiving!
           </DialogTitle>
           <DialogDescription className="text-center">
-            <div className="relative w-full h-[92%] my-4">
+            <div className="relative w-full h-full my-4">
               <Image
                 src="/thanksgiving.jpg"
                 alt="Thanksgiving celebration"
