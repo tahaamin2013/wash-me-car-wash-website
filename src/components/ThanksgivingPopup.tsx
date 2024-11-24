@@ -48,7 +48,7 @@ const ThanksgivingPopup: React.FC<ThanksgivingPopupProps> = ({ delay = 5000 }) =
               />
             </div>
             <p className="text-gray-700 mt-2">
-              We're thankful for your support. Enjoy this special day with your
+              We&apos;re thankful for your support. Enjoy this special day with your
               loved ones!
             </p>
           </DialogDescription>
