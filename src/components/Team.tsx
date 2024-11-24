@@ -11,7 +11,7 @@ const Team = () => {
           src="/Team.webp"
           fill
           loading="lazy"
-          className="object-cover sm:block hidden  absolute inset-0 object-center "
+          className="object-cover sm:block hidden  absolute inset-0 object-center"
         />
         <Image
           alt="Wash me car wash team image"
@@ -19,7 +19,7 @@ const Team = () => {
           width={500}
           height={500}
           loading="lazy"
-          className="object-cover sm:hidden block  absolute inset-0 object-center "
+          className="object-cover sm:hidden block  absolute inset-0 object-center"
         />
 
       </div>

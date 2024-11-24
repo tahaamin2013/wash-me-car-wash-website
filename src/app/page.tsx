@@ -48,10 +48,10 @@ const Home: React.FC = () => {
           className="block sm:hidden"
         />
       </Suspense>
-      {/* <Map /> */}
+      <Map />
       <Facilities />
       <WhatWeDo />
-      {/* <Team /> */}
+      <Team />
       <Pricing />
       <GiftCertificate />
       <FAQ />

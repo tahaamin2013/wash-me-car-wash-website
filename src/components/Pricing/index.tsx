@@ -82,21 +82,11 @@ const Pricing: React.FC = () => {
       className="font-sans text-center mt-8 my-8 flex justify-center items-center flex-col"
     >
       <div className="flex flex-wrap sm:justify-start justify-center items-center text-center gap-4 mb-16 w-full">
-        {/* <Image
-          src="https://res.cloudinary.com/dni4hpqo3/image/upload/c_scale,f_auto,h_161,q_auto/v1720984049/Wash%20Me%20Car%20Wash%20Images/pricing/0365053m_grpsiy.webp"
-          height={209}
-          width={200}
-          alt="PostCard Wash me car wash image"
-          loading="lazy"
-          className="w-auto max-w-full"
-        /> */}
         <Image
           src="https://raw.githubusercontent.com/aimahusnain/Washme-CarWash-Images/main/Frame-1.png"
           height={256}
           width={232}
           alt="Simonize Double Bond image"
-          loading="lazy"
-          className="w-auto max-w-full"
         />
         <h1 className="font-bold text-3xl sm:text-4xl capitalize text-center sm:text-left">
           Choose your plan

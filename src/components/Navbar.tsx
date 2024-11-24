@@ -15,10 +15,10 @@ import Goy from "./goy";
 const Navbar = () => {
   return (
     <div className="fixed z-50 w-full flex flex-col items-center">
-       <div className="absolute top-14 left-52 bg-white p-4 transform -rotate-12 shadow-lg">
+       {/* <div className="absolute top-14 left-52 bg-white p-4 transform -rotate-12 shadow-lg">
         <p className="text-xl font-bold text-blue-500">Coming soon</p>
         <p className="text-lg text-gray-800">Watch for our new look</p>
-      </div>
+      </div> */}
       <div className="bg-[#1b3e63] w-full text-white capitalize flex sm:flex-row flex-col flex-wrap justify-between px-5 text-center items-center">
         <div></div>
         <Goy id="#MemberShips">We are now offering MEMBERSHIPS!!!</Goy>

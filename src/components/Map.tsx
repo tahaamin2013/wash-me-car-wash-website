@@ -1,7 +1,6 @@
 "use client";
 
 import { mapData } from "@/AllWebsiteData";
-import { CldImage } from "next-cloudinary";
 import Link from "next/link";
 import React, { useMemo } from "react";
 
@@ -30,14 +29,14 @@ const LocationInfo = React.memo(({ address }: any) => {
         target="_blank"
         href="https://www.google.com/maps/place/Wash+Me+Car+Wash/@46.144836,-122.9307085,17z/data=!4m6!3m5!1s0x54946c94ec9bed79:0x41eb6feac6768b1b!8m2!3d46.14486!4d-122.9279929!16s%2Fg%2F1tds6drw?entry=ttu"
       >
-        <CldImage
+        {/* <Image
           draggable={false}
           width={700}
           height={400}
           alt="Map Image"
           className="rounded-xl"
           src="https://res.cloudinary.com/dni4hpqo3/image/upload/v1721253270/Wash%20Me%20Car%20Wash%20Images/Reviews/mapimage_ehgm78.png"
-        />
+        /> */}
       </Link>
     </>
   );
