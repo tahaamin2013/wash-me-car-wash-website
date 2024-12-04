@@ -122,8 +122,8 @@ const PricingContainer: React.FC<any> = ({ data }: any) => {
           For Instant Access to Our Exclusive Membership Benefits without the
           need to download the app
         </p>
-      </div>
-    </div> */}
+      </div> */}
+    </div>
   );
 };
 
