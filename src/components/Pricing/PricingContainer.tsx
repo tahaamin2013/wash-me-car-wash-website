@@ -75,7 +75,7 @@ const PricingContainer: React.FC<any> = ({ data }: any) => {
       <div className="flex flex-col gap-1 mb-1">
         {renderServices}
       </div>
-      <div className="mt-3 border-0 border-t-2 border-black">
+{/*       <div className="mt-3 border-0 border-t-2 border-black">
         <div className="font-bold text-lg">
           <p className="text-[#717c33]">Join</p>
           <h3>Our Monthly Car Wash Membership Includes Teflon Wax</h3>
@@ -123,7 +123,7 @@ const PricingContainer: React.FC<any> = ({ data }: any) => {
           need to download the app
         </p>
       </div>
-    </div>
+    </div> */}
   );
 };
 
