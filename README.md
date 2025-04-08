@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🚗 Car Wash Website – Book, Wash, Drive Clean!
 
-## Getting Started
+Welcome to the ultimate **Car Wash Booking Website**, built using **Next.js**, **Tailwind CSS**, and **TypeScript**. A fast, mobile-friendly, and stylish platform for car lovers and car cleaners alike.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## ✨ Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- 📅 Online Car Wash Booking System
+- 📍 Location Finder with Google Maps
+- 💳 Secure Payment Integration *(coming soon)*
+- 🌓 Light & Dark Mode
+- 📱 Fully Responsive Design
+- 🧼 Services Showcase (Interior, Exterior, Premium Wash)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+## 🔧 Built With
 
-To learn more about Next.js, take a look at the following resources:
+- 🚀 **Next.js** – React framework for fast web apps
+- 🎨 **Tailwind CSS** – Utility-first beautiful styling
+- 🔐 **TypeScript** – Safety with power
+- 📍 **Google Maps API** – For location-based service
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## 🚗 Services Included
 
-## Deploy on Vercel
+- ✅ Exterior Wash  
+- ✅ Interior Cleaning  
+- ✅ Full Body Polish  
+- ✅ Engine Cleaning  
+- ✅ Premium Packages
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## 🌟 About the Creator
+
+Hi, I'm **Taha Amin** – a web developer with passion for building real-world, modern websites! I make websites that work *and* wow 🚀
+
+> 📌 Follow me on GitHub: [@your-username](https://github.com/your-username)  
+> 💬 Need a custom website? DM me!
+
+---
+
+## 💡 Want to Contribute?
+
+Pull requests are welcome!  
+If you have suggestions, open an issue or reach out.
+
+---
+
+## 📜 License
+
+MIT – Use freely with love 💖
+
+---
+
+## 🙏 Show Your Support
+
+- ⭐ Star this project  
+- 📣 Share it with your dev or startup friends  
+- 🙋‍♂️ Follow me for more fun & functional websites!
+
